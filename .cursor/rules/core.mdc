@@ -1,0 +1,74 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: Core rules for the Pokémon-TCG-Pocket RL engine
+globs:
+  - "**/*.py"
+alwaysApply: true
+---
+
+# 📦 Project overview
+You are editing a **research-grade reinforcement-learning engine** that learns to play _Pokémon TCG Pocket_ like a chess engine.
+
+Key architectural layers (all in `src/`):
+
+1. `card_db/`   – parses card JSON and exposes immutable dataclasses  
+2. `rules/`     – deterministic game simulator (~100 ns/step target)  
+3. `env/`       – Gym-compatible wrapper returning masks & rewards  
+4. `net/`       – PyTorch policy-value nets; no business logic here  
+5. `train/`     – Lightning loops, distributed via Ray  
+6. `serve/`     – FastAPI “best-move” service + ONNX runtime  
+
+# ✍️ Coding style & tooling
+* **Python 3.11**, PEP 8 + Ruff + Black (line-length 100)  
+* Mandatory **type hints** everywhere; enable `pyright.strict`  
+* Pure functions or stateless classes inside `rules/`; RNG only in `env/`  
+* Write **NumPy-style docstrings** with examples  
+* Keep files ≤ 400 LOC; split logically if you exceed this  
+# ✅ Testing contract
+* Each new rule or card effect must ship with a pytest in `tests/rules/`  
+* Achieve ≥ 90 % line coverage for `rules/`  
+* Use Hypothesis for property tests (e.g., energy-attachment invariants)  
+* CI fails if coverage, Ruff, Black or MyPy checks fail  
+
+# 🚦 Performance guard-rails
+* `rules/*.py` **must not** import PyTorch or Ray  
+* Simulator step budget: **≤ 150 µs** on an M2 CPU core  
+  – Profile with `python -m rules.bench` before committing  
+* Avoid recursion deeper than evolution-stack length (≤ 3); prefer loops here  
+
+# 🛑 Prohibited patterns
+* No global mutable singletons (use dependency injection)  
+* No hard-coded file paths; use `importlib.resources` or `Path(__file__).parent`  
+* No bare `assert` in library code – raise explicit exceptions  
+* Never seed RNGs in library modules; leave that to the caller  
+
+# 🔄 Editor integrations
+* `pyproject.toml` defines deps (PyTorch ≥ 2.3, Gymnasium ≥ 1.0, Ray ≥ 2.9)  
+* `Makefile` has convenience targets: `make format`, `make test`, `make bench`  
+* Run `make prepush` locally; the pre-commit hook mirrors CI  
+
+# 🗂️ Folder conventions
+src/
+card_db/          # immutable data
+rules/            # pure game logic
+env/              # RL wrapper
+net/              # models
+train/            # training scripts
+serve/            # inference API
+tests/
+rules/
+env/
+integration/
+
+# 👩‍💻 When writing code
+* Prefer **dataclasses** (`@dataclass(frozen=True)`) for state snapshots  
+* Surface **action masks** as `torch.bool` tensors shaped `[A]`  
+* Log with the std-lib `logging` module; default level INFO
+
+# Helpful prompts for Cursor Agent
+* “Generate unit tests for the new card effect in `rules/effects/damage_swap.py`.”  
+* “Refactor `train/ppo_loop.py` to batch env steps across Ray actors.”  

@@ -1,0 +1,3185 @@
+[
+  {
+    "id": "A2a-001",
+    "name": "Heracross",
+    "localId": "001",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/001",
+    "hp": 100,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Single-Horn Throw",
+        "damage": "50+",
+        "cost": [
+          "Grass",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "Flip 2 coins. If both of them are heads, this attack does 70 more damage."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-002",
+    "name": "Burmy",
+    "localId": "002",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/002",
+    "hp": 50,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Ram",
+        "damage": 20,
+        "cost": [
+          "Grass"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-003",
+    "name": "Mothim",
+    "localId": "003",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/003",
+    "hp": 90,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Gust",
+        "damage": 50,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 0,
+    "effect": null
+  },
+  {
+    "id": "A2a-004",
+    "name": "Combee",
+    "localId": "004",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/004",
+    "hp": 50,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Bug Bite",
+        "damage": 20,
+        "cost": [
+          "Grass"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-005",
+    "name": "Vespiquen",
+    "localId": "005",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/005",
+    "hp": 100,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Reckless Charge",
+        "damage": 120,
+        "cost": [
+          "Grass",
+          "Grass",
+          "Grass"
+        ],
+        "effect": "This Pok\u00e9mon also does 30 damage to itself."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-006",
+    "name": "Cherubi",
+    "localId": "006",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/006",
+    "hp": 50,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Leafage",
+        "damage": 20,
+        "cost": [
+          "Grass"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-007",
+    "name": "Cherrim",
+    "localId": "007",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/007",
+    "hp": 80,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Worry Seed",
+        "damage": 40,
+        "cost": [
+          "Grass"
+        ],
+        "effect": "Your opponent's Active Pok\u00e9mon is now Confused."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-008",
+    "name": "Cherrim",
+    "localId": "008",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/008",
+    "hp": 80,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Leech Seed",
+        "damage": 60,
+        "cost": [
+          "Grass",
+          "Grass"
+        ],
+        "effect": "Heal 20 damage from this Pok\u00e9mon."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-009",
+    "name": "Carnivine",
+    "localId": "009",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/009",
+    "hp": 80,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Vine Whip",
+        "damage": 20,
+        "cost": [
+          "Grass"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Power Link",
+        "type": "Ability",
+        "effect": "If you have Arceus or Arceus ex in play, attacks used by this Pok\u00e9mon do +30 damage to your opponent's Active Pok\u00e9mon."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-010",
+    "name": "Leafeon ex",
+    "localId": "010",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/010",
+    "hp": 140,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Solar Beam",
+        "damage": 70,
+        "cost": [
+          "Grass",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Forest Breath",
+        "type": "Ability",
+        "effect": "Once during your turn, if this Pok\u00e9mon is in the Active Spot, you may take a {G} Energy from your Energy Zone and attach it to 1 of your {G} Pok\u00e9mon."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-011",
+    "name": "Houndour",
+    "localId": "011",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/011",
+    "hp": 60,
+    "types": [
+      "Fire"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Flare",
+        "damage": 20,
+        "cost": [
+          "Fire"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Water",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-012",
+    "name": "Houndoom",
+    "localId": "012",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/012",
+    "hp": 100,
+    "types": [
+      "Fire"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Corner",
+        "damage": 60,
+        "cost": [
+          "Fire",
+          "Colorless"
+        ],
+        "effect": "During your opponent's next turn, the Defending Pok\u00e9mon can't retreat."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Water",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-013",
+    "name": "Heatran",
+    "localId": "013",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/013",
+    "hp": 110,
+    "types": [
+      "Fire"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Ragin' Mad Strike",
+        "damage": "40+",
+        "cost": [
+          "Fire",
+          "Fire"
+        ],
+        "effect": "If this Pok\u00e9mon has damage on it, this attack does 40 more damage."
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Speed Link",
+        "type": "Ability",
+        "effect": "If you have Arceus or Arceus ex in play, this Pok\u00e9mon has no Retreat Cost."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Water",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 3,
+    "effect": null
+  },
+  {
+    "id": "A2a-014",
+    "name": "Marill",
+    "localId": "014",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/014",
+    "hp": 60,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Water Gun",
+        "damage": 20,
+        "cost": [
+          "Water"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-015",
+    "name": "Azumarill",
+    "localId": "015",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/015",
+    "hp": 100,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Waterfall",
+        "damage": 60,
+        "cost": [
+          "Water",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-016",
+    "name": "Barboach",
+    "localId": "016",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/016",
+    "hp": 60,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Mud-Slap",
+        "damage": 30,
+        "cost": [
+          "Water",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-017",
+    "name": "Whiscash",
+    "localId": "017",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/017",
+    "hp": 120,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Thrash",
+        "damage": "80+",
+        "cost": [
+          "Water",
+          "Water",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "Flip a coin. If heads, this attack does 60 more damage. If tails, this Pok\u00e9mon also does 20 damage to itself."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 3,
+    "effect": null
+  },
+  {
+    "id": "A2a-018",
+    "name": "Snorunt",
+    "localId": "018",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/018",
+    "hp": 60,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Icicle",
+        "damage": 20,
+        "cost": [
+          "Water"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Metal",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-019",
+    "name": "Froslass",
+    "localId": "019",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/019",
+    "hp": 90,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Blizzard",
+        "damage": 40,
+        "cost": [
+          "Water",
+          "Colorless"
+        ],
+        "effect": "This attack also does 10 damage to each of your opponent's Benched Pok\u00e9mon."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Metal",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-020",
+    "name": "Snover",
+    "localId": "020",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/020",
+    "hp": 70,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Corkscrew Punch",
+        "damage": 30,
+        "cost": [
+          "Water",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Metal",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-021",
+    "name": "Abomasnow",
+    "localId": "021",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/021",
+    "hp": 120,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Mega Punch",
+        "damage": 80,
+        "cost": [
+          "Water",
+          "Water",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Vigor Link",
+        "type": "Ability",
+        "effect": "If you have Arceus or Arceus ex in play, attacks used by this Pok\u00e9mon cost 1 less {C} Energy."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Metal",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 3,
+    "effect": null
+  },
+  {
+    "id": "A2a-022",
+    "name": "Glaceon ex",
+    "localId": "022",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/022",
+    "hp": 140,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Freezing Wind",
+        "damage": 90,
+        "cost": [
+          "Water",
+          "Water",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Snowy Terrain",
+        "type": "Ability",
+        "effect": "During Pok\u00e9mon Checkup, if this Pok\u00e9mon is in the Active Spot, do 10 damage to your opponent's Active Pok\u00e9mon."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Metal",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-023",
+    "name": "Origin Forme Palkia",
+    "localId": "023",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/023",
+    "hp": 120,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Zone Smash",
+        "damage": "60+",
+        "cost": [
+          "Water",
+          "Water",
+          "Water"
+        ],
+        "effect": "Flip a coin. If heads, this attack does 60 more damage."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-024",
+    "name": "Phione",
+    "localId": "024",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/024",
+    "hp": 60,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Water Pulse",
+        "damage": 40,
+        "cost": [
+          "Water",
+          "Water"
+        ],
+        "effect": "Your opponent's Active Pok\u00e9mon is now Asleep."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-025",
+    "name": "Pikachu",
+    "localId": "025",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/025",
+    "hp": 60,
+    "types": [
+      "Lightning"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Spark",
+        "damage": 10,
+        "cost": [
+          "Lightning"
+        ],
+        "effect": "This attack also does 10 damage to 1 of your opponent's Benched Pok\u00e9mon."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-026",
+    "name": "Raichu",
+    "localId": "026",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/026",
+    "hp": 90,
+    "types": [
+      "Lightning"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Spark",
+        "damage": 40,
+        "cost": [
+          "Lightning",
+          "Lightning"
+        ],
+        "effect": "This attack also does 20 damage to 1 of your opponent's Benched Pok\u00e9mon."
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Resilience Link",
+        "type": "Ability",
+        "effect": "If you have Arceus or Arceus ex in play, this Pok\u00e9mon takes \u221230 damage from attacks."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-027",
+    "name": "Electrike",
+    "localId": "027",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/027",
+    "hp": 60,
+    "types": [
+      "Lightning"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Zap Kick",
+        "damage": 20,
+        "cost": [
+          "Lightning"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-028",
+    "name": "Manectric",
+    "localId": "028",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/028",
+    "hp": 90,
+    "types": [
+      "Lightning"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Flash",
+        "damage": 40,
+        "cost": [
+          "Lightning"
+        ],
+        "effect": "During your opponent's next turn, if the Defending Pok\u00e9mon tries to use an attack, your opponent flips a coin. If tails, that attack doesn't happen."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-029",
+    "name": "Clefairy",
+    "localId": "029",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/029",
+    "hp": 60,
+    "types": [
+      "Psychic"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Smack",
+        "damage": 30,
+        "cost": [
+          "Psychic",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Metal",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-030",
+    "name": "Clefable",
+    "localId": "030",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/030",
+    "hp": 100,
+    "types": [
+      "Psychic"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Moonblast",
+        "damage": 60,
+        "cost": [
+          "Psychic",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "During your opponent's next turn, attacks used by the Defending Pok\u00e9mon do \u221230 damage."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Metal",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-031",
+    "name": "Gastly",
+    "localId": "031",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/031",
+    "hp": 50,
+    "types": [
+      "Psychic"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Astonish",
+        "damage": null,
+        "cost": [
+          "Colorless"
+        ],
+        "effect": "Flip a coin. If heads, your opponent reveals a random card from their hand and shuffles it into their deck."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Darkness",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-032",
+    "name": "Haunter",
+    "localId": "032",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/032",
+    "hp": 80,
+    "types": [
+      "Psychic"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Mumble",
+        "damage": 40,
+        "cost": [
+          "Psychic",
+          "Psychic"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Darkness",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-033",
+    "name": "Gengar",
+    "localId": "033",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/033",
+    "hp": 140,
+    "types": [
+      "Psychic"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage2",
+    "attacks": [
+      {
+        "name": "Hypnoblast",
+        "damage": 70,
+        "cost": [
+          "Psychic",
+          "Psychic"
+        ],
+        "effect": "Your opponent's Active Pok\u00e9mon is now Asleep."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Darkness",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-034",
+    "name": "Unown",
+    "localId": "034",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/034",
+    "hp": 60,
+    "types": [
+      "Psychic"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Hidden Power",
+        "damage": 20,
+        "cost": [
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "CHECK",
+        "type": "Ability",
+        "effect": "Once during your turn, you may choose either player. Look at the top card of that player's deck."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Darkness",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-035",
+    "name": "Rotom",
+    "localId": "035",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/035",
+    "hp": 70,
+    "types": [
+      "Psychic"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Dash Attack",
+        "damage": null,
+        "cost": [
+          "Colorless"
+        ],
+        "effect": "This attack does 20 damage to 1 of your opponent's Benched Pok\u00e9mon."
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Speed Link",
+        "type": "Ability",
+        "effect": "If you have Arceus or Arceus ex in play, this Pok\u00e9mon has no Retreat Cost."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Darkness",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-036",
+    "name": "Sudowoodo",
+    "localId": "036",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/036",
+    "hp": 80,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Fighting Headbutt",
+        "damage": 20,
+        "cost": [
+          "Fighting"
+        ],
+        "effect": "If your opponent's Active Pok\u00e9mon is a Pok\u00e9mon {ex}, this attack does 30 more damage."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-037",
+    "name": "Phanpy",
+    "localId": "037",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/037",
+    "hp": 60,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Rollout",
+        "damage": 20,
+        "cost": [
+          "Fighting"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-038",
+    "name": "Donphan",
+    "localId": "038",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/038",
+    "hp": 120,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Rolling Spin",
+        "damage": 60,
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Fighting"
+        ],
+        "effect": "During your next turn, this Pok\u00e9mon's Rolling Spin attack does +60 damage."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 3,
+    "effect": null
+  },
+  {
+    "id": "A2a-039",
+    "name": "Larvitar",
+    "localId": "039",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/039",
+    "hp": 60,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Corkscrew Punch",
+        "damage": 30,
+        "cost": [
+          "Fighting",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-040",
+    "name": "Pupitar",
+    "localId": "040",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/040",
+    "hp": 80,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Speed Attack",
+        "damage": 50,
+        "cost": [
+          "Fighting",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-041",
+    "name": "Tyranitar",
+    "localId": "041",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/041",
+    "hp": 160,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage2",
+    "attacks": [
+      {
+        "name": "Land Crush",
+        "damage": 130,
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Fighting",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Power Link",
+        "type": "Ability",
+        "effect": "If you have Arceus or Arceus ex in play, attacks used by this Pok\u00e9mon do +30 damage to your opponent's Active Pok\u00e9mon."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 4,
+    "effect": null
+  },
+  {
+    "id": "A2a-042",
+    "name": "Nosepass",
+    "localId": "042",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/042",
+    "hp": 80,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Tackle",
+        "damage": 10,
+        "cost": [
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 3,
+    "effect": null
+  },
+  {
+    "id": "A2a-043",
+    "name": "Meditite",
+    "localId": "043",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/043",
+    "hp": 60,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Kick",
+        "damage": 20,
+        "cost": [
+          "Fighting"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Psychic",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-044",
+    "name": "Medicham",
+    "localId": "044",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/044",
+    "hp": 100,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Kick Shot",
+        "damage": 80,
+        "cost": [
+          "Fighting"
+        ],
+        "effect": "Flip a coin. If tails, this attack does nothing."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Psychic",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-045",
+    "name": "Gible",
+    "localId": "045",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/045",
+    "hp": 60,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Tackle",
+        "damage": 20,
+        "cost": [
+          "Fighting"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-046",
+    "name": "Gabite",
+    "localId": "046",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/046",
+    "hp": 80,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Sharp Scythe",
+        "damage": 30,
+        "cost": [
+          "Fighting"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-047",
+    "name": "Garchomp ex",
+    "localId": "047",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/047",
+    "hp": 170,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage2",
+    "attacks": [
+      {
+        "name": "Linear Attack",
+        "damage": null,
+        "cost": [
+          "Fighting"
+        ],
+        "effect": "This attack does 50 damage to 1 of your opponent's Pok\u00e9mon."
+      },
+      {
+        "name": "Dragon Claw",
+        "damage": 100,
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-048",
+    "name": "Zubat",
+    "localId": "048",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/048",
+    "hp": 50,
+    "types": [
+      "Darkness"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Bite",
+        "damage": 20,
+        "cost": [
+          "Darkness"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-049",
+    "name": "Golbat",
+    "localId": "049",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/049",
+    "hp": 80,
+    "types": [
+      "Darkness"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Bite",
+        "damage": 30,
+        "cost": [
+          "Darkness"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-050",
+    "name": "Crobat",
+    "localId": "050",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/050",
+    "hp": 110,
+    "types": [
+      "Darkness"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage2",
+    "attacks": [
+      {
+        "name": "Darkness Fang",
+        "damage": 50,
+        "cost": [
+          "Darkness"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Cunning Link",
+        "type": "Ability",
+        "effect": "Once during your turn, if you have Arceus or Arceus ex in play, you may do 30 damage to your opponent's Active Pok\u00e9mon."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 0,
+    "effect": null
+  },
+  {
+    "id": "A2a-051",
+    "name": "Croagunk",
+    "localId": "051",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/051",
+    "hp": 60,
+    "types": [
+      "Darkness"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Beat",
+        "damage": 20,
+        "cost": [
+          "Darkness"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-052",
+    "name": "Toxicroak",
+    "localId": "052",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/052",
+    "hp": 100,
+    "types": [
+      "Darkness"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Toxic",
+        "damage": null,
+        "cost": [
+          "Darkness"
+        ],
+        "effect": "Your opponent's Active Pok\u00e9mon is now Poisoned. Do 20 damage to this Pok\u00e9mon instead of the usual amount for this Special Condition."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-053",
+    "name": "Magnemite",
+    "localId": "053",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/053",
+    "hp": 60,
+    "types": [
+      "Metal"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Tackle",
+        "damage": 20,
+        "cost": [
+          "Metal"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-054",
+    "name": "Magneton",
+    "localId": "054",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/054",
+    "hp": 90,
+    "types": [
+      "Metal"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Rolling Attack",
+        "damage": 30,
+        "cost": [
+          "Metal",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-055",
+    "name": "Magnezone",
+    "localId": "055",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/055",
+    "hp": 140,
+    "types": [
+      "Metal"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage2",
+    "attacks": [
+      {
+        "name": "Power Beam",
+        "damage": 80,
+        "cost": [
+          "Metal",
+          "Metal",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Resilience Link",
+        "type": "Ability",
+        "effect": "If you have Arceus or Arceus ex in play, this Pok\u00e9mon takes \u221230 damage from attacks."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-056",
+    "name": "Mawile",
+    "localId": "056",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/056",
+    "hp": 70,
+    "types": [
+      "Metal"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Iron Beam Breaker",
+        "damage": "20+",
+        "cost": [
+          "Colorless"
+        ],
+        "effect": "If your opponent's Active Pok\u00e9mon is a {M} Pok\u00e9mon, this attack does 30 more damage."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-057",
+    "name": "Probopass ex",
+    "localId": "057",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/057",
+    "hp": 160,
+    "types": [
+      "Metal"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Defensive Unit",
+        "damage": 90,
+        "cost": [
+          "Metal",
+          "Metal",
+          "Colorless"
+        ],
+        "effect": "During your opponent's next turn, this Pok\u00e9mon takes \u221220 damage from attacks."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 3,
+    "effect": null
+  },
+  {
+    "id": "A2a-058",
+    "name": "Bronzor",
+    "localId": "058",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/058",
+    "hp": 60,
+    "types": [
+      "Metal"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Ram",
+        "damage": 10,
+        "cost": [
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-059",
+    "name": "Bronzong",
+    "localId": "059",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/059",
+    "hp": 120,
+    "types": [
+      "Metal"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Psychic",
+        "damage": "50+",
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "This attack does 20 more damage for each Energy attached to your opponent's Active Pok\u00e9mon."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 3,
+    "effect": null
+  },
+  {
+    "id": "A2a-060",
+    "name": "Origin Forme Dialga",
+    "localId": "060",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/060",
+    "hp": 120,
+    "types": [
+      "Metal"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Time Mash",
+        "damage": 100,
+        "cost": [
+          "Metal",
+          "Metal",
+          "Colorless"
+        ],
+        "effect": "Flip a coin. If tails, during your next turn, this Pok\u00e9mon can't attack."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-061",
+    "name": "Giratina",
+    "localId": "061",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/061",
+    "hp": 120,
+    "types": [
+      "Dragon"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Crisis Dive",
+        "damage": 120,
+        "cost": [
+          "Grass",
+          "Psychic",
+          "Colorless"
+        ],
+        "effect": "Discard 2 random Energy from this Pok\u00e9mon."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "retreat": 3,
+    "effect": null
+  },
+  {
+    "id": "A2a-062",
+    "name": "Eevee",
+    "localId": "062",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/062",
+    "hp": 60,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Tail Whap",
+        "damage": 30,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-063",
+    "name": "Snorlax",
+    "localId": "063",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/063",
+    "hp": 140,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Collapse",
+        "damage": 100,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "This Pok\u00e9mon is now Asleep."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 4,
+    "effect": null
+  },
+  {
+    "id": "A2a-064",
+    "name": "Hoothoot",
+    "localId": "064",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/064",
+    "hp": 60,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Peck",
+        "damage": 20,
+        "cost": [
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-065",
+    "name": "Noctowl",
+    "localId": "065",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/065",
+    "hp": 100,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Silent Wing",
+        "damage": 50,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "Your opponent reveals their hand."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-066",
+    "name": "Starly",
+    "localId": "066",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/066",
+    "hp": 60,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Glide",
+        "damage": 20,
+        "cost": [
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-067",
+    "name": "Staravia",
+    "localId": "067",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/067",
+    "hp": 80,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Wing Attack",
+        "damage": 30,
+        "cost": [
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-068",
+    "name": "Staraptor",
+    "localId": "068",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/068",
+    "hp": 150,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage2",
+    "attacks": [
+      {
+        "name": "Brave Bird",
+        "damage": 130,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "This Pok\u00e9mon also does 20 damage to itself."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-069",
+    "name": "Shaymin",
+    "localId": "069",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/069",
+    "hp": 70,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Flap",
+        "damage": 30,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Sky Support",
+        "type": "Ability",
+        "effect": "As long as this Pok\u00e9mon is on your Bench, your Active Basic Pok\u00e9mon's Retreat Cost is 1 less."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-070",
+    "name": "Arceus",
+    "localId": "070",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/070",
+    "hp": 120,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Power Blast",
+        "damage": 100,
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "Discard a random Energy from this Pok\u00e9mon."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-071",
+    "name": "Arceus ex",
+    "localId": "071",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/071",
+    "hp": 140,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Ultimate Force",
+        "damage": "70+",
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "This attack does 20 more damage for each of your Benched Pok\u00e9mon."
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fabled Luster",
+        "type": "Ability",
+        "effect": "This Pok\u00e9mon can't be affected by any Special Conditions."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-072",
+    "name": "Irida",
+    "localId": "072",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/072",
+    "hp": null,
+    "types": null,
+    "category": "Trainer",
+    "stage": null,
+    "attacks": [],
+    "abilities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "retreat": null,
+    "effect": "Heal 40 damage from each of your Pok\u00e9mon that has any {W} Energy attached."
+  },
+  {
+    "id": "A2a-073",
+    "name": "Celestic Town Elder",
+    "localId": "073",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/073",
+    "hp": null,
+    "types": null,
+    "category": "Trainer",
+    "stage": null,
+    "attacks": [],
+    "abilities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "retreat": null,
+    "effect": "Put 1 random Basic Pok\u00e9mon from your discard pile into your hand."
+  },
+  {
+    "id": "A2a-074",
+    "name": "Barry",
+    "localId": "074",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/074",
+    "hp": null,
+    "types": null,
+    "category": "Trainer",
+    "stage": null,
+    "attacks": [],
+    "abilities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "retreat": null,
+    "effect": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less {C} Energy."
+  },
+  {
+    "id": "A2a-075",
+    "name": "Adaman",
+    "localId": "075",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/075",
+    "hp": null,
+    "types": null,
+    "category": "Trainer",
+    "stage": null,
+    "attacks": [],
+    "abilities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "retreat": null,
+    "effect": "During your opponent's next turn, all of your {M} Pok\u00e9mon take \u221220 damage from attacks from your opponent's Pok\u00e9mon."
+  },
+  {
+    "id": "A2a-076",
+    "name": "Houndoom",
+    "localId": "076",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/076",
+    "hp": 100,
+    "types": [
+      "Fire"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Corner",
+        "damage": 60,
+        "cost": [
+          "Fire",
+          "Colorless"
+        ],
+        "effect": "During your opponent's next turn, the Defending Pok\u00e9mon can't retreat."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Water",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-077",
+    "name": "Marill",
+    "localId": "077",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/077",
+    "hp": 60,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Water Gun",
+        "damage": 20,
+        "cost": [
+          "Water"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-078",
+    "name": "Unown",
+    "localId": "078",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/078",
+    "hp": 60,
+    "types": [
+      "Psychic"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Hidden Power",
+        "damage": 20,
+        "cost": [
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "CHECK",
+        "type": "Ability",
+        "effect": "Once during your turn, you may choose either player. Look at the top card of that player's deck."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Darkness",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-079",
+    "name": "Sudowoodo",
+    "localId": "079",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/079",
+    "hp": 80,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Fighting Headbutt",
+        "damage": 20,
+        "cost": [
+          "Fighting"
+        ],
+        "effect": "If your opponent's Active Pok\u00e9mon is a Pok\u00e9mon ex, this attack does 30 more damage."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-080",
+    "name": "Magnemite",
+    "localId": "080",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/080",
+    "hp": 60,
+    "types": [
+      "Metal"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Tackle",
+        "damage": 20,
+        "cost": [
+          "Metal"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-081",
+    "name": "Shaymin",
+    "localId": "081",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/081",
+    "hp": 70,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Flap",
+        "damage": 30,
+        "cost": [
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Sky Support",
+        "type": "Ability",
+        "effect": "As long as this Pok\u00e9mon is on your Bench, your Active Basic Pok\u00e9mon's Retreat Cost is 1 less."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Lightning",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-082",
+    "name": "Leafeon ex",
+    "localId": "082",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/082",
+    "hp": 140,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Solar Beam",
+        "damage": 70,
+        "cost": [
+          "Grass",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Forest Breath",
+        "type": "Ability",
+        "effect": "Once during your turn, if this Pok\u00e9mon is in the Active Spot, you may take a {G} Energy from your Energy Zone and attach it to 1 of your {G} Pok\u00e9mon."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-083",
+    "name": "Glaceon ex",
+    "localId": "083",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/083",
+    "hp": 140,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Freezing Wind",
+        "damage": 90,
+        "cost": [
+          "Water",
+          "Water",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Snowy Terrain",
+        "type": "Ability",
+        "effect": "During Pok\u00e9mon Checkup, if this Pok\u00e9mon is in the Active Spot, do 10 damage to your opponent's Active Pok\u00e9mon."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Metal",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-084",
+    "name": "Garchomp ex",
+    "localId": "084",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/084",
+    "hp": 170,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage2",
+    "attacks": [
+      {
+        "name": "Linear Attack",
+        "damage": null,
+        "cost": [
+          "Fighting"
+        ],
+        "effect": "This attack does 50 damage to 1 of your opponent's Pok\u00e9mon."
+      },
+      {
+        "name": "Dragon Claw",
+        "damage": 100,
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-085",
+    "name": "Probopass ex",
+    "localId": "085",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/085",
+    "hp": 160,
+    "types": [
+      "Metal"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Defensive Unit",
+        "damage": 90,
+        "cost": [
+          "Metal",
+          "Metal",
+          "Colorless"
+        ],
+        "effect": "During your opponent's next turn, this Pok\u00e9mon takes \u221220 damage from attacks."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 3,
+    "effect": null
+  },
+  {
+    "id": "A2a-086",
+    "name": "Arceus ex",
+    "localId": "086",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/086",
+    "hp": 140,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Ultimate Force",
+        "damage": "70+",
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "This attack does 20 more damage for each of your Benched Pok\u00e9mon."
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fabled Luster",
+        "type": "Ability",
+        "effect": "This Pok\u00e9mon can't be affected by any Special Conditions."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-087",
+    "name": "Irida",
+    "localId": "087",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/087",
+    "hp": null,
+    "types": null,
+    "category": "Trainer",
+    "stage": null,
+    "attacks": [],
+    "abilities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "retreat": null,
+    "effect": "Heal 40 damage from each of your Pok\u00e9mon that has any {W} Energy attached."
+  },
+  {
+    "id": "A2a-088",
+    "name": "Celestic Town Elder",
+    "localId": "088",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/088",
+    "hp": null,
+    "types": null,
+    "category": "Trainer",
+    "stage": null,
+    "attacks": [],
+    "abilities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "retreat": null,
+    "effect": "Put 1 random Basic Pok\u00e9mon from your discard pile into your hand."
+  },
+  {
+    "id": "A2a-089",
+    "name": "Barry",
+    "localId": "089",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/089",
+    "hp": null,
+    "types": null,
+    "category": "Trainer",
+    "stage": null,
+    "attacks": [],
+    "abilities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "retreat": null,
+    "effect": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less {C} Energy."
+  },
+  {
+    "id": "A2a-090",
+    "name": "Adaman",
+    "localId": "090",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/090",
+    "hp": null,
+    "types": null,
+    "category": "Trainer",
+    "stage": null,
+    "attacks": [],
+    "abilities": [],
+    "weaknesses": [],
+    "resistances": [],
+    "retreat": null,
+    "effect": "During your opponent's next turn, all of your {M} Pok\u00e9mon take \u221220 damage from attacks from your opponent's Pok\u00e9mon."
+  },
+  {
+    "id": "A2a-091",
+    "name": "Leafeon ex",
+    "localId": "091",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/091",
+    "hp": 140,
+    "types": [
+      "Grass"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Solar Beam",
+        "damage": 70,
+        "cost": [
+          "Grass",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Forest Breath",
+        "type": "Ability",
+        "effect": "Once during your turn, if this Pok\u00e9mon is in the Active Spot, you may take a {G} Energy from your Energy Zone and attach it to 1 of your {G} Pok\u00e9mon."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-092",
+    "name": "Glaceon ex",
+    "localId": "092",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/092",
+    "hp": 140,
+    "types": [
+      "Water"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Freezing Wind",
+        "damage": 90,
+        "cost": [
+          "Water",
+          "Water",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Snowy Terrain",
+        "type": "Ability",
+        "effect": "During Pok\u00e9mon Checkup, if this Pok\u00e9mon is in the Active Spot, do 10 damage to your opponent's Active Pok\u00e9mon."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Metal",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-093",
+    "name": "Garchomp ex",
+    "localId": "093",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/093",
+    "hp": 170,
+    "types": [
+      "Fighting"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage2",
+    "attacks": [
+      {
+        "name": "Linear Attack",
+        "damage": null,
+        "cost": [
+          "Fighting"
+        ],
+        "effect": "This attack does 50 damage to 1 of your opponent's Pok\u00e9mon."
+      },
+      {
+        "name": "Dragon Claw",
+        "damage": 100,
+        "cost": [
+          "Fighting",
+          "Fighting",
+          "Colorless"
+        ],
+        "effect": null
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Grass",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 1,
+    "effect": null
+  },
+  {
+    "id": "A2a-094",
+    "name": "Probopass ex",
+    "localId": "094",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/094",
+    "hp": 160,
+    "types": [
+      "Metal"
+    ],
+    "category": "Pokemon",
+    "stage": "Stage1",
+    "attacks": [
+      {
+        "name": "Defensive Unit",
+        "damage": 90,
+        "cost": [
+          "Metal",
+          "Metal",
+          "Colorless"
+        ],
+        "effect": "During your opponent's next turn, this Pok\u00e9mon takes \u221220 damage from attacks."
+      }
+    ],
+    "abilities": [],
+    "weaknesses": [
+      {
+        "type": "Fire",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 3,
+    "effect": null
+  },
+  {
+    "id": "A2a-095",
+    "name": "Arceus ex",
+    "localId": "095",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/095",
+    "hp": 140,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Ultimate Force",
+        "damage": "70+",
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "This attack does 20 more damage for each of your Benched Pok\u00e9mon."
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fabled Luster",
+        "type": "Ability",
+        "effect": "This Pok\u00e9mon can't be affected by any Special Conditions."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  },
+  {
+    "id": "A2a-096",
+    "name": "Arceus ex",
+    "localId": "096",
+    "image": "https://assets.tcgdex.net/en/tcgp/A2a/096",
+    "hp": 140,
+    "types": [
+      "Colorless"
+    ],
+    "category": "Pokemon",
+    "stage": "Basic",
+    "attacks": [
+      {
+        "name": "Ultimate Force",
+        "damage": "70+",
+        "cost": [
+          "Colorless",
+          "Colorless",
+          "Colorless"
+        ],
+        "effect": "This attack does 20 more damage for each of your Benched Pok\u00e9mon."
+      }
+    ],
+    "abilities": [
+      {
+        "name": "Fabled Luster",
+        "type": "Ability",
+        "effect": "This Pok\u00e9mon can't be affected by any Special Conditions."
+      }
+    ],
+    "weaknesses": [
+      {
+        "type": "Fighting",
+        "value": "+20"
+      }
+    ],
+    "resistances": [],
+    "retreat": 2,
+    "effect": null
+  }
+]
