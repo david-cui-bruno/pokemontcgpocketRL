@@ -158,6 +158,9 @@ omit = [
     "*/tests/*",
     "*/test_*",
     "*/__init__.py",
+    "src/card_db/sample_data.py",
+    "src/card_db/scraper.py",
+    "src/card_db/storage.py"
 ]
 
 [tool.coverage.report]

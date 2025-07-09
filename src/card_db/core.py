@@ -39,6 +39,8 @@ class EnergyType(Enum):
     DARKNESS = "darkness"
     METAL = "metal"
     COLORLESS = "colorless"
+    DRAGON = "dragon"
+    FAIRY = "fairy"
 
 
 class Stage(Enum):
@@ -57,6 +59,14 @@ class StatusCondition(Enum):
     CONFUSED = "confused"
     PARALYZED = "paralyzed"
     POISONED = "poisoned"
+
+
+class AbilityType(Enum):
+    """Types of Pokemon abilities."""
+    
+    STATIC = "static"          # Always active (passive)
+    ACTIVATED = "activated"    # Must be activated by player
+    TRIGGERED = "triggered"    # Activates on certain conditions
 
 
 class TargetType(Enum):
@@ -166,8 +176,8 @@ class Ability:
     ----------
     name : str
         The ability name
-    ability_type : str
-        Type of ability ("static", "activated", "triggered")
+    ability_type : AbilityType
+        Type of ability (static, activated, triggered)
     effects : List[Effect]
         The effects this ability provides
     cost : List[EnergyType], optional
@@ -183,14 +193,14 @@ class Ability:
     --------
     >>> static_ability = Ability(
     ...     name="Lightning Rod",
-    ...     ability_type="static", 
+    ...     ability_type=AbilityType.STATIC, 
     ...     effects=[Effect("resistance", amount=20, target=TargetType.SELF)],
     ...     description="This Pokemon takes 20 less damage from Water attacks"
     ... )
     """
     
     name: str
-    ability_type: str  # "static", "activated", "triggered"
+    ability_type: AbilityType  # Fixed: Use AbilityType enum instead of string
     effects: List[Effect]
     cost: List[EnergyType] = None
     usage_limit: Optional[str] = None
@@ -203,7 +213,7 @@ class Ability:
             object.__setattr__(self, 'cost', [])
 
 
-@dataclass(frozen=True)
+@dataclass
 class Card:
     """Base class for all cards."""
     id: str
@@ -212,7 +222,7 @@ class Card:
     rarity: Optional[str] = None
 
 
-@dataclass(frozen=True)
+@dataclass
 class PokemonCard:
     """Represents a Pokemon card."""
     # Required fields first
@@ -230,18 +240,27 @@ class PokemonCard:
     ability: Optional[Ability] = None
     retreat_cost: int = 0
     weakness: Optional[EnergyType] = None
-    resistance: Optional[EnergyType] = None
     is_ex: bool = False
+    attached_energies: List[EnergyType] = None
+    damage_counters: int = 0
+    energy_attached: int = 0
+    status_condition: Optional[StatusCondition] = None
     
     def __post_init__(self) -> None:
         """Initialize mutable defaults."""
         if self.attacks is None:
             object.__setattr__(self, 'attacks', [])
+        if self.attached_energies is None:
+            object.__setattr__(self, 'attached_energies', [])
 
 
-@dataclass(frozen=True)
+@dataclass
 class ItemCard:
-    """Represents an Item card."""
+    """Represents an Item card.
+    
+    Item cards can be played multiple times per turn and have immediate effects.
+    Examples: Potion, Switch, Energy Retrieval
+    """
     id: str
     name: str
     effects: List[Effect]
@@ -250,16 +269,49 @@ class ItemCard:
     description: Optional[str] = None
 
 
-@dataclass(frozen=True)
+@dataclass
+class ToolCard:
+    """Represents a Tool card.
+    
+    Tool cards attach to Pokemon and provide ongoing effects.
+    Only 1 Tool can be attached to each Pokemon at a time.
+    Examples: Exp. Share, Rocky Helmet, Choice Band
+    """
+    id: str
+    name: str
+    effects: List[Effect]
+    attached_to: Optional[PokemonCard] = None  # Which Pokemon this tool is attached to
+    set_code: Optional[str] = None
+    rarity: Optional[str] = None
+    description: Optional[str] = None
+
+
+@dataclass
 class SupporterCard:
-    """Represents a Supporter card."""
+    """Represents a Supporter card.
+    
+    Supporter cards can only be played once per turn and have powerful effects.
+    Examples: Professor's Research, Marnie, Boss's Orders
+    """
     id: str
     name: str
     effects: List[Effect]
     set_code: Optional[str] = None
     rarity: Optional[str] = None
     description: Optional[str] = None
+
+
+@dataclass
+class EnergyCard(Card):
+    """Represents an Energy card."""
+    energy_type: EnergyType = None  # Give it a default value
+    provides: List[EnergyType] = None  # For special energy cards
+    
+    def __post_init__(self):
+        if self.provides is None:
+            self.provides = []
 
 
 # Type aliases for convenience
-AnyCard = Union[PokemonCard, ItemCard, SupporterCard] 
+AnyCard = Union[PokemonCard, ItemCard, ToolCard, SupporterCard]
+TrainerCard = Union[ItemCard, ToolCard, SupporterCard]  # New alias for all trainer types 

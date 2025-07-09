@@ -48,16 +48,24 @@ class CardStorage:
         """Retrieve set data."""
         path = self.sets_dir / f"{set_id}.json"
         if path.exists():
-            with open(path) as f:
-                return json.load(f)
+            try:
+                with open(path) as f:
+                    return json.load(f)
+            except json.JSONDecodeError:
+                logger.warning(f"Invalid JSON in set file: {path}")
+                return None
         return None
     
     def get_card(self, card_id: str) -> Optional[Dict]:
         """Retrieve card data."""
         path = self.cards_dir / f"{card_id}.json"
         if path.exists():
-            with open(path) as f:
-                return json.load(f)
+            try:
+                with open(path) as f:
+                    return json.load(f)
+            except json.JSONDecodeError:
+                logger.warning(f"Invalid JSON in card file: {path}")
+                return None
         return None
     
     def list_sets(self) -> List[str]:

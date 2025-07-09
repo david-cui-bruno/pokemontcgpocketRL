@@ -1,0 +1,10008 @@
+{
+  "consolidation_stats": {
+    "total_pokemon_original": 1196,
+    "total_pokemon_consolidated": 905,
+    "total_trainer_cards": 112,
+    "duplicates_removed": 291
+  },
+  "pokemon_variants": {
+    "Heracross": [
+      {
+        "id": "A2a-001",
+        "hp": 100,
+        "attacks": [
+          "Single-Horn Throw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Oddish": [
+      {
+        "id": "A2-001",
+        "hp": 60,
+        "attacks": [
+          "Blot"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-011",
+        "hp": 60,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tropius": [
+      {
+        "id": "A3b-001",
+        "hp": 100,
+        "attacks": [
+          "Cutting Wind"
+        ],
+        "abilities": []
+      }
+    ],
+    "Petilil": [
+      {
+        "id": "A3a-001",
+        "hp": 60,
+        "attacks": [
+          "Seed Bomb"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-029",
+        "hp": 60,
+        "attacks": [
+          "Blot"
+        ],
+        "abilities": []
+      }
+    ],
+    "Burmy": [
+      {
+        "id": "A2a-002",
+        "hp": 50,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-015",
+        "hp": 60,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ivysaur": [
+      {
+        "id": "A1-002",
+        "hp": 90,
+        "attacks": [
+          "Razor Leaf"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-211",
+        "hp": 90,
+        "attacks": [
+          "Razor Leaf"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gloom": [
+      {
+        "id": "A2-002",
+        "hp": 80,
+        "attacks": [
+          "Razor Leaf"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lilligant": [
+      {
+        "id": "A3a-002",
+        "hp": 110,
+        "attacks": [
+          "Cut"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-030",
+        "hp": 100,
+        "attacks": [
+          "Leaf Supply"
+        ],
+        "abilities": []
+      }
+    ],
+    "Surskit": [
+      {
+        "id": "A3-003",
+        "hp": 50,
+        "attacks": [
+          "Quick Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mothim": [
+      {
+        "id": "A2a-003",
+        "hp": 90,
+        "attacks": [
+          "Gust"
+        ],
+        "abilities": []
+      }
+    ],
+    "Venusaur": [
+      {
+        "id": "A1-003",
+        "hp": 160,
+        "attacks": [
+          "Mega Drain"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bellossom": [
+      {
+        "id": "A2-003",
+        "hp": 130,
+        "attacks": [
+          "Leaf Step"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bounsweet": [
+      {
+        "id": "A3b-003",
+        "hp": 60,
+        "attacks": [
+          "Flop"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-018",
+        "hp": 50,
+        "attacks": [
+          "Stampede"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pinsir": [
+      {
+        "id": "A2b-004",
+        "hp": 90,
+        "attacks": [
+          "Guillotine Rush"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3b-093",
+        "hp": 90,
+        "attacks": [
+          "Guillotine Rush"
+        ],
+        "abilities": []
+      }
+    ],
+    "Masquerain": [
+      {
+        "id": "A3-004",
+        "hp": 90,
+        "attacks": [
+          "Bug Buzz"
+        ],
+        "abilities": []
+      }
+    ],
+    "Combee": [
+      {
+        "id": "A2a-004",
+        "hp": 50,
+        "attacks": [
+          "Bug Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tangela": [
+      {
+        "id": "A2-004",
+        "hp": 70,
+        "attacks": [
+          "Vine Whip"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-024",
+        "hp": 80,
+        "attacks": [
+          "Absorb"
+        ],
+        "abilities": []
+      }
+    ],
+    "Steenee": [
+      {
+        "id": "A3b-004",
+        "hp": 80,
+        "attacks": [
+          "Leaf Step"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-019",
+        "hp": 80,
+        "attacks": [
+          "Double Spin"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dartrix": [
+      {
+        "id": "A3a-004",
+        "hp": 80,
+        "attacks": [
+          "Skill Dive"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-011",
+        "hp": 80,
+        "attacks": [
+          "Razor Wing"
+        ],
+        "abilities": []
+      }
+    ],
+    "Snivy": [
+      {
+        "id": "A1a-004",
+        "hp": 70,
+        "attacks": [
+          "Vine Whip"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "P-A-027",
+        "hp": 60,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Maractus": [
+      {
+        "id": "A3-005",
+        "hp": 90,
+        "attacks": [
+          "Sting"
+        ],
+        "abilities": []
+      }
+    ],
+    "Vespiquen": [
+      {
+        "id": "A2a-005",
+        "hp": 100,
+        "attacks": [
+          "Reckless Charge"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-018",
+        "hp": 100,
+        "attacks": [
+          "Pierce"
+        ],
+        "abilities": []
+      }
+    ],
+    "Caterpie": [
+      {
+        "id": "A1-005",
+        "hp": 50,
+        "attacks": [
+          "Find a Friend"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tsareena": [
+      {
+        "id": "A3b-005",
+        "hp": 140,
+        "attacks": [
+          "Kick Down"
+        ],
+        "abilities": []
+      }
+    ],
+    "Decidueye": [
+      {
+        "id": "A3a-005",
+        "hp": 130,
+        "attacks": [
+          "Sniping Arrow"
+        ],
+        "abilities": []
+      }
+    ],
+    "Servine": [
+      {
+        "id": "A1a-005",
+        "hp": 80,
+        "attacks": [
+          "Vine Whip"
+        ],
+        "abilities": []
+      }
+    ],
+    "Floragato": [
+      {
+        "id": "A2b-006",
+        "hp": 90,
+        "attacks": [
+          "Slash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Karrablast": [
+      {
+        "id": "A3-006",
+        "hp": 60,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cherubi": [
+      {
+        "id": "A2a-006",
+        "hp": 50,
+        "attacks": [
+          "Leafage"
+        ],
+        "abilities": []
+      }
+    ],
+    "Metapod": [
+      {
+        "id": "A1-006",
+        "hp": 80,
+        "attacks": [
+          "Bug Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Yanma": [
+      {
+        "id": "A2-006",
+        "hp": 50,
+        "attacks": [
+          "Flap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Applin": [
+      {
+        "id": "A3b-006",
+        "hp": 40,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      }
+    ],
+    "Phantump": [
+      {
+        "id": "A3-007",
+        "hp": 60,
+        "attacks": [
+          "Hook"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3a-024",
+        "hp": 70,
+        "attacks": [
+          "Spooky Shot"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cherrim": [
+      {
+        "id": "A2a-007",
+        "hp": 80,
+        "attacks": [
+          "Worry Seed"
+        ],
+        "abilities": []
+      }
+    ],
+    "Butterfree": [
+      {
+        "id": "A1-007",
+        "hp": 120,
+        "attacks": [
+          "Gust"
+        ],
+        "abilities": [
+          "Powder Heal"
+        ]
+      },
+      {
+        "id": "P-A-013",
+        "hp": 120,
+        "attacks": [
+          "Gust"
+        ],
+        "abilities": [
+          "Powder Heal"
+        ]
+      }
+    ],
+    "Appletun": [
+      {
+        "id": "A3b-007",
+        "hp": 90,
+        "attacks": [
+          "Sweets Relay"
+        ],
+        "abilities": []
+      }
+    ],
+    "Morelull": [
+      {
+        "id": "A1a-007",
+        "hp": 60,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3a-026",
+        "hp": 50,
+        "attacks": [
+          "Hook"
+        ],
+        "abilities": []
+      }
+    ],
+    "Trevenant": [
+      {
+        "id": "A3-008",
+        "hp": 130,
+        "attacks": [
+          "Claw Slash"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3a-025",
+        "hp": 120,
+        "attacks": [
+          "Wrack Down"
+        ],
+        "abilities": []
+      }
+    ],
+    "Weedle": [
+      {
+        "id": "A1-008",
+        "hp": 50,
+        "attacks": [
+          "Sting"
+        ],
+        "abilities": []
+      }
+    ],
+    "Roselia": [
+      {
+        "id": "A2-008",
+        "hp": 70,
+        "attacks": [
+          "Sting"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kartana": [
+      {
+        "id": "A3a-008",
+        "hp": 60,
+        "attacks": [
+          "Thrash Metal"
+        ],
+        "abilities": []
+      }
+    ],
+    "Shiinotic": [
+      {
+        "id": "A1a-008",
+        "hp": 90,
+        "attacks": [
+          "Flickering Spores"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-017",
+        "hp": 100,
+        "attacks": [
+          "Flickering Light"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3a-027",
+        "hp": 90,
+        "attacks": [
+          "Gentle Slap"
+        ],
+        "abilities": [
+          "Illuminate"
+        ]
+      }
+    ],
+    "Rowlet": [
+      {
+        "id": "A3-009",
+        "hp": 60,
+        "attacks": [
+          "Leafage"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-010",
+        "hp": 60,
+        "attacks": [
+          "Skill Dive"
+        ],
+        "abilities": []
+      }
+    ],
+    "Carnivine": [
+      {
+        "id": "A2a-009",
+        "hp": 80,
+        "attacks": [
+          "Vine Whip"
+        ],
+        "abilities": [
+          "Power Link"
+        ]
+      }
+    ],
+    "Kakuna": [
+      {
+        "id": "A1-009",
+        "hp": 80,
+        "attacks": [
+          "Bug Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Roserade": [
+      {
+        "id": "A2-009",
+        "hp": 100,
+        "attacks": [
+          "Poisonous Whip"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dhelmise": [
+      {
+        "id": "A1a-009",
+        "hp": 100,
+        "attacks": [
+          "Energy Whip"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mewtwo": [
+      {
+        "id": "P-A-010",
+        "hp": 120,
+        "attacks": [
+          "Power Blast"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-128",
+        "hp": 120,
+        "attacks": [
+          "Power Blast"
+        ],
+        "abilities": []
+      }
+    ],
+    "Beedrill": [
+      {
+        "id": "A1-010",
+        "hp": 120,
+        "attacks": [
+          "Sharp Sting"
+        ],
+        "abilities": []
+      }
+    ],
+    "Torkoal": [
+      {
+        "id": "A3b-010",
+        "hp": 100,
+        "attacks": [
+          "Flamethrower"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mantine": [
+      {
+        "id": "A3a-010",
+        "hp": 90,
+        "attacks": [
+          "Surf"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ponyta": [
+      {
+        "id": "A1a-010",
+        "hp": 60,
+        "attacks": [
+          "Stomp"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-042",
+        "hp": 60,
+        "attacks": [
+          "Flare"
+        ],
+        "abilities": []
+      }
+    ],
+    "Magmar": [
+      {
+        "id": "A2b-011",
+        "hp": 70,
+        "attacks": [
+          "Flare"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-012",
+        "hp": 80,
+        "attacks": [
+          "Fire Blast"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-023",
+        "hp": 80,
+        "attacks": [
+          "Stoke"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-044",
+        "hp": 80,
+        "attacks": [
+          "Magma Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Chansey": [
+      {
+        "id": "P-A-011",
+        "hp": 120,
+        "attacks": [
+          "Gentle Slap"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-202",
+        "hp": 120,
+        "attacks": [
+          "Gentle Slap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Houndour": [
+      {
+        "id": "A2a-011",
+        "hp": 60,
+        "attacks": [
+          "Flare"
+        ],
+        "abilities": []
+      }
+    ],
+    "Grotle": [
+      {
+        "id": "A2-011",
+        "hp": 100,
+        "attacks": [
+          "Razor Leaf"
+        ],
+        "abilities": []
+      }
+    ],
+    "Litten": [
+      {
+        "id": "A3b-011",
+        "hp": 70,
+        "attacks": [
+          "Flare"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-030",
+        "hp": 60,
+        "attacks": [
+          "Heat Tackle"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-031",
+        "hp": 60,
+        "attacks": [
+          "Scratch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Carvanha": [
+      {
+        "id": "A3a-011",
+        "hp": 60,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rapidash": [
+      {
+        "id": "A1a-011",
+        "hp": 100,
+        "attacks": [
+          "Rising Lunge"
+        ],
+        "abilities": []
+      }
+    ],
+    "Magmortar": [
+      {
+        "id": "A2b-012",
+        "hp": 120,
+        "attacks": [
+          "Smoke Bomb"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-024",
+        "hp": 130,
+        "attacks": [
+          "Bursting Inferno"
+        ],
+        "abilities": []
+      }
+    ],
+    "Meowth": [
+      {
+        "id": "P-A-012",
+        "hp": 60,
+        "attacks": [
+          "Pay Day"
+        ],
+        "abilities": []
+      }
+    ],
+    "Torterra": [
+      {
+        "id": "A2-012",
+        "hp": 160,
+        "attacks": [
+          "Frenzy Plant"
+        ],
+        "abilities": []
+      }
+    ],
+    "Torracat": [
+      {
+        "id": "A3b-012",
+        "hp": 80,
+        "attacks": [
+          "Claw Slash"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-032",
+        "hp": 80,
+        "attacks": [
+          "Heat Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Sharpedo": [
+      {
+        "id": "A3a-012",
+        "hp": 90,
+        "attacks": [
+          "Crunch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Paldean Tauros": [
+      {
+        "id": "A2b-013",
+        "hp": 110,
+        "attacks": [
+          "Blaze Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Grubbin": [
+      {
+        "id": "A3-013",
+        "hp": 60,
+        "attacks": [
+          "Gnaw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Heatran": [
+      {
+        "id": "A2a-013",
+        "hp": 110,
+        "attacks": [
+          "Ragin' Mad Strike"
+        ],
+        "abilities": [
+          "Speed Link"
+        ]
+      }
+    ],
+    "Vileplume": [
+      {
+        "id": "A1-013",
+        "hp": 140,
+        "attacks": [
+          "Soothing Scent"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kricketot": [
+      {
+        "id": "A2-013",
+        "hp": 60,
+        "attacks": [
+          "Bug Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Incineroar": [
+      {
+        "id": "A3b-013",
+        "hp": 150,
+        "attacks": [
+          "Darkest Lariat"
+        ],
+        "abilities": []
+      }
+    ],
+    "Shinx": [
+      {
+        "id": "A3a-013",
+        "hp": 60,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Larvesta": [
+      {
+        "id": "A1a-013",
+        "hp": 80,
+        "attacks": [
+          "Combustion"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tentacool": [
+      {
+        "id": "A2b-014",
+        "hp": 70,
+        "attacks": [
+          "Rain Splash"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-062",
+        "hp": 60,
+        "attacks": [
+          "Gentle Slap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Fomantis": [
+      {
+        "id": "A3-014",
+        "hp": 60,
+        "attacks": [
+          "Leafage"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lapras ex": [
+      {
+        "id": "P-A-014",
+        "hp": 140,
+        "attacks": [
+          "Bubble Drain"
+        ],
+        "abilities": []
+      }
+    ],
+    "Paras": [
+      {
+        "id": "A1-014",
+        "hp": 70,
+        "attacks": [
+          "Scratch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kricketune": [
+      {
+        "id": "A2-014",
+        "hp": 90,
+        "attacks": [
+          "Entrancing Melody"
+        ],
+        "abilities": []
+      }
+    ],
+    "Salandit": [
+      {
+        "id": "A3b-014",
+        "hp": 60,
+        "attacks": [
+          "Ember"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-035",
+        "hp": 50,
+        "attacks": [
+          "Gnaw"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-049",
+        "hp": 60,
+        "attacks": [
+          "Scratch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Luxio": [
+      {
+        "id": "A3a-014",
+        "hp": 80,
+        "attacks": [
+          "Head Bolt"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-059",
+        "hp": 90,
+        "attacks": [
+          "Electric Claws"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tentacruel": [
+      {
+        "id": "A2b-015",
+        "hp": 100,
+        "attacks": [
+          "Wave Splash"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-063",
+        "hp": 110,
+        "attacks": [
+          "Poison Tentacles"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lurantis": [
+      {
+        "id": "A3-015",
+        "hp": 90,
+        "attacks": [
+          "Petal Blizzard"
+        ],
+        "abilities": []
+      }
+    ],
+    "Azumarill": [
+      {
+        "id": "A2a-015",
+        "hp": 100,
+        "attacks": [
+          "Waterfall"
+        ],
+        "abilities": []
+      }
+    ],
+    "Parasect": [
+      {
+        "id": "A1-015",
+        "hp": 120,
+        "attacks": [
+          "Slash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Salazzle": [
+      {
+        "id": "A3b-015",
+        "hp": 90,
+        "attacks": [
+          "Combustion"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-016",
+        "hp": 80,
+        "attacks": [
+          "Poison Claws"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-036",
+        "hp": 90,
+        "attacks": [
+          "Heated Poison"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-050",
+        "hp": 90,
+        "attacks": [
+          "Fire Claws"
+        ],
+        "abilities": []
+      }
+    ],
+    "Luxray": [
+      {
+        "id": "A3a-015",
+        "hp": 130,
+        "attacks": [
+          "Electric Ball"
+        ],
+        "abilities": [
+          "Intimidating Fang"
+        ]
+      },
+      {
+        "id": "A2-060",
+        "hp": 130,
+        "attacks": [
+          "Volt Bolt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Clefairy": [
+      {
+        "id": "P-A-016",
+        "hp": 60,
+        "attacks": [
+          "Slap"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3a-022",
+        "hp": 60,
+        "attacks": [
+          "Pound"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2a-029",
+        "hp": 60,
+        "attacks": [
+          "Smack"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-113",
+        "hp": 60,
+        "attacks": [
+          "Slap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Barboach": [
+      {
+        "id": "A2a-016",
+        "hp": 60,
+        "attacks": [
+          "Mud-Slap"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3b-038",
+        "hp": 70,
+        "attacks": [
+          "Mud Shot"
+        ],
+        "abilities": []
+      }
+    ],
+    "Venonat": [
+      {
+        "id": "A1-016",
+        "hp": 50,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Wormadam": [
+      {
+        "id": "A2-016",
+        "hp": 120,
+        "attacks": [
+          "Leaf Cutter"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-090",
+        "hp": 120,
+        "attacks": [
+          "Land Crush"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-115",
+        "hp": 110,
+        "attacks": [
+          "Iron Head"
+        ],
+        "abilities": []
+      }
+    ],
+    "Blitzle": [
+      {
+        "id": "A3a-016",
+        "hp": 60,
+        "attacks": [
+          "Rear Kick"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-105",
+        "hp": 60,
+        "attacks": [
+          "Zap Kick"
+        ],
+        "abilities": []
+      }
+    ],
+    "Floatzel": [
+      {
+        "id": "A2b-017",
+        "hp": 90,
+        "attacks": [
+          "Water Arrow"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-039",
+        "hp": 90,
+        "attacks": [
+          "Jet Screw"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "P-A-053",
+        "hp": 100,
+        "attacks": [
+          "Attack the Wound"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mankey": [
+      {
+        "id": "P-A-017",
+        "hp": 50,
+        "attacks": [
+          "Reckless Charge"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-041",
+        "hp": 50,
+        "attacks": [
+          "Focus Fist"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-141",
+        "hp": 60,
+        "attacks": [
+          "Low Kick"
+        ],
+        "abilities": []
+      }
+    ],
+    "Whiscash": [
+      {
+        "id": "A2a-017",
+        "hp": 120,
+        "attacks": [
+          "Thrash"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3b-039",
+        "hp": 130,
+        "attacks": [
+          "Earthquake"
+        ],
+        "abilities": []
+      }
+    ],
+    "Venomoth": [
+      {
+        "id": "A1-017",
+        "hp": 80,
+        "attacks": [
+          "Poison Powder"
+        ],
+        "abilities": []
+      }
+    ],
+    "Zebstrika": [
+      {
+        "id": "A3a-017",
+        "hp": 90,
+        "attacks": [
+          "Head Bolt"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-106",
+        "hp": 90,
+        "attacks": [
+          "Thunder Spear"
+        ],
+        "abilities": []
+      }
+    ],
+    "Magikarp": [
+      {
+        "id": "A1a-017",
+        "hp": 30,
+        "attacks": [
+          "Leap Out"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-077",
+        "hp": 30,
+        "attacks": [
+          "Splash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Snorunt": [
+      {
+        "id": "A2a-018",
+        "hp": 60,
+        "attacks": [
+          "Icicle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bellsprout": [
+      {
+        "id": "A1-018",
+        "hp": 60,
+        "attacks": [
+          "Vine Whip"
+        ],
+        "abilities": []
+      }
+    ],
+    "Vanillite": [
+      {
+        "id": "A3b-018",
+        "hp": 60,
+        "attacks": [
+          "Sweets Relay"
+        ],
+        "abilities": []
+      }
+    ],
+    "Emolga": [
+      {
+        "id": "A3a-018",
+        "hp": 70,
+        "attacks": [
+          "Static Shock"
+        ],
+        "abilities": []
+      }
+    ],
+    "Froslass": [
+      {
+        "id": "A2a-019",
+        "hp": 90,
+        "attacks": [
+          "Blizzard"
+        ],
+        "abilities": []
+      }
+    ],
+    "Weepinbell": [
+      {
+        "id": "A1-019",
+        "hp": 90,
+        "attacks": [
+          "Razor Leaf"
+        ],
+        "abilities": []
+      }
+    ],
+    "Vanillish": [
+      {
+        "id": "A3b-019",
+        "hp": 80,
+        "attacks": [
+          "Sweets Relay"
+        ],
+        "abilities": []
+      }
+    ],
+    "Haunter": [
+      {
+        "id": "P-A-020",
+        "hp": 70,
+        "attacks": [
+          "Surprise Attack"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2a-032",
+        "hp": 80,
+        "attacks": [
+          "Mumble"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-121",
+        "hp": 80,
+        "attacks": [
+          "Will-O-Wisp"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-221",
+        "hp": 80,
+        "attacks": [
+          "Will-O-Wisp"
+        ],
+        "abilities": []
+      }
+    ],
+    "Snover": [
+      {
+        "id": "A2a-020",
+        "hp": 70,
+        "attacks": [
+          "Corkscrew Punch"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-044",
+        "hp": 70,
+        "attacks": [
+          "Ice Shard"
+        ],
+        "abilities": []
+      }
+    ],
+    "Victreebel": [
+      {
+        "id": "A1-020",
+        "hp": 140,
+        "attacks": [
+          "Vine Whip"
+        ],
+        "abilities": [
+          "Fragrance Trap"
+        ]
+      }
+    ],
+    "Leafeon": [
+      {
+        "id": "A2-020",
+        "hp": 90,
+        "attacks": [
+          "Leafy Cyclone"
+        ],
+        "abilities": []
+      }
+    ],
+    "Vanilluxe": [
+      {
+        "id": "A3b-020",
+        "hp": 140,
+        "attacks": [
+          "Double Spin"
+        ],
+        "abilities": []
+      }
+    ],
+    "Xurkitree": [
+      {
+        "id": "A3a-020",
+        "hp": 100,
+        "attacks": [
+          "Electronica"
+        ],
+        "abilities": []
+      }
+    ],
+    "Finneon": [
+      {
+        "id": "A1a-020",
+        "hp": 60,
+        "attacks": [
+          "Water Gun"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-042",
+        "hp": 50,
+        "attacks": [
+          "Elegant Swim"
+        ],
+        "abilities": []
+      }
+    ],
+    "Wimpod": [
+      {
+        "id": "A3-021",
+        "hp": 70,
+        "attacks": [
+          "Gnaw"
+        ],
+        "abilities": [
+          "Wimp Out"
+        ]
+      }
+    ],
+    "Onix": [
+      {
+        "id": "P-A-021",
+        "hp": 110,
+        "attacks": [
+          "Land Crush"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-150",
+        "hp": 110,
+        "attacks": [
+          "Land Crush"
+        ],
+        "abilities": []
+      }
+    ],
+    "Abomasnow": [
+      {
+        "id": "A2a-021",
+        "hp": 120,
+        "attacks": [
+          "Mega Punch"
+        ],
+        "abilities": [
+          "Vigor Link"
+        ]
+      },
+      {
+        "id": "A2-045",
+        "hp": 140,
+        "attacks": [
+          "Frost Breath"
+        ],
+        "abilities": []
+      }
+    ],
+    "Exeggcute": [
+      {
+        "id": "A1-021",
+        "hp": 50,
+        "attacks": [
+          "Seed Bomb"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mow Rotom": [
+      {
+        "id": "A2-021",
+        "hp": 80,
+        "attacks": [
+          "Energy Cutoff"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alomomola": [
+      {
+        "id": "A3b-021",
+        "hp": 110,
+        "attacks": [
+          "Water Pulse"
+        ],
+        "abilities": []
+      }
+    ],
+    "Zeraora": [
+      {
+        "id": "A3a-021",
+        "hp": 90,
+        "attacks": [
+          "Lightning Claw"
+        ],
+        "abilities": [
+          "Thunderclap Flash"
+        ]
+      }
+    ],
+    "Lumineon": [
+      {
+        "id": "A1a-021",
+        "hp": 80,
+        "attacks": [
+          "Aqua Liner"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-043",
+        "hp": 90,
+        "attacks": [
+          "Waterfall"
+        ],
+        "abilities": []
+      }
+    ],
+    "Golisopod": [
+      {
+        "id": "A3-022",
+        "hp": 120,
+        "attacks": [
+          "First Impression"
+        ],
+        "abilities": []
+      }
+    ],
+    "Jigglypuff": [
+      {
+        "id": "P-A-022",
+        "hp": 50,
+        "attacks": [
+          "Sing"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-193",
+        "hp": 60,
+        "attacks": [
+          "Pound"
+        ],
+        "abilities": []
+      }
+    ],
+    "Exeggutor": [
+      {
+        "id": "A1-022",
+        "hp": 160,
+        "attacks": [
+          "Stomp"
+        ],
+        "abilities": []
+      }
+    ],
+    "Popplio": [
+      {
+        "id": "A3b-022",
+        "hp": 70,
+        "attacks": [
+          "Watering"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-045",
+        "hp": 60,
+        "attacks": [
+          "Sing"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-046",
+        "hp": 60,
+        "attacks": [
+          "Water Gun"
+        ],
+        "abilities": []
+      }
+    ],
+    "Chewtle": [
+      {
+        "id": "A1a-022",
+        "hp": 80,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Voltorb": [
+      {
+        "id": "A2b-023",
+        "hp": 70,
+        "attacks": [
+          "Lightning Ball"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-099",
+        "hp": 60,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Origin Forme Palkia": [
+      {
+        "id": "A2a-023",
+        "hp": 120,
+        "attacks": [
+          "Zone Smash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Brionne": [
+      {
+        "id": "A3b-023",
+        "hp": 90,
+        "attacks": [
+          "Water Gun"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-047",
+        "hp": 80,
+        "attacks": [
+          "Wave Splash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Clefable": [
+      {
+        "id": "A3a-023",
+        "hp": 100,
+        "attacks": [
+          "Moon Kick"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2a-030",
+        "hp": 100,
+        "attacks": [
+          "Moonblast"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-114",
+        "hp": 100,
+        "attacks": [
+          "Magical Shot"
+        ],
+        "abilities": []
+      }
+    ],
+    "Drednaw": [
+      {
+        "id": "A1a-023",
+        "hp": 130,
+        "attacks": [
+          "Crunch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Electrode": [
+      {
+        "id": "A2b-024",
+        "hp": 90,
+        "attacks": [
+          "Tumbling Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Magnemite": [
+      {
+        "id": "P-A-024",
+        "hp": 60,
+        "attacks": [
+          "Lightning Ball"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-051",
+        "hp": 60,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-097",
+        "hp": 60,
+        "attacks": [
+          "Lightning Ball"
+        ],
+        "abilities": []
+      }
+    ],
+    "Phione": [
+      {
+        "id": "A2a-024",
+        "hp": 60,
+        "attacks": [
+          "Water Pulse"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cramorant": [
+      {
+        "id": "A1a-024",
+        "hp": 80,
+        "attacks": [
+          "Dive"
+        ],
+        "abilities": []
+      }
+    ],
+    "Growlithe": [
+      {
+        "id": "A3-025",
+        "hp": 70,
+        "attacks": [
+          "Combustion"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-039",
+        "hp": 70,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3a-089",
+        "hp": 70,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pikachu": [
+      {
+        "id": "A2a-025",
+        "hp": 60,
+        "attacks": [
+          "Spark"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-025",
+        "hp": 60,
+        "attacks": [
+          "Circle Circuit"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-057",
+        "hp": 60,
+        "attacks": [
+          "Tail Smack"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-094",
+        "hp": 60,
+        "attacks": [
+          "Gnaw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Scyther": [
+      {
+        "id": "A1-025",
+        "hp": 70,
+        "attacks": [
+          "Sharp Scythe"
+        ],
+        "abilities": []
+      }
+    ],
+    "Slugma": [
+      {
+        "id": "A2-025",
+        "hp": 70,
+        "attacks": [
+          "Flare"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pawmi": [
+      {
+        "id": "A2b-026",
+        "hp": 60,
+        "attacks": [
+          "Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Arcanine": [
+      {
+        "id": "A3-026",
+        "hp": 130,
+        "attacks": [
+          "Fire Mane"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-040",
+        "hp": 150,
+        "attacks": [
+          "Heat Tackle"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3a-090",
+        "hp": 130,
+        "attacks": [
+          "Heat Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Magcargo": [
+      {
+        "id": "A2-026",
+        "hp": 120,
+        "attacks": [
+          "Searing Flame"
+        ],
+        "abilities": []
+      }
+    ],
+    "Joltik": [
+      {
+        "id": "A3b-026",
+        "hp": 40,
+        "attacks": [
+          "Jolt"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-028",
+        "hp": 40,
+        "attacks": [
+          "Bug Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Raichu": [
+      {
+        "id": "A1a-026",
+        "hp": 120,
+        "attacks": [
+          "Gigashock"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-095",
+        "hp": 100,
+        "attacks": [
+          "Thunderbolt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pawmo": [
+      {
+        "id": "A2b-027",
+        "hp": 90,
+        "attacks": [
+          "Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Electrike": [
+      {
+        "id": "A2a-027",
+        "hp": 60,
+        "attacks": [
+          "Zap Kick"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cottonee": [
+      {
+        "id": "A1-027",
+        "hp": 50,
+        "attacks": [
+          "Attach"
+        ],
+        "abilities": []
+      }
+    ],
+    "Galvantula": [
+      {
+        "id": "A3b-027",
+        "hp": 80,
+        "attacks": [
+          "Electric Shock"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-029",
+        "hp": 80,
+        "attacks": [
+          "Electroweb"
+        ],
+        "abilities": []
+      }
+    ],
+    "Electabuzz": [
+      {
+        "id": "A1a-027",
+        "hp": 70,
+        "attacks": [
+          "Thunder Spear"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-056",
+        "hp": 80,
+        "attacks": [
+          "Charge"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-101",
+        "hp": 70,
+        "attacks": [
+          "Thunder Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Fletchinder": [
+      {
+        "id": "A3-028",
+        "hp": 80,
+        "attacks": [
+          "Steady Firebreathing"
+        ],
+        "abilities": []
+      }
+    ],
+    "Manectric": [
+      {
+        "id": "A2a-028",
+        "hp": 90,
+        "attacks": [
+          "Flash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Whimsicott": [
+      {
+        "id": "A1-028",
+        "hp": 80,
+        "attacks": [
+          "Rolling Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Monferno": [
+      {
+        "id": "A2-028",
+        "hp": 80,
+        "attacks": [
+          "Fiery Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Meditite": [
+      {
+        "id": "A3a-028",
+        "hp": 60,
+        "attacks": [
+          "Trip Over"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2a-043",
+        "hp": 60,
+        "attacks": [
+          "Kick"
+        ],
+        "abilities": []
+      }
+    ],
+    "Abra": [
+      {
+        "id": "A2b-029",
+        "hp": 60,
+        "attacks": [
+          "Psyshot"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-115",
+        "hp": 60,
+        "attacks": [
+          "Teleport"
+        ],
+        "abilities": []
+      }
+    ],
+    "Talonflame": [
+      {
+        "id": "A3-029",
+        "hp": 120,
+        "attacks": [
+          "Fire Wing"
+        ],
+        "abilities": []
+      }
+    ],
+    "Blastoise": [
+      {
+        "id": "P-A-029",
+        "hp": 150,
+        "attacks": [
+          "Hydro Pump"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-055",
+        "hp": 150,
+        "attacks": [
+          "Hydro Pump"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-217",
+        "hp": 150,
+        "attacks": [
+          "Hydro Pump"
+        ],
+        "abilities": []
+      }
+    ],
+    "Woobat": [
+      {
+        "id": "A3b-029",
+        "hp": 60,
+        "attacks": [
+          "Gust"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-133",
+        "hp": 60,
+        "attacks": [
+          "Gnaw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Medicham": [
+      {
+        "id": "A3a-029",
+        "hp": 90,
+        "attacks": [
+          "High Jump Kick"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2a-044",
+        "hp": 100,
+        "attacks": [
+          "Kick Shot"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kadabra": [
+      {
+        "id": "A2b-030",
+        "hp": 80,
+        "attacks": [
+          "Psyshot"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-116",
+        "hp": 80,
+        "attacks": [
+          "Super Psy Bolt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Eevee": [
+      {
+        "id": "P-A-030",
+        "hp": 60,
+        "attacks": [
+          "Growl"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-061",
+        "hp": 60,
+        "attacks": [
+          "Continuous Steps"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2a-062",
+        "hp": 60,
+        "attacks": [
+          "Tail Whap"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-126",
+        "hp": 60,
+        "attacks": [
+          "Quick Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Heat Rotom": [
+      {
+        "id": "A2-030",
+        "hp": 80,
+        "attacks": [
+          "Heat Breath"
+        ],
+        "abilities": []
+      }
+    ],
+    "Swoobat": [
+      {
+        "id": "A3b-030",
+        "hp": 100,
+        "attacks": [
+          "Psyshot"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-134",
+        "hp": 90,
+        "attacks": [
+          "Heart Stamp"
+        ],
+        "abilities": []
+      }
+    ],
+    "Baltoy": [
+      {
+        "id": "A3a-030",
+        "hp": 60,
+        "attacks": [
+          "Spinning Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alakazam": [
+      {
+        "id": "A2b-031",
+        "hp": 130,
+        "attacks": [
+          "Psychic Suppression"
+        ],
+        "abilities": []
+      }
+    ],
+    "Skiddo": [
+      {
+        "id": "A1-031",
+        "hp": 70,
+        "attacks": [
+          "Surprise Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Swinub": [
+      {
+        "id": "A2-031",
+        "hp": 60,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Swirlix": [
+      {
+        "id": "A3b-031",
+        "hp": 60,
+        "attacks": [
+          "Sweets Relay"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-039",
+        "hp": 60,
+        "attacks": [
+          "Fairy Wind"
+        ],
+        "abilities": []
+      }
+    ],
+    "Claydol": [
+      {
+        "id": "A3a-031",
+        "hp": 100,
+        "attacks": [
+          "Power Beam"
+        ],
+        "abilities": [
+          "Heal Block"
+        ]
+      }
+    ],
+    "Mew": [
+      {
+        "id": "A1a-031",
+        "hp": 60,
+        "attacks": [
+          "Psy Report"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-283",
+        "hp": 60,
+        "attacks": [
+          "Psy Report"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mr. Mime": [
+      {
+        "id": "A2b-032",
+        "hp": 90,
+        "attacks": [
+          "Juggling"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-069",
+        "hp": 80,
+        "attacks": [
+          "Barrier Shove"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-126",
+        "hp": 80,
+        "attacks": [
+          "Barrier Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Charmander": [
+      {
+        "id": "P-A-032",
+        "hp": 60,
+        "attacks": [
+          "Ember"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gogoat": [
+      {
+        "id": "A1-032",
+        "hp": 120,
+        "attacks": [
+          "Razor Leaf"
+        ],
+        "abilities": []
+      }
+    ],
+    "Piloswine": [
+      {
+        "id": "A2-032",
+        "hp": 110,
+        "attacks": [
+          "Hammer In"
+        ],
+        "abilities": [
+          "Thick Fat"
+        ]
+      }
+    ],
+    "Slurpuff": [
+      {
+        "id": "A3b-032",
+        "hp": 120,
+        "attacks": [
+          "Sweets Relay"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-040",
+        "hp": 100,
+        "attacks": [
+          "Magical Shot"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rockruff": [
+      {
+        "id": "A3a-032",
+        "hp": 60,
+        "attacks": [
+          "Rock Throw"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-099",
+        "hp": 60,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Drifloon": [
+      {
+        "id": "A2b-033",
+        "hp": 60,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      }
+    ],
+    "Incineroar ex": [
+      {
+        "id": "A3-033",
+        "hp": 180,
+        "attacks": [
+          "Fire Fang",
+          "Scar-Charged Smash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gengar": [
+      {
+        "id": "A2a-033",
+        "hp": 140,
+        "attacks": [
+          "Hypnoblast"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-122",
+        "hp": 130,
+        "attacks": [
+          "Bother"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-222",
+        "hp": 130,
+        "attacks": [
+          "Bother"
+        ],
+        "abilities": []
+      }
+    ],
+    "Sigilyph": [
+      {
+        "id": "A1a-033",
+        "hp": 80,
+        "attacks": [
+          "Spike Draw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Drifblim": [
+      {
+        "id": "A2b-034",
+        "hp": 90,
+        "attacks": [
+          "Gust"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-074",
+        "hp": 100,
+        "attacks": [
+          "Balloon Strike"
+        ],
+        "abilities": []
+      }
+    ],
+    "Oricorio": [
+      {
+        "id": "A3-034",
+        "hp": 70,
+        "attacks": [
+          "Kindle"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-076",
+        "hp": 70,
+        "attacks": [
+          "Dazzle Dance"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-077",
+        "hp": 70,
+        "attacks": [
+          "Spiteful Dance"
+        ],
+        "abilities": []
+      }
+    ],
+    "Charmeleon": [
+      {
+        "id": "A1-034",
+        "hp": 90,
+        "attacks": [
+          "Fire Claws"
+        ],
+        "abilities": []
+      }
+    ],
+    "Regice": [
+      {
+        "id": "A2-034",
+        "hp": 110,
+        "attacks": [
+          "Frost Smash"
+        ],
+        "abilities": [
+          "Crystal Body"
+        ]
+      }
+    ],
+    "Passimian": [
+      {
+        "id": "A3a-034",
+        "hp": 100,
+        "attacks": [
+          "Let's Throw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Elgyem": [
+      {
+        "id": "A1a-034",
+        "hp": 60,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rotom": [
+      {
+        "id": "A2a-035",
+        "hp": 70,
+        "attacks": [
+          "Dash Attack"
+        ],
+        "abilities": [
+          "Speed Link"
+        ]
+      }
+    ],
+    "Charizard": [
+      {
+        "id": "A1-035",
+        "hp": 150,
+        "attacks": [
+          "Fire Spin"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mimikyu": [
+      {
+        "id": "A3b-035",
+        "hp": 70,
+        "attacks": [
+          "Try to Imitate"
+        ],
+        "abilities": []
+      }
+    ],
+    "Sandygast": [
+      {
+        "id": "A3a-035",
+        "hp": 80,
+        "attacks": [
+          "Sandy Shot"
+        ],
+        "abilities": []
+      }
+    ],
+    "Beheeyem": [
+      {
+        "id": "A1a-035",
+        "hp": 90,
+        "attacks": [
+          "Mind Jack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gimmighoul": [
+      {
+        "id": "A2b-036",
+        "hp": 60,
+        "attacks": [
+          "Chest-ouflage"
+        ],
+        "abilities": []
+      }
+    ],
+    "Sudowoodo": [
+      {
+        "id": "A2a-036",
+        "hp": 80,
+        "attacks": [
+          "Fighting Headbutt"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2a-079",
+        "hp": 80,
+        "attacks": [
+          "Fighting Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Prinplup": [
+      {
+        "id": "A2-036",
+        "hp": 90,
+        "attacks": [
+          "Surf"
+        ],
+        "abilities": []
+      }
+    ],
+    "Milcery": [
+      {
+        "id": "A3b-036",
+        "hp": 50,
+        "attacks": [
+          "Sweets Relay"
+        ],
+        "abilities": []
+      }
+    ],
+    "Palossand": [
+      {
+        "id": "A3a-036",
+        "hp": 130,
+        "attacks": [
+          "Sand Tomb"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-082",
+        "hp": 130,
+        "attacks": [
+          "Spooky Shot"
+        ],
+        "abilities": []
+      }
+    ],
+    "Flabébé": [
+      {
+        "id": "A1a-036",
+        "hp": 40,
+        "attacks": [
+          "Hypnotic Gaze"
+        ],
+        "abilities": []
+      }
+    ],
+    "Machop": [
+      {
+        "id": "A2b-037",
+        "hp": 60,
+        "attacks": [
+          "Low Kick"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-143",
+        "hp": 70,
+        "attacks": [
+          "Knuckle Punch"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-223",
+        "hp": 70,
+        "attacks": [
+          "Knuckle Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cresselia ex": [
+      {
+        "id": "P-A-037",
+        "hp": 140,
+        "attacks": [
+          "Psychic Flash"
+        ],
+        "abilities": [
+          "Lunar Plumage"
+        ]
+      }
+    ],
+    "Phanpy": [
+      {
+        "id": "A2a-037",
+        "hp": 60,
+        "attacks": [
+          "Rollout"
+        ],
+        "abilities": []
+      }
+    ],
+    "Vulpix": [
+      {
+        "id": "A1-037",
+        "hp": 50,
+        "attacks": [
+          "Tail Whip"
+        ],
+        "abilities": []
+      }
+    ],
+    "Empoleon": [
+      {
+        "id": "A2-037",
+        "hp": 150,
+        "attacks": [
+          "Aqua Jet"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alcremie": [
+      {
+        "id": "A3b-037",
+        "hp": 80,
+        "attacks": [
+          "Sweets Overload"
+        ],
+        "abilities": []
+      }
+    ],
+    "Floette": [
+      {
+        "id": "A1a-037",
+        "hp": 70,
+        "attacks": [
+          "Leaf Drain"
+        ],
+        "abilities": []
+      }
+    ],
+    "Machoke": [
+      {
+        "id": "A2b-038",
+        "hp": 100,
+        "attacks": [
+          "Pummel"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-144",
+        "hp": 100,
+        "attacks": [
+          "Strength"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-224",
+        "hp": 100,
+        "attacks": [
+          "Strength"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Sandshrew": [
+      {
+        "id": "A3-038",
+        "hp": 60,
+        "attacks": [
+          "Scratch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Misdreavus": [
+      {
+        "id": "P-A-038",
+        "hp": 60,
+        "attacks": [
+          "Confuse Ray"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-066",
+        "hp": 60,
+        "attacks": [
+          "Mumble"
+        ],
+        "abilities": []
+      }
+    ],
+    "Donphan": [
+      {
+        "id": "A2a-038",
+        "hp": 120,
+        "attacks": [
+          "Rolling Spin"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ninetales": [
+      {
+        "id": "A1-038",
+        "hp": 90,
+        "attacks": [
+          "Flamethrower"
+        ],
+        "abilities": []
+      }
+    ],
+    "Buizel": [
+      {
+        "id": "A2-038",
+        "hp": 60,
+        "attacks": [
+          "Water Gun"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Persian": [
+      {
+        "id": "A3a-038",
+        "hp": 100,
+        "attacks": [
+          "Fake Out"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-109",
+        "hp": 100,
+        "attacks": [
+          "Claw Slash"
+        ],
+        "abilities": [
+          "Fur Coat"
+        ]
+      }
+    ],
+    "Florges": [
+      {
+        "id": "A1a-038",
+        "hp": 120,
+        "attacks": [
+          "Bloomshine"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Sandslash": [
+      {
+        "id": "A3-039",
+        "hp": 100,
+        "attacks": [
+          "Spike Armor"
+        ],
+        "abilities": []
+      }
+    ],
+    "Larvitar": [
+      {
+        "id": "A2a-039",
+        "hp": 60,
+        "attacks": [
+          "Corkscrew Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Sandile": [
+      {
+        "id": "A3a-039",
+        "hp": 70,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Hitmonlee": [
+      {
+        "id": "A2b-040",
+        "hp": 80,
+        "attacks": [
+          "Kick"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-154",
+        "hp": 80,
+        "attacks": [
+          "Stretch Kick"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pupitar": [
+      {
+        "id": "A2a-040",
+        "hp": 80,
+        "attacks": [
+          "Speed Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Shellos": [
+      {
+        "id": "A2-040",
+        "hp": 70,
+        "attacks": [
+          "Mud-Slap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mienfoo": [
+      {
+        "id": "A3b-040",
+        "hp": 60,
+        "attacks": [
+          "Kick Shot"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-160",
+        "hp": 60,
+        "attacks": [
+          "Pound"
+        ],
+        "abilities": []
+      }
+    ],
+    "Krokorok": [
+      {
+        "id": "A3a-040",
+        "hp": 90,
+        "attacks": [
+          "Light Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Hitmonchan": [
+      {
+        "id": "A2b-041",
+        "hp": 90,
+        "attacks": [
+          "Magnum Punch"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-155",
+        "hp": 80,
+        "attacks": [
+          "Jab"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tyranitar": [
+      {
+        "id": "A2a-041",
+        "hp": 160,
+        "attacks": [
+          "Land Crush"
+        ],
+        "abilities": [
+          "Power Link"
+        ]
+      }
+    ],
+    "Mienshao": [
+      {
+        "id": "A3b-041",
+        "hp": 90,
+        "attacks": [
+          "Low Kick"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-161",
+        "hp": 80,
+        "attacks": [
+          "Spiral Kick"
+        ],
+        "abilities": []
+      }
+    ],
+    "Krookodile": [
+      {
+        "id": "A3a-041",
+        "hp": 140,
+        "attacks": [
+          "Poaching Fangs"
+        ],
+        "abilities": []
+      }
+    ],
+    "Shellder": [
+      {
+        "id": "A3-042",
+        "hp": 70,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-066",
+        "hp": 60,
+        "attacks": [
+          "Tongue Slap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Nosepass": [
+      {
+        "id": "A2a-042",
+        "hp": 80,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "P-A-045",
+        "hp": 60,
+        "attacks": [
+          "Iron Defense"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-086",
+        "hp": 70,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      }
+    ],
+    "Carbink": [
+      {
+        "id": "A3b-042",
+        "hp": 80,
+        "attacks": [
+          "Hard Roll"
+        ],
+        "abilities": []
+      }
+    ],
+    "Primeape": [
+      {
+        "id": "A1a-042",
+        "hp": 80,
+        "attacks": [
+          "Punch"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-142",
+        "hp": 90,
+        "attacks": [
+          "Fight Back"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cloyster": [
+      {
+        "id": "A3-043",
+        "hp": 110,
+        "attacks": [
+          "Guard Press"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-067",
+        "hp": 120,
+        "attacks": [
+          "Surf"
+        ],
+        "abilities": [
+          "Shell Armor"
+        ]
+      }
+    ],
+    "Geodude": [
+      {
+        "id": "A1a-043",
+        "hp": 70,
+        "attacks": [
+          "Light Punch"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-147",
+        "hp": 70,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Flamigo": [
+      {
+        "id": "A2b-044",
+        "hp": 80,
+        "attacks": [
+          "Double Kick"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lapras": [
+      {
+        "id": "A3-044",
+        "hp": 110,
+        "attacks": [
+          "Surf"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3b-094",
+        "hp": 100,
+        "attacks": [
+          "Hydro Pump"
+        ],
+        "abilities": []
+      }
+    ],
+    "Sableye": [
+      {
+        "id": "A3b-044",
+        "hp": 70,
+        "attacks": [
+          "Scratch"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-070",
+        "hp": 80,
+        "attacks": [
+          "Corner"
+        ],
+        "abilities": []
+      }
+    ],
+    "Poipole": [
+      {
+        "id": "A3a-044",
+        "hp": 60,
+        "attacks": [
+          "2-Step"
+        ],
+        "abilities": []
+      }
+    ],
+    "Graveler": [
+      {
+        "id": "A1a-044",
+        "hp": 100,
+        "attacks": [
+          "Lunge Out"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-148",
+        "hp": 100,
+        "attacks": [
+          "Rollout"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ekans": [
+      {
+        "id": "A2b-045",
+        "hp": 70,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "P-A-056",
+        "hp": 60,
+        "attacks": [
+          "Poison Sting"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3b-100",
+        "hp": 60,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-164",
+        "hp": 60,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Flareon": [
+      {
+        "id": "A1-045",
+        "hp": 120,
+        "attacks": [
+          "Flamethrower"
+        ],
+        "abilities": []
+      }
+    ],
+    "Purrloin": [
+      {
+        "id": "A3b-045",
+        "hp": 60,
+        "attacks": [
+          "Playful Knockdown"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-051",
+        "hp": 60,
+        "attacks": [
+          "Scratch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Naganadel": [
+      {
+        "id": "A3a-045",
+        "hp": 100,
+        "attacks": [
+          "Electro House"
+        ],
+        "abilities": []
+      }
+    ],
+    "Golem": [
+      {
+        "id": "A1a-045",
+        "hp": 160,
+        "attacks": [
+          "Guard Press"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-149",
+        "hp": 160,
+        "attacks": [
+          "Double-Edge"
+        ],
+        "abilities": []
+      }
+    ],
+    "Arbok": [
+      {
+        "id": "A2b-046",
+        "hp": 110,
+        "attacks": [
+          "Venomous Fang"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3b-101",
+        "hp": 100,
+        "attacks": [
+          "Corner"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-165",
+        "hp": 100,
+        "attacks": [
+          "Corner"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gabite": [
+      {
+        "id": "A2a-046",
+        "hp": 80,
+        "attacks": [
+          "Sharp Scythe"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-122",
+        "hp": 90,
+        "attacks": [
+          "Slash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Moltres": [
+      {
+        "id": "A1-046",
+        "hp": 100,
+        "attacks": [
+          "Sky Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Glaceon": [
+      {
+        "id": "A2-046",
+        "hp": 90,
+        "attacks": [
+          "Ice Beam"
+        ],
+        "abilities": []
+      }
+    ],
+    "Liepard": [
+      {
+        "id": "A3b-046",
+        "hp": 90,
+        "attacks": [
+          "Slashing Claw"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-052",
+        "hp": 90,
+        "attacks": [
+          "Slash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Diglett": [
+      {
+        "id": "A3a-046",
+        "hp": 60,
+        "attacks": [
+          "Happened to Headbutt"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-117",
+        "hp": 50,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Paldean Wooper": [
+      {
+        "id": "A2b-047",
+        "hp": 50,
+        "attacks": [
+          "Poison Jab"
+        ],
+        "abilities": []
+      }
+    ],
+    "Staraptor": [
+      {
+        "id": "P-A-047",
+        "hp": 140,
+        "attacks": [
+          "Wing Attack"
+        ],
+        "abilities": [
+          "Defensive Whirlwind"
+        ]
+      },
+      {
+        "id": "A2a-068",
+        "hp": 150,
+        "attacks": [
+          "Brave Bird"
+        ],
+        "abilities": []
+      }
+    ],
+    "Wash Rotom": [
+      {
+        "id": "A2-047",
+        "hp": 80,
+        "attacks": [
+          "Wave Splash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mawile": [
+      {
+        "id": "A3b-047",
+        "hp": 70,
+        "attacks": [
+          "Powerful Vise"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2a-056",
+        "hp": 70,
+        "attacks": [
+          "Iron Beam Breaker"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-178",
+        "hp": 70,
+        "attacks": [
+          "Crunch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Paldean Clodsire ex": [
+      {
+        "id": "A2b-048",
+        "hp": 160,
+        "attacks": [
+          "Venoshock"
+        ],
+        "abilities": []
+      }
+    ],
+    "Primarina": [
+      {
+        "id": "A3-048",
+        "hp": 140,
+        "attacks": [
+          "Surf"
+        ],
+        "abilities": [
+          "Melodious Healing"
+        ]
+      }
+    ],
+    "Zubat": [
+      {
+        "id": "A2a-048",
+        "hp": 50,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-172",
+        "hp": 50,
+        "attacks": [
+          "Glide"
+        ],
+        "abilities": []
+      }
+    ],
+    "Heatmor": [
+      {
+        "id": "A1-048",
+        "hp": 80,
+        "attacks": [
+          "Combustion"
+        ],
+        "abilities": []
+      }
+    ],
+    "Frost Rotom": [
+      {
+        "id": "A2-048",
+        "hp": 80,
+        "attacks": [
+          "Blizzard"
+        ],
+        "abilities": []
+      }
+    ],
+    "Togedemaru": [
+      {
+        "id": "A3b-048",
+        "hp": 80,
+        "attacks": [
+          "Bristling Spikes"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-067",
+        "hp": 70,
+        "attacks": [
+          "Electrosmash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Aron": [
+      {
+        "id": "A3a-048",
+        "hp": 70,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Stonjourner": [
+      {
+        "id": "A1a-048",
+        "hp": 120,
+        "attacks": [
+          "Mega Kick"
+        ],
+        "abilities": []
+      }
+    ],
+    "Spiritomb": [
+      {
+        "id": "A2b-049",
+        "hp": 80,
+        "attacks": [
+          "Confuse Ray"
+        ],
+        "abilities": []
+      }
+    ],
+    "Golbat": [
+      {
+        "id": "A2a-049",
+        "hp": 80,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Meltan": [
+      {
+        "id": "A3b-049",
+        "hp": 60,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-181",
+        "hp": 70,
+        "attacks": [
+          "Amass"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lairon": [
+      {
+        "id": "A3a-049",
+        "hp": 100,
+        "attacks": [
+          "Lunge Out"
+        ],
+        "abilities": []
+      }
+    ],
+    "Koffing": [
+      {
+        "id": "A1a-049",
+        "hp": 70,
+        "attacks": [
+          "Division"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-176",
+        "hp": 70,
+        "attacks": [
+          "Suffocating Gas"
+        ],
+        "abilities": []
+      }
+    ],
+    "Shroodle": [
+      {
+        "id": "A2b-050",
+        "hp": 60,
+        "attacks": [
+          "Gnaw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Wishiwashi": [
+      {
+        "id": "A3-050",
+        "hp": 30,
+        "attacks": [
+          "Call for Family"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mewtwo ex": [
+      {
+        "id": "P-A-050",
+        "hp": 150,
+        "attacks": [
+          "Psychic Sphere",
+          "Psydrive"
+        ],
+        "abilities": []
+      }
+    ],
+    "Crobat": [
+      {
+        "id": "A2a-050",
+        "hp": 110,
+        "attacks": [
+          "Darkness Fang"
+        ],
+        "abilities": [
+          "Cunning Link"
+        ]
+      }
+    ],
+    "Melmetal": [
+      {
+        "id": "A3b-050",
+        "hp": 140,
+        "attacks": [
+          "Mega Punch"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-182",
+        "hp": 130,
+        "attacks": [
+          "Heavy Impact"
+        ],
+        "abilities": [
+          "Hard Coat"
+        ]
+      }
+    ],
+    "Aggron": [
+      {
+        "id": "A3a-050",
+        "hp": 160,
+        "attacks": [
+          "Giga Impact"
+        ],
+        "abilities": []
+      }
+    ],
+    "Weezing": [
+      {
+        "id": "A1a-050",
+        "hp": 110,
+        "attacks": [
+          "Smokescreen"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cyclizar": [
+      {
+        "id": "P-A-051",
+        "hp": 80,
+        "attacks": [
+          "Overacceleration"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2b-068",
+        "hp": 80,
+        "attacks": [
+          "Overacceleration"
+        ],
+        "abilities": []
+      }
+    ],
+    "Croagunk": [
+      {
+        "id": "A2a-051",
+        "hp": 60,
+        "attacks": [
+          "Beat"
+        ],
+        "abilities": []
+      }
+    ],
+    "Sizzlipede": [
+      {
+        "id": "A1-051",
+        "hp": 60,
+        "attacks": [
+          "Gnaw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dratini": [
+      {
+        "id": "A3b-051",
+        "hp": 60,
+        "attacks": [
+          "Beat"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-183",
+        "hp": 70,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ferroseed": [
+      {
+        "id": "A3a-051",
+        "hp": 60,
+        "attacks": [
+          "Spike Sting"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tinkatink": [
+      {
+        "id": "A2b-052",
+        "hp": 60,
+        "attacks": [
+          "Corkscrew Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dewpider": [
+      {
+        "id": "A3-052",
+        "hp": 60,
+        "attacks": [
+          "Hook"
+        ],
+        "abilities": []
+      }
+    ],
+    "Toxicroak": [
+      {
+        "id": "A2a-052",
+        "hp": 100,
+        "attacks": [
+          "Toxic"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-108",
+        "hp": 90,
+        "attacks": [
+          "Group Beatdown"
+        ],
+        "abilities": []
+      }
+    ],
+    "Centiskorch": [
+      {
+        "id": "A1-052",
+        "hp": 130,
+        "attacks": [
+          "Fire Blast"
+        ],
+        "abilities": []
+      }
+    ],
+    "Magneton": [
+      {
+        "id": "A2-052",
+        "hp": 80,
+        "attacks": [
+          "Lightning Ball"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2a-054",
+        "hp": 90,
+        "attacks": [
+          "Rolling Attack"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-098",
+        "hp": 80,
+        "attacks": [
+          "Spinning Attack"
+        ],
+        "abilities": [
+          "Volt Charge"
+        ]
+      }
+    ],
+    "Dragonair": [
+      {
+        "id": "A3b-052",
+        "hp": 90,
+        "attacks": [
+          "Waterfall"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-184",
+        "hp": 100,
+        "attacks": [
+          "Tail Smack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ferrothorn": [
+      {
+        "id": "A3a-052",
+        "hp": 110,
+        "attacks": [
+          "Spinning Attack"
+        ],
+        "abilities": [
+          "Steel Spikes"
+        ]
+      }
+    ],
+    "Tinkatuff": [
+      {
+        "id": "A2b-053",
+        "hp": 90,
+        "attacks": [
+          "Tenacious Hammer"
+        ],
+        "abilities": []
+      }
+    ],
+    "Araquanid": [
+      {
+        "id": "A3-053",
+        "hp": 110,
+        "attacks": [
+          "Dangerous Claws"
+        ],
+        "abilities": []
+      }
+    ],
+    "Magnezone": [
+      {
+        "id": "A2-053",
+        "hp": 140,
+        "attacks": [
+          "Thunder Blast"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2a-055",
+        "hp": 140,
+        "attacks": [
+          "Power Beam"
+        ],
+        "abilities": [
+          "Resilience Link"
+        ]
+      }
+    ],
+    "Stakataka": [
+      {
+        "id": "A3a-053",
+        "hp": 110,
+        "attacks": [
+          "Brass Rock"
+        ],
+        "abilities": []
+      }
+    ],
+    "Venipede": [
+      {
+        "id": "A1a-053",
+        "hp": 60,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      }
+    ],
+    "Wartortle": [
+      {
+        "id": "A1-054",
+        "hp": 80,
+        "attacks": [
+          "Wave Splash"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-216",
+        "hp": 80,
+        "attacks": [
+          "Wave Splash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Drampa": [
+      {
+        "id": "A3b-054",
+        "hp": 100,
+        "attacks": [
+          "Dragon Breath"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lillipup": [
+      {
+        "id": "A3a-054",
+        "hp": 60,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Whirlipede": [
+      {
+        "id": "A1a-054",
+        "hp": 90,
+        "attacks": [
+          "Poison Sting"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bruxish": [
+      {
+        "id": "A3-055",
+        "hp": 80,
+        "attacks": [
+          "Wave Splash"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-091",
+        "hp": 90,
+        "attacks": [
+          "Second Strike"
+        ],
+        "abilities": []
+      }
+    ],
+    "Herdier": [
+      {
+        "id": "A3a-055",
+        "hp": 80,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Scolipede": [
+      {
+        "id": "A1a-055",
+        "hp": 140,
+        "attacks": [
+          "Venoshock"
+        ],
+        "abilities": []
+      }
+    ],
+    "Stoutland": [
+      {
+        "id": "A3a-056",
+        "hp": 140,
+        "attacks": [
+          "Sharp Fang"
+        ],
+        "abilities": [
+          "Guard Dog Visage"
+        ]
+      }
+    ],
+    "Druddigon": [
+      {
+        "id": "A1a-056",
+        "hp": 100,
+        "attacks": [
+          "Dragon Claw"
+        ],
+        "abilities": [
+          "Rough Skin"
+        ]
+      }
+    ],
+    "Psyduck": [
+      {
+        "id": "A1-057",
+        "hp": 60,
+        "attacks": [
+          "Headache"
+        ],
+        "abilities": []
+      }
+    ],
+    "Stufful": [
+      {
+        "id": "A3a-057",
+        "hp": 70,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-138",
+        "hp": 70,
+        "attacks": [
+          "Hammer In"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pidgey": [
+      {
+        "id": "A1a-057",
+        "hp": 50,
+        "attacks": [
+          "Flap"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3a-095",
+        "hp": 60,
+        "attacks": [
+          "Gust"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-186",
+        "hp": 60,
+        "attacks": [
+          "Gust"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rattata": [
+      {
+        "id": "A2b-058",
+        "hp": 50,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-189",
+        "hp": 40,
+        "attacks": [
+          "Gnaw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pachirisu": [
+      {
+        "id": "P-A-058",
+        "hp": 70,
+        "attacks": [
+          "Plasma"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bronzor": [
+      {
+        "id": "A2a-058",
+        "hp": 60,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-116",
+        "hp": 60,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Golduck": [
+      {
+        "id": "A1-058",
+        "hp": 90,
+        "attacks": [
+          "Aqua Edge"
+        ],
+        "abilities": []
+      }
+    ],
+    "Aipom": [
+      {
+        "id": "A3b-058",
+        "hp": 60,
+        "attacks": [
+          "Double Hit"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-130",
+        "hp": 60,
+        "attacks": [
+          "Tail Jab"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bewear": [
+      {
+        "id": "A3a-058",
+        "hp": 120,
+        "attacks": [
+          "Superpowered Hug"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pidgeotto": [
+      {
+        "id": "A1a-058",
+        "hp": 90,
+        "attacks": [
+          "Wing Attack"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3a-096",
+        "hp": 80,
+        "attacks": [
+          "Gust"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-187",
+        "hp": 80,
+        "attacks": [
+          "Gust"
+        ],
+        "abilities": []
+      }
+    ],
+    "Raticate": [
+      {
+        "id": "A2b-059",
+        "hp": 90,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-190",
+        "hp": 80,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Geodude": [
+      {
+        "id": "A3-059",
+        "hp": 70,
+        "attacks": [
+          "Knuckle Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bronzong": [
+      {
+        "id": "A2a-059",
+        "hp": 120,
+        "attacks": [
+          "Psychic"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-117",
+        "hp": 120,
+        "attacks": [
+          "Guard Press"
+        ],
+        "abilities": []
+      }
+    ],
+    "Poliwag": [
+      {
+        "id": "A1-059",
+        "hp": 60,
+        "attacks": [
+          "Razor Fin"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ambipom": [
+      {
+        "id": "A3b-059",
+        "hp": 90,
+        "attacks": [
+          "Corkscrew Punch"
+        ],
+        "abilities": [
+          "Catching Tail"
+        ]
+      },
+      {
+        "id": "A2-131",
+        "hp": 90,
+        "attacks": [
+          "Double Hit"
+        ],
+        "abilities": []
+      }
+    ],
+    "Oranguru": [
+      {
+        "id": "A3a-059",
+        "hp": 100,
+        "attacks": [
+          "Hammer In"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-140",
+        "hp": 100,
+        "attacks": [
+          "Primate's Trap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Graveler": [
+      {
+        "id": "A3-060",
+        "hp": 110,
+        "attacks": [
+          "Heavy Impact"
+        ],
+        "abilities": []
+      }
+    ],
+    "Origin Forme Dialga": [
+      {
+        "id": "A2a-060",
+        "hp": 120,
+        "attacks": [
+          "Time Mash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Poliwhirl": [
+      {
+        "id": "A1-060",
+        "hp": 90,
+        "attacks": [
+          "Knuckle Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Chatot": [
+      {
+        "id": "A3b-060",
+        "hp": 70,
+        "attacks": [
+          "Tone-Deaf"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1a-062",
+        "hp": 60,
+        "attacks": [
+          "Mimic"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-141",
+        "hp": 70,
+        "attacks": [
+          "Fury Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Type: Null": [
+      {
+        "id": "A3a-060",
+        "hp": 80,
+        "attacks": [
+          "Quick Blow"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tauros": [
+      {
+        "id": "A1a-060",
+        "hp": 100,
+        "attacks": [
+          "Fighting Tackle"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-128",
+        "hp": 100,
+        "attacks": [
+          "Rising Lunge"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-204",
+        "hp": 100,
+        "attacks": [
+          "Horn Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Golem": [
+      {
+        "id": "A3-061",
+        "hp": 160,
+        "attacks": [
+          "Super Zap Cannon"
+        ],
+        "abilities": []
+      }
+    ],
+    "Giratina": [
+      {
+        "id": "A2a-061",
+        "hp": 120,
+        "attacks": [
+          "Crisis Dive"
+        ],
+        "abilities": []
+      }
+    ],
+    "Poliwrath": [
+      {
+        "id": "A1-061",
+        "hp": 150,
+        "attacks": [
+          "Mega Punch"
+        ],
+        "abilities": [
+          "Counterattack"
+        ]
+      }
+    ],
+    "Audino": [
+      {
+        "id": "A3b-061",
+        "hp": 90,
+        "attacks": [
+          "Do the Wave"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lickitung": [
+      {
+        "id": "A2b-062",
+        "hp": 80,
+        "attacks": [
+          "Rollout"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-124",
+        "hp": 80,
+        "attacks": [
+          "Tongue Slap"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-201",
+        "hp": 90,
+        "attacks": [
+          "Continuous Lick"
+        ],
+        "abilities": []
+      }
+    ],
+    "Helioptile": [
+      {
+        "id": "A3-062",
+        "hp": 60,
+        "attacks": [
+          "Smash Kick"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-110",
+        "hp": 60,
+        "attacks": [
+          "Tail Whap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Minccino": [
+      {
+        "id": "A3b-062",
+        "hp": 70,
+        "attacks": [
+          "Pound"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-212",
+        "hp": 60,
+        "attacks": [
+          "Tail Smack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lickilicky": [
+      {
+        "id": "A2b-063",
+        "hp": 130,
+        "attacks": [
+          "Rollout"
+        ],
+        "abilities": []
+      }
+    ],
+    "Heliolisk": [
+      {
+        "id": "A3-063",
+        "hp": 90,
+        "attacks": [
+          "Rear Kick"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-111",
+        "hp": 90,
+        "attacks": [
+          "Quick Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rayquaza": [
+      {
+        "id": "P-A-063",
+        "hp": 100,
+        "attacks": [
+          "Spiral Rush"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cinccino": [
+      {
+        "id": "A3b-063",
+        "hp": 90,
+        "attacks": [
+          "Slap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Charjabug": [
+      {
+        "id": "A3-064",
+        "hp": 90,
+        "attacks": [
+          "Vise Grip"
+        ],
+        "abilities": []
+      }
+    ],
+    "Hoothoot": [
+      {
+        "id": "A2a-064",
+        "hp": 60,
+        "attacks": [
+          "Peck"
+        ],
+        "abilities": []
+      }
+    ],
+    "Seel": [
+      {
+        "id": "A1-064",
+        "hp": 80,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Togetic": [
+      {
+        "id": "A2-064",
+        "hp": 80,
+        "attacks": [
+          "Fairy Wind"
+        ],
+        "abilities": []
+      }
+    ],
+    "Skwovet": [
+      {
+        "id": "A3b-064",
+        "hp": 70,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Vikavolt": [
+      {
+        "id": "A3-065",
+        "hp": 140,
+        "attacks": [
+          "Disconnect"
+        ],
+        "abilities": []
+      }
+    ],
+    "Noctowl": [
+      {
+        "id": "A2a-065",
+        "hp": 100,
+        "attacks": [
+          "Silent Wing"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dewgong": [
+      {
+        "id": "A1-065",
+        "hp": 120,
+        "attacks": [
+          "Surf"
+        ],
+        "abilities": []
+      }
+    ],
+    "Togekiss": [
+      {
+        "id": "A2-065",
+        "hp": 140,
+        "attacks": [
+          "Overdrive Smash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Greedent": [
+      {
+        "id": "A3b-065",
+        "hp": 120,
+        "attacks": [
+          "Enhanced Fang"
+        ],
+        "abilities": []
+      }
+    ],
+    "Buneary": [
+      {
+        "id": "A2b-066",
+        "hp": 50,
+        "attacks": [
+          "Pound"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-137",
+        "hp": 60,
+        "attacks": [
+          "Splash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Starly": [
+      {
+        "id": "A2a-066",
+        "hp": 60,
+        "attacks": [
+          "Glide"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-132",
+        "hp": 50,
+        "attacks": [
+          "Pluck"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lopunny": [
+      {
+        "id": "A2b-067",
+        "hp": 100,
+        "attacks": [
+          "Hopping Shot"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-138",
+        "hp": 90,
+        "attacks": [
+          "Jump Kick"
+        ],
+        "abilities": []
+      }
+    ],
+    "Staravia": [
+      {
+        "id": "A2a-067",
+        "hp": 80,
+        "attacks": [
+          "Wing Attack"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A2-133",
+        "hp": 80,
+        "attacks": [
+          "Wing Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Krabby": [
+      {
+        "id": "A1-068",
+        "hp": 70,
+        "attacks": [
+          "Vise Grip"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kingler": [
+      {
+        "id": "A1-069",
+        "hp": 120,
+        "attacks": [
+          "KO Crab"
+        ],
+        "abilities": []
+      }
+    ],
+    "Arceus": [
+      {
+        "id": "A2a-070",
+        "hp": 120,
+        "attacks": [
+          "Power Blast"
+        ],
+        "abilities": []
+      }
+    ],
+    "Horsea": [
+      {
+        "id": "A1-070",
+        "hp": 60,
+        "attacks": [
+          "Water Gun"
+        ],
+        "abilities": []
+      }
+    ],
+    "Duskull": [
+      {
+        "id": "A2-070",
+        "hp": 60,
+        "attacks": [
+          "Will-O-Wisp"
+        ],
+        "abilities": []
+      }
+    ],
+    "Spoink": [
+      {
+        "id": "A3-071",
+        "hp": 60,
+        "attacks": [
+          "Psycharge"
+        ],
+        "abilities": []
+      }
+    ],
+    "Seadra": [
+      {
+        "id": "A1-071",
+        "hp": 70,
+        "attacks": [
+          "Water Arrow"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dusclops": [
+      {
+        "id": "A2-071",
+        "hp": 90,
+        "attacks": [
+          "Psypunch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Grumpig": [
+      {
+        "id": "A3-072",
+        "hp": 110,
+        "attacks": [
+          "Zen Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Grimer": [
+      {
+        "id": "P-A-072",
+        "hp": 70,
+        "attacks": [
+          "Poison Gas"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-110",
+        "hp": 70,
+        "attacks": [
+          "Sludge Toss"
+        ],
+        "abilities": []
+      }
+    ],
+    "Goldeen": [
+      {
+        "id": "A1-072",
+        "hp": 60,
+        "attacks": [
+          "Flop"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dusknoir": [
+      {
+        "id": "A2-072",
+        "hp": 130,
+        "attacks": [
+          "Devour Soul"
+        ],
+        "abilities": [
+          "Shadow Void"
+        ]
+      }
+    ],
+    "Lunatone": [
+      {
+        "id": "A3-073",
+        "hp": 90,
+        "attacks": [
+          "Moon Press"
+        ],
+        "abilities": []
+      }
+    ],
+    "Toucannon": [
+      {
+        "id": "P-A-073",
+        "hp": 140,
+        "attacks": [
+          "Beak Blast"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-135",
+        "hp": 140,
+        "attacks": [
+          "Drill Peck"
+        ],
+        "abilities": []
+      }
+    ],
+    "Seaking": [
+      {
+        "id": "A1-073",
+        "hp": 100,
+        "attacks": [
+          "Horn Hazard"
+        ],
+        "abilities": []
+      }
+    ],
+    "Shuppet": [
+      {
+        "id": "A3-074",
+        "hp": 60,
+        "attacks": [
+          "Will-O-Wisp"
+        ],
+        "abilities": []
+      }
+    ],
+    "Staryu": [
+      {
+        "id": "A1-074",
+        "hp": 50,
+        "attacks": [
+          "Smack"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-218",
+        "hp": 50,
+        "attacks": [
+          "Smack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Banette": [
+      {
+        "id": "A3-075",
+        "hp": 90,
+        "attacks": [
+          "Night Bind"
+        ],
+        "abilities": []
+      }
+    ],
+    "Starmie": [
+      {
+        "id": "A1-075",
+        "hp": 90,
+        "attacks": [
+          "Wave Splash"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-219",
+        "hp": 90,
+        "attacks": [
+          "Wave Splash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Uxie": [
+      {
+        "id": "A2-075",
+        "hp": 70,
+        "attacks": [
+          "Mind Boost"
+        ],
+        "abilities": []
+      }
+    ],
+    "Azelf": [
+      {
+        "id": "A2-077",
+        "hp": 70,
+        "attacks": [
+          "Psychic Arrow"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gyarados": [
+      {
+        "id": "A1-078",
+        "hp": 150,
+        "attacks": [
+          "Hyper Beam"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-233",
+        "hp": 150,
+        "attacks": [
+          "Hyper Beam"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ribombee": [
+      {
+        "id": "A3-079",
+        "hp": 80,
+        "attacks": [
+          "Fairy Wind"
+        ],
+        "abilities": []
+      }
+    ],
+    "Vaporeon": [
+      {
+        "id": "A1-080",
+        "hp": 130,
+        "attacks": [
+          "Bubble Drain"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rhyhorn": [
+      {
+        "id": "A2-080",
+        "hp": 80,
+        "attacks": [
+          "Horn Attack"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-156",
+        "hp": 80,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Omanyte": [
+      {
+        "id": "A1-081",
+        "hp": 90,
+        "attacks": [
+          "Water Gun"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rhydon": [
+      {
+        "id": "A2-081",
+        "hp": 110,
+        "attacks": [
+          "Wrack Down"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-157",
+        "hp": 120,
+        "attacks": [
+          "Horn Drill"
+        ],
+        "abilities": []
+      }
+    ],
+    "Omastar": [
+      {
+        "id": "A1-082",
+        "hp": 140,
+        "attacks": [
+          "Ancient Whirlpool"
+        ],
+        "abilities": []
+      }
+    ],
+    "Articuno": [
+      {
+        "id": "A1-083",
+        "hp": 100,
+        "attacks": [
+          "Ice Beam"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gligar": [
+      {
+        "id": "A2-083",
+        "hp": 60,
+        "attacks": [
+          "Pierce"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gliscor": [
+      {
+        "id": "A2-084",
+        "hp": 100,
+        "attacks": [
+          "Acrobatics"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ducklett": [
+      {
+        "id": "A1-085",
+        "hp": 50,
+        "attacks": [
+          "Flap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Hitmontop": [
+      {
+        "id": "A2-085",
+        "hp": 80,
+        "attacks": [
+          "Spinning Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cosmoem": [
+      {
+        "id": "A3-086",
+        "hp": 100,
+        "attacks": [
+          "Stiffen"
+        ],
+        "abilities": []
+      }
+    ],
+    "Swanna": [
+      {
+        "id": "A1-086",
+        "hp": 90,
+        "attacks": [
+          "Wing Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Froakie": [
+      {
+        "id": "A1-087",
+        "hp": 60,
+        "attacks": [
+          "Flop"
+        ],
+        "abilities": []
+      }
+    ],
+    "Regirock": [
+      {
+        "id": "A2-087",
+        "hp": 120,
+        "attacks": [
+          "Boulder Crush"
+        ],
+        "abilities": [
+          "Exoskeleton"
+        ]
+      }
+    ],
+    "Necrozma": [
+      {
+        "id": "A3-088",
+        "hp": 120,
+        "attacks": [
+          "Prismatic Laser"
+        ],
+        "abilities": []
+      }
+    ],
+    "Frogadier": [
+      {
+        "id": "A1-088",
+        "hp": 80,
+        "attacks": [
+          "Water Drip"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3a-092",
+        "hp": 80,
+        "attacks": [
+          "Water Drip"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cranidos": [
+      {
+        "id": "A2-088",
+        "hp": 90,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cubone": [
+      {
+        "id": "A3-089",
+        "hp": 60,
+        "attacks": [
+          "Beat"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-226",
+        "hp": 60,
+        "attacks": [
+          "Growl"
+        ],
+        "abilities": []
+      }
+    ],
+    "Greninja": [
+      {
+        "id": "A1-089",
+        "hp": 120,
+        "attacks": [
+          "Mist Slash"
+        ],
+        "abilities": [
+          "Water Shuriken"
+        ]
+      }
+    ],
+    "Rampardos": [
+      {
+        "id": "A2-089",
+        "hp": 150,
+        "attacks": [
+          "Head Smash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Makuhita": [
+      {
+        "id": "A3-090",
+        "hp": 70,
+        "attacks": [
+          "Slap Push"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pyukumuku": [
+      {
+        "id": "A1-090",
+        "hp": 70,
+        "attacks": [
+          "Rain Splash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Hariyama": [
+      {
+        "id": "A3-091",
+        "hp": 120,
+        "attacks": [
+          "Push Out"
+        ],
+        "abilities": []
+      }
+    ],
+    "Riolu": [
+      {
+        "id": "A2-091",
+        "hp": 60,
+        "attacks": [
+          "Jab"
+        ],
+        "abilities": []
+      }
+    ],
+    "Solrock": [
+      {
+        "id": "A3-092",
+        "hp": 90,
+        "attacks": [
+          "Solar Beam"
+        ],
+        "abilities": []
+      }
+    ],
+    "Snom": [
+      {
+        "id": "A1-092",
+        "hp": 50,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      }
+    ],
+    "Drilbur": [
+      {
+        "id": "A3-093",
+        "hp": 60,
+        "attacks": [
+          "Scratch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Frosmoth": [
+      {
+        "id": "A1-093",
+        "hp": 90,
+        "attacks": [
+          "Powder Snow"
+        ],
+        "abilities": []
+      }
+    ],
+    "Timburr": [
+      {
+        "id": "A3-094",
+        "hp": 60,
+        "attacks": [
+          "Corkscrew Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Hippowdon": [
+      {
+        "id": "A2-094",
+        "hp": 140,
+        "attacks": [
+          "Earthen Press"
+        ],
+        "abilities": []
+      }
+    ],
+    "Jynx": [
+      {
+        "id": "A3a-094",
+        "hp": 80,
+        "attacks": [
+          "Psychic"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-127",
+        "hp": 80,
+        "attacks": [
+          "Psychic"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gurdurr": [
+      {
+        "id": "A3-095",
+        "hp": 90,
+        "attacks": [
+          "Strength"
+        ],
+        "abilities": []
+      }
+    ],
+    "Conkeldurr": [
+      {
+        "id": "A3-096",
+        "hp": 150,
+        "attacks": [
+          "Mega Punch"
+        ],
+        "abilities": [
+          "Guts"
+        ]
+      }
+    ],
+    "Murkrow": [
+      {
+        "id": "A2-096",
+        "hp": 60,
+        "attacks": [
+          "Peck"
+        ],
+        "abilities": []
+      }
+    ],
+    "Honchkrow": [
+      {
+        "id": "A2-097",
+        "hp": 100,
+        "attacks": [
+          "Skill Dive"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pidgeot": [
+      {
+        "id": "A3a-097",
+        "hp": 130,
+        "attacks": [
+          "Wing Attack"
+        ],
+        "abilities": [
+          "Drive Off"
+        ]
+      }
+    ],
+    "Sneasel": [
+      {
+        "id": "A2-098",
+        "hp": 60,
+        "attacks": [
+          "Double Scratch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gardevoir": [
+      {
+        "id": "A3b-099",
+        "hp": 110,
+        "attacks": [
+          "Psyshot"
+        ],
+        "abilities": [
+          "Psy Shadow"
+        ]
+      },
+      {
+        "id": "A1-132",
+        "hp": 110,
+        "attacks": [
+          "Psyshot"
+        ],
+        "abilities": [
+          "Psy Shadow"
+        ]
+      }
+    ],
+    "Celebi ex": [
+      {
+        "id": "A3a-099",
+        "hp": 130,
+        "attacks": [
+          "Powerful Bloom"
+        ],
+        "abilities": []
+      }
+    ],
+    "Poochyena": [
+      {
+        "id": "A2-100",
+        "hp": 60,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Arcanine ex": [
+      {
+        "id": "A3a-100",
+        "hp": 150,
+        "attacks": [
+          "Inferno Onrush"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lycanroc": [
+      {
+        "id": "A3-101",
+        "hp": 100,
+        "attacks": [
+          "Blood Fang"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mightyena": [
+      {
+        "id": "A2-101",
+        "hp": 90,
+        "attacks": [
+          "Darkness Fang"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mudbray": [
+      {
+        "id": "A3-102",
+        "hp": 80,
+        "attacks": [
+          "Rear Kick"
+        ],
+        "abilities": []
+      }
+    ],
+    "Jolteon": [
+      {
+        "id": "A1-102",
+        "hp": 90,
+        "attacks": [
+          "Pin Missile"
+        ],
+        "abilities": []
+      }
+    ],
+    "Stunky": [
+      {
+        "id": "A2-102",
+        "hp": 70,
+        "attacks": [
+          "Scratch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pidgeot ex": [
+      {
+        "id": "A3a-102",
+        "hp": 170,
+        "attacks": [
+          "Scattering Cyclone"
+        ],
+        "abilities": []
+      }
+    ],
+    "Zapdos": [
+      {
+        "id": "A1-103",
+        "hp": 130,
+        "attacks": [
+          "Raging Thunder"
+        ],
+        "abilities": []
+      }
+    ],
+    "Skuntank": [
+      {
+        "id": "A2-103",
+        "hp": 100,
+        "attacks": [
+          "Poison Gas"
+        ],
+        "abilities": []
+      }
+    ],
+    "Articuno ex": [
+      {
+        "id": "A3b-104",
+        "hp": 140,
+        "attacks": [
+          "Ice Wing",
+          "Blizzard"
+        ],
+        "abilities": []
+      }
+    ],
+    "Skorupi": [
+      {
+        "id": "A2-105",
+        "hp": 70,
+        "attacks": [
+          "Pierce"
+        ],
+        "abilities": []
+      }
+    ],
+    "Zapdos ex": [
+      {
+        "id": "A3b-105",
+        "hp": 130,
+        "attacks": [
+          "Peck",
+          "Thundering Hurricane"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-260",
+        "hp": 130,
+        "attacks": [
+          "Raging Thunder"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Rattata": [
+      {
+        "id": "A3-106",
+        "hp": 50,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Drapion": [
+      {
+        "id": "A2-106",
+        "hp": 120,
+        "attacks": [
+          "Cross Poison"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gallade ex": [
+      {
+        "id": "A3b-106",
+        "hp": 170,
+        "attacks": [
+          "Energized Blade"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Raticate": [
+      {
+        "id": "A3-107",
+        "hp": 110,
+        "attacks": [
+          "Scrounge-and-Scarf"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tynamo": [
+      {
+        "id": "A1-107",
+        "hp": 30,
+        "attacks": [
+          "Tiny Charge"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Meowth": [
+      {
+        "id": "A3-108",
+        "hp": 60,
+        "attacks": [
+          "Scratch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Eelektrik": [
+      {
+        "id": "A1-108",
+        "hp": 80,
+        "attacks": [
+          "Head Bolt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Eelektross": [
+      {
+        "id": "A1-109",
+        "hp": 140,
+        "attacks": [
+          "Thunder Fang"
+        ],
+        "abilities": []
+      }
+    ],
+    "Darkrai": [
+      {
+        "id": "A2-109",
+        "hp": 110,
+        "attacks": [
+          "Dark Void"
+        ],
+        "abilities": []
+      }
+    ],
+    "Absol": [
+      {
+        "id": "A3-112",
+        "hp": 80,
+        "attacks": [
+          "Unseen Claw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pincurchin": [
+      {
+        "id": "A1-112",
+        "hp": 70,
+        "attacks": [
+          "Thunder Shock"
+        ],
+        "abilities": []
+      }
+    ],
+    "Registeel": [
+      {
+        "id": "A2-112",
+        "hp": 110,
+        "attacks": [
+          "Metal Claw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Trubbish": [
+      {
+        "id": "A3-113",
+        "hp": 60,
+        "attacks": [
+          "Pound"
+        ],
+        "abilities": []
+      }
+    ],
+    "Shieldon": [
+      {
+        "id": "A2-113",
+        "hp": 100,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Garbodor": [
+      {
+        "id": "A3-114",
+        "hp": 120,
+        "attacks": [
+          "Super Poison Breath"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bastiodon": [
+      {
+        "id": "A2-114",
+        "hp": 160,
+        "attacks": [
+          "Headbang"
+        ],
+        "abilities": [
+          "Guarded Grill"
+        ]
+      }
+    ],
+    "Mareanie": [
+      {
+        "id": "A3-115",
+        "hp": 70,
+        "attacks": [
+          "Pierce"
+        ],
+        "abilities": []
+      }
+    ],
+    "Toxapex": [
+      {
+        "id": "A3-116",
+        "hp": 110,
+        "attacks": [
+          "Spike Cannon"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Dugtrio": [
+      {
+        "id": "A3-118",
+        "hp": 90,
+        "attacks": [
+          "Iron Head"
+        ],
+        "abilities": []
+      }
+    ],
+    "Probopass": [
+      {
+        "id": "A2-118",
+        "hp": 130,
+        "attacks": [
+          "Triple Nose"
+        ],
+        "abilities": []
+      }
+    ],
+    "Excadrill": [
+      {
+        "id": "A3-119",
+        "hp": 110,
+        "attacks": [
+          "Slash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Slowbro": [
+      {
+        "id": "A1-119",
+        "hp": 130,
+        "attacks": [
+          "Super Psy Bolt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Escavalier": [
+      {
+        "id": "A3-120",
+        "hp": 110,
+        "attacks": [
+          "Pike"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gastly": [
+      {
+        "id": "A1-120",
+        "hp": 60,
+        "attacks": [
+          "Suffocating Gas"
+        ],
+        "abilities": []
+      }
+    ],
+    "Klefki": [
+      {
+        "id": "A3-121",
+        "hp": 70,
+        "attacks": [
+          "Unlock"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gible": [
+      {
+        "id": "A2-121",
+        "hp": 60,
+        "attacks": [
+          "Gnaw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Drowzee": [
+      {
+        "id": "A1-124",
+        "hp": 70,
+        "attacks": [
+          "Mumble"
+        ],
+        "abilities": []
+      }
+    ],
+    "Jangmo-o": [
+      {
+        "id": "A3-125",
+        "hp": 60,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Hypno": [
+      {
+        "id": "A1-125",
+        "hp": 100,
+        "attacks": [
+          "Psypunch"
+        ],
+        "abilities": [
+          "Sleep Pendulum"
+        ]
+      }
+    ],
+    "Hakamo-o": [
+      {
+        "id": "A3-126",
+        "hp": 100,
+        "attacks": [
+          "Dragon Claw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kommo-o": [
+      {
+        "id": "A3-127",
+        "hp": 150,
+        "attacks": [
+          "Clanging Scales"
+        ],
+        "abilities": []
+      }
+    ],
+    "Porygon": [
+      {
+        "id": "A2-127",
+        "hp": 60,
+        "attacks": [
+          "Beam"
+        ],
+        "abilities": []
+      }
+    ],
+    "Porygon2": [
+      {
+        "id": "A2-128",
+        "hp": 80,
+        "attacks": [
+          "Sharpen"
+        ],
+        "abilities": []
+      }
+    ],
+    "Skitty": [
+      {
+        "id": "A3-129",
+        "hp": 60,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Porygon-Z": [
+      {
+        "id": "A2-129",
+        "hp": 140,
+        "attacks": [
+          "Buggy Beam"
+        ],
+        "abilities": []
+      }
+    ],
+    "Delcatty": [
+      {
+        "id": "A3-130",
+        "hp": 90,
+        "attacks": [
+          "Energy Assist"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ralts": [
+      {
+        "id": "A1-130",
+        "hp": 60,
+        "attacks": [
+          "Ram"
+        ],
+        "abilities": []
+      }
+    ],
+    "Fletchling": [
+      {
+        "id": "A3-131",
+        "hp": 50,
+        "attacks": [
+          "Flap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kirlia": [
+      {
+        "id": "A1-131",
+        "hp": 80,
+        "attacks": [
+          "Smack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Hawlucha": [
+      {
+        "id": "A3-132",
+        "hp": 80,
+        "attacks": [
+          "Justified Press"
+        ],
+        "abilities": []
+      }
+    ],
+    "Trumbeak": [
+      {
+        "id": "A3-134",
+        "hp": 80,
+        "attacks": [
+          "Glide"
+        ],
+        "abilities": []
+      }
+    ],
+    "Golett": [
+      {
+        "id": "A1-135",
+        "hp": 90,
+        "attacks": [
+          "Mega Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Yungoos": [
+      {
+        "id": "A3-136",
+        "hp": 60,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Golurk": [
+      {
+        "id": "A1-136",
+        "hp": 140,
+        "attacks": [
+          "Double Lariat"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bibarel": [
+      {
+        "id": "A2-136",
+        "hp": 110,
+        "attacks": [
+          "Rolling Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gumshoos": [
+      {
+        "id": "A3-137",
+        "hp": 100,
+        "attacks": [
+          "Headbang"
+        ],
+        "abilities": []
+      }
+    ],
+    "Sandshrew": [
+      {
+        "id": "A1-137",
+        "hp": 70,
+        "attacks": [
+          "Scratch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Sandslash": [
+      {
+        "id": "A1-138",
+        "hp": 100,
+        "attacks": [
+          "Slash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dugtrio": [
+      {
+        "id": "A1-140",
+        "hp": 70,
+        "attacks": [
+          "Dig"
+        ],
+        "abilities": []
+      }
+    ],
+    "Purugly": [
+      {
+        "id": "A2-140",
+        "hp": 110,
+        "attacks": [
+          "Interrupt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Fan Rotom": [
+      {
+        "id": "A2-142",
+        "hp": 80,
+        "attacks": [
+          "Spin Storm"
+        ],
+        "abilities": []
+      }
+    ],
+    "Machamp": [
+      {
+        "id": "A1-145",
+        "hp": 150,
+        "attacks": [
+          "Seismic Toss"
+        ],
+        "abilities": []
+      }
+    ],
+    "Marowak": [
+      {
+        "id": "A1-152",
+        "hp": 140,
+        "attacks": [
+          "Bone Beatdown"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A3-227",
+        "hp": 100,
+        "attacks": [
+          "Bone Beatdown"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kabuto": [
+      {
+        "id": "A1-158",
+        "hp": 90,
+        "attacks": [
+          "Shell Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kabutops": [
+      {
+        "id": "A1-159",
+        "hp": 140,
+        "attacks": [
+          "Leech Life"
+        ],
+        "abilities": []
+      }
+    ],
+    "Clobbopus": [
+      {
+        "id": "A1-162",
+        "hp": 80,
+        "attacks": [
+          "Knuckle Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Grapploct": [
+      {
+        "id": "A1-163",
+        "hp": 130,
+        "attacks": [
+          "Knock Back"
+        ],
+        "abilities": []
+      }
+    ],
+    "Nidoran♀": [
+      {
+        "id": "A1-166",
+        "hp": 60,
+        "attacks": [
+          "Call for Family"
+        ],
+        "abilities": []
+      }
+    ],
+    "Nidorina": [
+      {
+        "id": "A1-167",
+        "hp": 80,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Nidoran♂": [
+      {
+        "id": "A1-169",
+        "hp": 60,
+        "attacks": [
+          "Peck"
+        ],
+        "abilities": []
+      }
+    ],
+    "Nidorino": [
+      {
+        "id": "A1-170",
+        "hp": 90,
+        "attacks": [
+          "Horn Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Nidoking": [
+      {
+        "id": "A1-171",
+        "hp": 150,
+        "attacks": [
+          "Poison Horn"
+        ],
+        "abilities": []
+      },
+      {
+        "id": "A1-241",
+        "hp": 150,
+        "attacks": [
+          "Poison Horn"
+        ],
+        "abilities": []
+      }
+    ],
+    "Grimer": [
+      {
+        "id": "A1-174",
+        "hp": 70,
+        "attacks": [
+          "Poison Gas"
+        ],
+        "abilities": []
+      }
+    ],
+    "Muk": [
+      {
+        "id": "A1-175",
+        "hp": 130,
+        "attacks": [
+          "Venoshock"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pawniard": [
+      {
+        "id": "A1-179",
+        "hp": 50,
+        "attacks": [
+          "Pierce"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bisharp": [
+      {
+        "id": "A1-180",
+        "hp": 90,
+        "attacks": [
+          "Metal Claw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Spearow": [
+      {
+        "id": "A1-191",
+        "hp": 60,
+        "attacks": [
+          "Peck"
+        ],
+        "abilities": []
+      }
+    ],
+    "Fearow": [
+      {
+        "id": "A1-192",
+        "hp": 100,
+        "attacks": [
+          "Drill Run"
+        ],
+        "abilities": []
+      }
+    ],
+    "Wigglytuff": [
+      {
+        "id": "A1-194",
+        "hp": 100,
+        "attacks": [
+          "Hyper Voice"
+        ],
+        "abilities": []
+      }
+    ],
+    "Persian": [
+      {
+        "id": "A1-197",
+        "hp": 90,
+        "attacks": [
+          "Shadow Claw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Farfetch'd": [
+      {
+        "id": "A1-198",
+        "hp": 60,
+        "attacks": [
+          "Leek Slap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Doduo": [
+      {
+        "id": "A1-199",
+        "hp": 60,
+        "attacks": [
+          "Peck"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dodrio": [
+      {
+        "id": "A1-200",
+        "hp": 80,
+        "attacks": [
+          "Drill Peck"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kangaskhan": [
+      {
+        "id": "A1-203",
+        "hp": 100,
+        "attacks": [
+          "Dizzy Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Wooloo": [
+      {
+        "id": "A1-214",
+        "hp": 70,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dubwool": [
+      {
+        "id": "A1-215",
+        "hp": 120,
+        "attacks": [
+          "Rolling Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Venusaur ex": [
+      {
+        "id": "A3-230",
+        "hp": 190,
+        "attacks": [
+          "Razor Leaf",
+          "Giant Bloom"
+        ],
+        "abilities": []
+      }
+    ],
+    "Blastoise ex": [
+      {
+        "id": "A3-232",
+        "hp": 180,
+        "attacks": [
+          "Surf",
+          "Hydro Bazooka"
+        ],
+        "abilities": []
+      }
+    ],
+    "Starmie ex": [
+      {
+        "id": "A3-233",
+        "hp": 130,
+        "attacks": [
+          "Hydro Splash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gengar ex": [
+      {
+        "id": "A3-234",
+        "hp": 170,
+        "attacks": [
+          "Spooky Shot"
+        ],
+        "abilities": [
+          "Shadowy Spellbind"
+        ]
+      },
+      {
+        "id": "A1-261",
+        "hp": 170,
+        "attacks": [
+          "Spooky Shot"
+        ],
+        "abilities": [
+          "Shadowy Spellbind"
+        ]
+      }
+    ],
+    "Machamp ex": [
+      {
+        "id": "A3-235",
+        "hp": 180,
+        "attacks": [
+          "Mega Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Marowak ex": [
+      {
+        "id": "A3-236",
+        "hp": 140,
+        "attacks": [
+          "Bonemerang"
+        ],
+        "abilities": []
+      }
+    ],
+    "Wigglytuff ex": [
+      {
+        "id": "A3-237",
+        "hp": 140,
+        "attacks": [
+          "Sleepy Song"
+        ],
+        "abilities": []
+      }
+    ]
+  },
+  "consolidated_groups": {
+    "Weedle": [
+      {
+        "ids": [
+          "A2b-001",
+          "A2b-097"
+        ],
+        "hp": 50,
+        "attacks": [
+          "Multiply"
+        ],
+        "abilities": []
+      }
+    ],
+    "Exeggcute": [
+      {
+        "ids": [
+          "A3-001",
+          "A3-213"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Rolling Tackle"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "A1a-001",
+          "P-A-060"
+        ],
+        "hp": 50,
+        "attacks": [
+          "Growth Spurt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bulbasaur": [
+      {
+        "ids": [
+          "A1-001",
+          "A1-227"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Vine Whip"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "P-A-023",
+          "A3-210"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Vine Whip"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kakuna": [
+      {
+        "ids": [
+          "A2b-002",
+          "A2b-098"
+        ],
+        "hp": 80,
+        "attacks": [
+          "String Shot"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Exeggutor": [
+      {
+        "ids": [
+          "A3-002",
+          "P-A-069",
+          "A3-156"
+        ],
+        "hp": 150,
+        "attacks": [
+          "Tropical Hammer"
+        ],
+        "abilities": []
+      }
+    ],
+    "Leafeon": [
+      {
+        "ids": [
+          "A3b-002",
+          "A3b-070"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Leaf Blast"
+        ],
+        "abilities": []
+      }
+    ],
+    "Exeggutor": [
+      {
+        "ids": [
+          "A1a-002",
+          "A1a-069",
+          "A3-214"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Psychic"
+        ],
+        "abilities": []
+      }
+    ],
+    "Beedrill ex": [
+      {
+        "ids": [
+          "A2b-003",
+          "A2b-079",
+          "A2b-107"
+        ],
+        "hp": 170,
+        "attacks": [
+          "Crushing Spear"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rowlet": [
+      {
+        "ids": [
+          "A3a-003",
+          "A3a-070"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Fury Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Celebi ex": [
+      {
+        "ids": [
+          "A1a-003",
+          "A1a-075",
+          "A1a-085"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Powerful Bloom"
+        ],
+        "abilities": []
+      }
+    ],
+    "Venusaur ex": [
+      {
+        "ids": [
+          "A1-004",
+          "A1-251"
+        ],
+        "hp": 190,
+        "attacks": [
+          "Razor Leaf",
+          "Giant Bloom"
+        ],
+        "abilities": []
+      }
+    ],
+    "Sprigatito": [
+      {
+        "ids": [
+          "A2b-005",
+          "P-A-052"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Cry for Help"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tangrowth": [
+      {
+        "ids": [
+          "A2-005",
+          "A2-156"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Mega Drain"
+        ],
+        "abilities": []
+      }
+    ],
+    "Buzzwole ex": [
+      {
+        "ids": [
+          "A3a-006",
+          "A3a-076",
+          "A3a-088"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Punch",
+          "Big Beat"
+        ],
+        "abilities": []
+      }
+    ],
+    "Serperior": [
+      {
+        "ids": [
+          "A1a-006",
+          "A1a-070"
+        ],
+        "hp": 110,
+        "attacks": [
+          "Solar Beam"
+        ],
+        "abilities": [
+          "Jungle Totem"
+        ]
+      }
+    ],
+    "Meowscarada": [
+      {
+        "ids": [
+          "A2b-007",
+          "A2b-073"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Fighting Claws"
+        ],
+        "abilities": []
+      }
+    ],
+    "Yanmega ex": [
+      {
+        "ids": [
+          "A2-007",
+          "A2-180",
+          "A2-196"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Air Slash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pheromosa": [
+      {
+        "ids": [
+          "A3a-007",
+          "A3a-071"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Jump Blues"
+        ],
+        "abilities": []
+      }
+    ],
+    "Charmander": [
+      {
+        "ids": [
+          "A2b-008",
+          "A2b-099"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Combustion"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "A1-033",
+          "A1-230"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Ember"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cherrim": [
+      {
+        "ids": [
+          "A2a-008",
+          "P-A-043"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Leech Seed"
+        ],
+        "abilities": []
+      }
+    ],
+    "Flareon": [
+      {
+        "ids": [
+          "A3b-008",
+          "A3b-071"
+        ],
+        "hp": 110,
+        "attacks": [
+          "Assisting Heater"
+        ],
+        "abilities": []
+      }
+    ],
+    "Charmeleon": [
+      {
+        "ids": [
+          "A2b-009",
+          "A2b-100"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Combustion"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pikachu": [
+      {
+        "ids": [
+          "P-A-009",
+          "P-A-015",
+          "P-A-026"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Gnaw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Flareon ex": [
+      {
+        "ids": [
+          "A3b-009",
+          "A3b-079",
+          "A3b-087"
+        ],
+        "hp": 150,
+        "attacks": [
+          "Fire Spin"
+        ],
+        "abilities": [
+          "Combust"
+        ]
+      }
+    ],
+    "Blacephalon": [
+      {
+        "ids": [
+          "A3a-009",
+          "A3a-072"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Beat Punk"
+        ],
+        "abilities": []
+      }
+    ],
+    "Charizard ex": [
+      {
+        "ids": [
+          "A2b-010",
+          "A2b-080",
+          "A2b-108"
+        ],
+        "hp": 180,
+        "attacks": [
+          "Stoke",
+          "Steam Artillery"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "A1-036",
+          "A1-253",
+          "A1-280",
+          "A1-284"
+        ],
+        "hp": 180,
+        "attacks": [
+          "Slash",
+          "Crimson Storm"
+        ],
+        "abilities": []
+      }
+    ],
+    "Leafeon ex": [
+      {
+        "ids": [
+          "A2a-010",
+          "A2a-082",
+          "A2a-091"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Solar Beam"
+        ],
+        "abilities": [
+          "Forest Breath"
+        ]
+      }
+    ],
+    "Turtwig": [
+      {
+        "ids": [
+          "A2-010",
+          "P-A-035"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": []
+      }
+    ],
+    "Decidueye ex": [
+      {
+        "ids": [
+          "A3-012",
+          "A3-180",
+          "A3-198"
+        ],
+        "hp": 170,
+        "attacks": [
+          "Pierce the Pain",
+          "Razor Leaf"
+        ],
+        "abilities": []
+      }
+    ],
+    "Houndoom": [
+      {
+        "ids": [
+          "A2a-012",
+          "A2a-076"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Corner"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gloom": [
+      {
+        "ids": [
+          "A1-012",
+          "A1-228"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Drool"
+        ],
+        "abilities": []
+      }
+    ],
+    "Marill": [
+      {
+        "ids": [
+          "A2a-014",
+          "A2a-077"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Water Gun"
+        ],
+        "abilities": []
+      }
+    ],
+    "Volcarona": [
+      {
+        "ids": [
+          "A1a-014",
+          "P-A-028"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Volcanic Ash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Salandit": [
+      {
+        "ids": [
+          "A1a-015",
+          "A1a-071"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Venoshock"
+        ],
+        "abilities": []
+      }
+    ],
+    "Buizel": [
+      {
+        "ids": [
+          "A2b-016",
+          "A2b-074"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Water Gun"
+        ],
+        "abilities": []
+      }
+    ],
+    "Morelull": [
+      {
+        "ids": [
+          "A3-016",
+          "A3-157"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Stampede"
+        ],
+        "abilities": []
+      }
+    ],
+    "Vaporeon": [
+      {
+        "ids": [
+          "A3b-016",
+          "A3b-072"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Hyper Whirlpool"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "A1a-019",
+          "A1a-072"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Wave Splash"
+        ],
+        "abilities": [
+          "Wash Out"
+        ]
+      }
+    ],
+    "Combee": [
+      {
+        "ids": [
+          "A2-017",
+          "A2-157"
+        ],
+        "hp": 50,
+        "attacks": [
+          "Call for Family"
+        ],
+        "abilities": []
+      }
+    ],
+    "Glaceon": [
+      {
+        "ids": [
+          "A3b-017",
+          "A3b-073"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Ice Blade"
+        ],
+        "abilities": []
+      }
+    ],
+    "Wiglett": [
+      {
+        "ids": [
+          "A2b-018",
+          "A2b-101"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Spring Out"
+        ],
+        "abilities": []
+      }
+    ],
+    "Venusaur": [
+      {
+        "ids": [
+          "P-A-018",
+          "A3-212"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Mega Drain"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gyarados ex": [
+      {
+        "ids": [
+          "A1a-018",
+          "A1a-076"
+        ],
+        "hp": 180,
+        "attacks": [
+          "Rampaging Whirlpool"
+        ],
+        "abilities": []
+      }
+    ],
+    "Wugtrio ex": [
+      {
+        "ids": [
+          "A2b-019",
+          "A2b-081",
+          "A2b-109"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Pop Out Throughout"
+        ],
+        "abilities": []
+      }
+    ],
+    "Greninja": [
+      {
+        "ids": [
+          "P-A-019",
+          "A3a-093"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Mist Slash"
+        ],
+        "abilities": [
+          "Water Shuriken"
+        ]
+      }
+    ],
+    "Carnivine": [
+      {
+        "ids": [
+          "A2-019",
+          "A2-158"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Flog"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tapu Koko ex": [
+      {
+        "ids": [
+          "A3a-019",
+          "A3a-077",
+          "A3a-084"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Plasma Hurricane",
+          "Mach Bolt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dondozo": [
+      {
+        "ids": [
+          "A2b-020",
+          "A2b-102"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Ocean Cyclone"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tsareena": [
+      {
+        "ids": [
+          "A3-020",
+          "A3-158"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Three Kick Combo"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tatsugiri": [
+      {
+        "ids": [
+          "A2b-021",
+          "A2b-075"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Rain Splash"
+        ],
+        "abilities": [
+          "Retreat Directive"
+        ]
+      }
+    ],
+    "Pikachu ex": [
+      {
+        "ids": [
+          "A2b-022",
+          "A2b-082",
+          "A2b-092"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Thunderbolt"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "A1-096",
+          "A1-259",
+          "A1-281",
+          "A1-285"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Circle Circuit"
+        ],
+        "abilities": []
+      }
+    ],
+    "Glaceon ex": [
+      {
+        "ids": [
+          "A2a-022",
+          "A2a-083",
+          "A2a-092"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Freezing Wind"
+        ],
+        "abilities": [
+          "Snowy Terrain"
+        ]
+      }
+    ],
+    "Shaymin": [
+      {
+        "ids": [
+          "A2-022",
+          "A2-159"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Flop"
+        ],
+        "abilities": [
+          "Fragrant Flower Garden"
+        ]
+      },
+      {
+        "ids": [
+          "A2a-069",
+          "A2a-081"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Flap"
+        ],
+        "abilities": [
+          "Sky Support"
+        ]
+      }
+    ],
+    "Dhelmise ex": [
+      {
+        "ids": [
+          "A3-023",
+          "A3-181",
+          "A3-199"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Anchor Shot"
+        ],
+        "abilities": []
+      }
+    ],
+    "Exeggutor ex": [
+      {
+        "ids": [
+          "A1-023",
+          "A3-231",
+          "A1-252"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Tropical Swing"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tapu Bulu": [
+      {
+        "ids": [
+          "A3-024",
+          "A3-159"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Stuck-In Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Primarina ex": [
+      {
+        "ids": [
+          "A3b-024",
+          "A3b-080",
+          "A3b-088"
+        ],
+        "hp": 180,
+        "attacks": [
+          "Hydro Pump",
+          "Sparkling Aria"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pachirisu": [
+      {
+        "ids": [
+          "A2b-025",
+          "A2b-103"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Plasma"
+        ],
+        "abilities": []
+      }
+    ],
+    "Moltres ex": [
+      {
+        "ids": [
+          "P-A-025",
+          "A3b-103"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Inferno Dance",
+          "Heat Blast"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "A1-047",
+          "A1-255",
+          "A1-274"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Inferno Dance",
+          "Heat Blast"
+        ],
+        "abilities": []
+      }
+    ],
+    "Jolteon": [
+      {
+        "ids": [
+          "A3b-025",
+          "A3b-074"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Beginning Bolt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Raichu": [
+      {
+        "ids": [
+          "A2a-026",
+          "P-A-044"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Spark"
+        ],
+        "abilities": [
+          "Resilience Link"
+        ]
+      }
+    ],
+    "Pinsir": [
+      {
+        "ids": [
+          "A1-026",
+          "A1-229"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Double Horn"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Marowak": [
+      {
+        "ids": [
+          "A3-027",
+          "A3-160"
+        ],
+        "hp": 110,
+        "attacks": [
+          "Burning Bonemerang"
+        ],
+        "abilities": []
+      }
+    ],
+    "Chimchar": [
+      {
+        "ids": [
+          "A2-027",
+          "P-A-040"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Scratch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pawmot": [
+      {
+        "ids": [
+          "A2b-028",
+          "P-A-054"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Electric Punch"
+        ],
+        "abilities": [
+          "Counterattack"
+        ]
+      }
+    ],
+    "Espeon": [
+      {
+        "ids": [
+          "A3b-028",
+          "A3b-075"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Energy Crush"
+        ],
+        "abilities": []
+      }
+    ],
+    "Infernape ex": [
+      {
+        "ids": [
+          "A2-029",
+          "A2-181",
+          "A2-197"
+        ],
+        "hp": 170,
+        "attacks": [
+          "Flare Blitz"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dedenne": [
+      {
+        "ids": [
+          "A1a-030",
+          "A1a-073"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Thunder Shock"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cinccino": [
+      {
+        "ids": [
+          "P-A-031",
+          "A1-213"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Do the Wave"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gastly": [
+      {
+        "ids": [
+          "A2a-031",
+          "A3-220"
+        ],
+        "hp": 50,
+        "attacks": [
+          "Astonish"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mew ex": [
+      {
+        "ids": [
+          "A1a-032",
+          "A1a-077",
+          "A1a-083",
+          "A1a-086"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Psyshot",
+          "Genome Hacking"
+        ],
+        "abilities": []
+      }
+    ],
+    "Squirtle": [
+      {
+        "ids": [
+          "P-A-033",
+          "A3-215"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Water Gun"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "A1-053",
+          "A1-232"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Water Gun"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mamoswine": [
+      {
+        "ids": [
+          "A2-033",
+          "A2-160"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Frosty Flattening"
+        ],
+        "abilities": [
+          "Thick Fat"
+        ]
+      }
+    ],
+    "Sylveon": [
+      {
+        "ids": [
+          "A3b-033",
+          "A3b-076"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Evoharmony"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lycanroc ex": [
+      {
+        "ids": [
+          "A3a-033",
+          "A3a-078",
+          "A3a-085"
+        ],
+        "hp": 150,
+        "attacks": [
+          "Lycanfang"
+        ],
+        "abilities": []
+      }
+    ],
+    "Piplup": [
+      {
+        "ids": [
+          "P-A-034",
+          "A2-035"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Nap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Unown": [
+      {
+        "ids": [
+          "A2a-034",
+          "A2a-078"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Hidden Power"
+        ],
+        "abilities": [
+          "CHECK"
+        ]
+      }
+    ],
+    "Sylveon ex": [
+      {
+        "ids": [
+          "A3b-034",
+          "A3b-081",
+          "A3b-089"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Fairy Wind"
+        ],
+        "abilities": [
+          "Happy Ribbon"
+        ]
+      }
+    ],
+    "Giratina ex": [
+      {
+        "ids": [
+          "A2b-035",
+          "A2b-083",
+          "A2b-096"
+        ],
+        "hp": 150,
+        "attacks": [
+          "Chaotic Impact"
+        ],
+        "abilities": [
+          "Broken-Space Bellow"
+        ]
+      }
+    ],
+    "Electivire": [
+      {
+        "ids": [
+          "P-A-036",
+          "A2-057"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Exciting Voltage"
+        ],
+        "abilities": []
+      }
+    ],
+    "Turtonator": [
+      {
+        "ids": [
+          "A3-037",
+          "A3-161"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Fire Spin"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Meowth": [
+      {
+        "ids": [
+          "A3a-037",
+          "A3a-073"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Meddle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Machamp": [
+      {
+        "ids": [
+          "A2b-039",
+          "P-A-055",
+          "A3-225"
+        ],
+        "hp": 150,
+        "attacks": [
+          "Power Press"
+        ],
+        "abilities": []
+      }
+    ],
+    "Skarmory": [
+      {
+        "ids": [
+          "P-A-039",
+          "A2-111"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Metal Arms"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Vulpix": [
+      {
+        "ids": [
+          "A3-040",
+          "A3-162"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Call Forth Cold"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Ninetales": [
+      {
+        "ids": [
+          "A3-041",
+          "P-A-070"
+        ],
+        "hp": 110,
+        "attacks": [
+          "Blizzard"
+        ],
+        "abilities": []
+      }
+    ],
+    "Togepi": [
+      {
+        "ids": [
+          "P-A-041",
+          "A2-063"
+        ],
+        "hp": 50,
+        "attacks": [
+          "Pound"
+        ],
+        "abilities": []
+      }
+    ],
+    "Arcanine ex": [
+      {
+        "ids": [
+          "A1-041",
+          "A1-254"
+        ],
+        "hp": 150,
+        "attacks": [
+          "Inferno Onrush"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gastrodon": [
+      {
+        "ids": [
+          "A2-041",
+          "A2-161"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Muddy Water"
+        ],
+        "abilities": []
+      }
+    ],
+    "Riolu": [
+      {
+        "ids": [
+          "A2b-042",
+          "P-A-059",
+          "A2b-104"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Darkrai ex": [
+      {
+        "ids": [
+          "P-A-042",
+          "A2-110",
+          "A2-187",
+          "A2-202"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Dark Prism"
+        ],
+        "abilities": [
+          "Nightmare Aura"
+        ]
+      }
+    ],
+    "Nihilego": [
+      {
+        "ids": [
+          "A3a-042",
+          "A3a-103"
+        ],
+        "hp": 70,
+        "attacks": [
+          "New Wave"
+        ],
+        "abilities": [
+          "More Poison"
+        ]
+      }
+    ],
+    "Lucario ex": [
+      {
+        "ids": [
+          "A2b-043",
+          "A2b-084",
+          "A2b-110"
+        ],
+        "hp": 150,
+        "attacks": [
+          "Aura Sphere"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rapidash": [
+      {
+        "ids": [
+          "A1-043",
+          "A1-231"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Fire Mane"
+        ],
+        "abilities": []
+      }
+    ],
+    "Umbreon": [
+      {
+        "ids": [
+          "A3b-043",
+          "A3b-077"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Dark Binding"
+        ],
+        "abilities": []
+      }
+    ],
+    "Guzzlord ex": [
+      {
+        "ids": [
+          "A3a-043",
+          "A3a-079",
+          "A3a-086"
+        ],
+        "hp": 170,
+        "attacks": [
+          "Grindcore",
+          "Tyrannical Hole"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gible": [
+      {
+        "ids": [
+          "A2a-045",
+          "P-A-046"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Aerodactyl ex": [
+      {
+        "ids": [
+          "A1a-046",
+          "A1a-078",
+          "A1a-084",
+          "A3a-101"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Land Crush"
+        ],
+        "abilities": [
+          "Primeval Law"
+        ]
+      }
+    ],
+    "Garchomp ex": [
+      {
+        "ids": [
+          "A2a-047",
+          "A2a-084",
+          "A2a-093"
+        ],
+        "hp": 170,
+        "attacks": [
+          "Linear Attack",
+          "Dragon Claw"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Dugtrio ex": [
+      {
+        "ids": [
+          "A3a-047",
+          "A3a-080",
+          "A3a-087"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Triplet Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Marshadow": [
+      {
+        "ids": [
+          "A1a-047",
+          "A1a-074"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Revenge"
+        ],
+        "abilities": []
+      }
+    ],
+    "Manaphy": [
+      {
+        "ids": [
+          "P-A-048",
+          "A2-050",
+          "A2-162"
+        ],
+        "hp": 50,
+        "attacks": [
+          "Oceanic Gift"
+        ],
+        "abilities": []
+      }
+    ],
+    "Crabominable ex": [
+      {
+        "ids": [
+          "A3-049",
+          "A3-183",
+          "A3-201"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Insatiable Striking"
+        ],
+        "abilities": []
+      }
+    ],
+    "Snorlax": [
+      {
+        "ids": [
+          "P-A-049",
+          "A2a-063"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Collapse"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "A1-211",
+          "A1-250"
+        ],
+        "hp": 150,
+        "attacks": [
+          "Rollout"
+        ],
+        "abilities": []
+      }
+    ],
+    "Palkia ex": [
+      {
+        "ids": [
+          "A2-049",
+          "A2-182",
+          "A2-204",
+          "A2-206"
+        ],
+        "hp": 150,
+        "attacks": [
+          "Slash",
+          "Dimensional Storm"
+        ],
+        "abilities": []
+      }
+    ],
+    "Grafaiai": [
+      {
+        "ids": [
+          "A2b-051",
+          "A2b-076"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": [
+          "Poison Coating"
+        ]
+      }
+    ],
+    "Wishiwashi ex": [
+      {
+        "ids": [
+          "A3-051",
+          "A3-184",
+          "A3-202"
+        ],
+        "hp": 170,
+        "attacks": [
+          "School Storm"
+        ],
+        "abilities": []
+      }
+    ],
+    "Magnemite": [
+      {
+        "ids": [
+          "A2a-053",
+          "A2a-080"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dragonite ex": [
+      {
+        "ids": [
+          "A3b-053",
+          "A3b-082",
+          "A3b-090"
+        ],
+        "hp": 180,
+        "attacks": [
+          "Giga Impact"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tinkaton ex": [
+      {
+        "ids": [
+          "A2b-054",
+          "A2b-086",
+          "A2b-094"
+        ],
+        "hp": 170,
+        "attacks": [
+          "Terrific Thumping"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pyukumuku": [
+      {
+        "ids": [
+          "A3-054",
+          "A3-163"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Sprinkle Water"
+        ],
+        "abilities": [
+          "Innards Out"
+        ]
+      }
+    ],
+    "Voltorb": [
+      {
+        "ids": [
+          "A2-054",
+          "A3b-095"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Big Explosion"
+        ],
+        "abilities": []
+      }
+    ],
+    "Varoom": [
+      {
+        "ids": [
+          "A2b-055",
+          "A2b-105"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      }
+    ],
+    "Electrode": [
+      {
+        "ids": [
+          "A2-055",
+          "A3b-096"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Rolling Attack"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "A1-100",
+          "A1-235"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Electro Ball"
+        ],
+        "abilities": []
+      }
+    ],
+    "Eevee": [
+      {
+        "ids": [
+          "A3b-055",
+          "A3b-078"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Collect"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "A1-206",
+          "A1-207",
+          "A1-208",
+          "A1-248"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Revavroom": [
+      {
+        "ids": [
+          "A2b-056",
+          "A2b-106"
+        ],
+        "hp": 110,
+        "attacks": [
+          "Spinning Drift"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tapu Fini": [
+      {
+        "ids": [
+          "A3-056",
+          "A3-164"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Spiral Drain"
+        ],
+        "abilities": []
+      }
+    ],
+    "Blastoise ex": [
+      {
+        "ids": [
+          "A1-056",
+          "A1-256"
+        ],
+        "hp": 180,
+        "attacks": [
+          "Surf",
+          "Hydro Bazooka"
+        ],
+        "abilities": []
+      }
+    ],
+    "Eevee ex": [
+      {
+        "ids": [
+          "A3b-056",
+          "A3b-083",
+          "A3b-092"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Bite"
+        ],
+        "abilities": [
+          "Veevee 'volve"
+        ]
+      }
+    ],
+    "Gholdengo": [
+      {
+        "ids": [
+          "A2b-057",
+          "A2b-077"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Scintillating Surfing"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bidoof": [
+      {
+        "ids": [
+          "P-A-057",
+          "A2b-064"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Headbutt"
+        ],
+        "abilities": []
+      },
+      {
+        "ids": [
+          "A2-135",
+          "A2-177"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Super Fang"
+        ],
+        "abilities": []
+      }
+    ],
+    "Probopass ex": [
+      {
+        "ids": [
+          "A2a-057",
+          "A2a-085",
+          "A2a-094"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Defensive Unit"
+        ],
+        "abilities": []
+      }
+    ],
+    "Snorlax ex": [
+      {
+        "ids": [
+          "A3b-057",
+          "A3b-084",
+          "A3b-091"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Flop-Down Punch"
+        ],
+        "abilities": [
+          "Full-Mouth Manner"
+        ]
+      }
+    ],
+    "Alolan Raichu ex": [
+      {
+        "ids": [
+          "A3-058",
+          "A3-185",
+          "A3-203"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Psychic"
+        ],
+        "abilities": []
+      }
+    ],
+    "Shinx": [
+      {
+        "ids": [
+          "A2-058",
+          "A2-163"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Hide"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pidgeot ex": [
+      {
+        "ids": [
+          "A1a-059",
+          "A1a-079"
+        ],
+        "hp": 170,
+        "attacks": [
+          "Scattering Cyclone"
+        ],
+        "abilities": []
+      }
+    ],
+    "Jigglypuff": [
+      {
+        "ids": [
+          "A2b-060",
+          "A3-228"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Rollout"
+        ],
+        "abilities": []
+      }
+    ],
+    "Wigglytuff": [
+      {
+        "ids": [
+          "A2b-061",
+          "A2b-078",
+          "A3-229"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Gentle Slap"
+        ],
+        "abilities": [
+          "Comforting Song"
+        ]
+      }
+    ],
+    "Froakie": [
+      {
+        "ids": [
+          "P-A-061",
+          "A3a-091"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Flop"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pachirisu ex": [
+      {
+        "ids": [
+          "A2-061",
+          "A2-183",
+          "A2-198"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Sparking Gadget"
+        ],
+        "abilities": []
+      }
+    ],
+    "Silvally": [
+      {
+        "ids": [
+          "A3a-061",
+          "A3a-074"
+        ],
+        "hp": 110,
+        "attacks": [
+          "Brave Buddies"
+        ],
+        "abilities": []
+      }
+    ],
+    "Farfetch'd": [
+      {
+        "ids": [
+          "P-A-062",
+          "A3b-102"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Leek Slap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rotom": [
+      {
+        "ids": [
+          "A2-062",
+          "A2-164"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Assault Laser"
+        ],
+        "abilities": []
+      }
+    ],
+    "Celesteela": [
+      {
+        "ids": [
+          "A3a-062",
+          "A3a-075"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Moombahton"
+        ],
+        "abilities": [
+          "Ultra Thrusters"
+        ]
+      }
+    ],
+    "Rayquaza ex": [
+      {
+        "ids": [
+          "P-A-064",
+          "P-A-065"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Draco Meteor"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bibarel ex": [
+      {
+        "ids": [
+          "A2b-065",
+          "A2b-087",
+          "A2b-095"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Carefree Press"
+        ],
+        "abilities": []
+      }
+    ],
+    "Oricorio": [
+      {
+        "ids": [
+          "A3-066",
+          "A3-165"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Zzzap"
+        ],
+        "abilities": [
+          "Safeguard"
+        ]
+      }
+    ],
+    "Mimikyu": [
+      {
+        "ids": [
+          "P-A-066",
+          "A3-083"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Shadow Hit"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cosmog": [
+      {
+        "ids": [
+          "P-A-067",
+          "A3-085",
+          "A3-171"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Teleport"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mismagius ex": [
+      {
+        "ids": [
+          "A2-067",
+          "A2-184",
+          "A2-199"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Magical Delusion"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tapu Koko": [
+      {
+        "ids": [
+          "A3-068",
+          "A3-166"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Volt Switch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lycanroc": [
+      {
+        "ids": [
+          "P-A-068",
+          "A3-100"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Crunch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ralts": [
+      {
+        "ids": [
+          "A2-068",
+          "A3b-097"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Teleport"
+        ],
+        "abilities": []
+      }
+    ],
+    "Kirlia": [
+      {
+        "ids": [
+          "A2-069",
+          "A3b-098"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Slap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Crabrawler": [
+      {
+        "ids": [
+          "P-A-071",
+          "A3-097"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Arceus ex": [
+      {
+        "ids": [
+          "A2a-071",
+          "A2a-086",
+          "A2a-095",
+          "A2a-096"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Ultimate Force"
+        ],
+        "abilities": [
+          "Fabled Luster"
+        ]
+      }
+    ],
+    "Drifloon": [
+      {
+        "ids": [
+          "A2-073",
+          "A2-165"
+        ],
+        "hp": 50,
+        "attacks": [
+          "Expand"
+        ],
+        "abilities": []
+      }
+    ],
+    "Starmie ex": [
+      {
+        "ids": [
+          "A1-076",
+          "A1-257"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Hydro Splash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mesprit": [
+      {
+        "ids": [
+          "A2-076",
+          "A2-166"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Supreme Blast"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cutiefly": [
+      {
+        "ids": [
+          "A3-078",
+          "A3-167"
+        ],
+        "hp": 30,
+        "attacks": [
+          "Flap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Giratina": [
+      {
+        "ids": [
+          "A2-078",
+          "A2-167"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Spooky Shot"
+        ],
+        "abilities": [
+          "Levitate"
+        ]
+      }
+    ],
+    "Lapras": [
+      {
+        "ids": [
+          "A1-079",
+          "A1-234"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Hydro Pump"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cresselia": [
+      {
+        "ids": [
+          "A2-079",
+          "A2-168"
+        ],
+        "hp": 110,
+        "attacks": [
+          "Moonlight Gain"
+        ],
+        "abilities": []
+      }
+    ],
+    "Comfey": [
+      {
+        "ids": [
+          "A3-080",
+          "A3-168"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Spinning Attack"
+        ],
+        "abilities": [
+          "Flower Shield"
+        ]
+      }
+    ],
+    "Sandygast": [
+      {
+        "ids": [
+          "A3-081",
+          "A3-169"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Vibration"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rhyperior": [
+      {
+        "ids": [
+          "A2-082",
+          "A2-169"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Mountain Swing"
+        ],
+        "abilities": []
+      }
+    ],
+    "Tapu Lele": [
+      {
+        "ids": [
+          "A3-084",
+          "A3-170"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Energy Arrow"
+        ],
+        "abilities": []
+      }
+    ],
+    "Articuno ex": [
+      {
+        "ids": [
+          "A1-084",
+          "A1-258",
+          "A1-275"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Ice Wing",
+          "Blizzard"
+        ],
+        "abilities": []
+      }
+    ],
+    "Paldean Clodsire ex": [
+      {
+        "ids": [
+          "A2b-085",
+          "A2b-093"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Venoshock"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lunala ex": [
+      {
+        "ids": [
+          "A3-087",
+          "A3-186",
+          "A3-204",
+          "A3-238"
+        ],
+        "hp": 180,
+        "attacks": [
+          "Lunar Blast"
+        ],
+        "abilities": [
+          "Psychic Connect"
+        ]
+      }
+    ],
+    "Lucario": [
+      {
+        "ids": [
+          "A2-092",
+          "A2-170"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Submarine Blow"
+        ],
+        "abilities": [
+          "Fighting Coach"
+        ]
+      }
+    ],
+    "Hippopotas": [
+      {
+        "ids": [
+          "A2-093",
+          "A2-171"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Rolling Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gallade ex": [
+      {
+        "ids": [
+          "A2-095",
+          "A2-185",
+          "A2-200"
+        ],
+        "hp": 170,
+        "attacks": [
+          "Energized Blade"
+        ],
+        "abilities": []
+      }
+    ],
+    "Rockruff": [
+      {
+        "ids": [
+          "A3-098",
+          "A3-172"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Signs of Evolution"
+        ],
+        "abilities": []
+      }
+    ],
+    "Aerodactyl": [
+      {
+        "ids": [
+          "A3a-098",
+          "A1-210"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Primal Wingbeat"
+        ],
+        "abilities": []
+      }
+    ],
+    "Weavile ex": [
+      {
+        "ids": [
+          "A2-099",
+          "A2-186",
+          "A2-201"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Scratching Nails"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mudsdale": [
+      {
+        "ids": [
+          "A3-103",
+          "A3-173"
+        ],
+        "hp": 140,
+        "attacks": [
+          "High Horsepower"
+        ],
+        "abilities": []
+      }
+    ],
+    "Passimian ex": [
+      {
+        "ids": [
+          "A3-104",
+          "A3-187",
+          "A3-205"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Seismic Toss"
+        ],
+        "abilities": [
+          "Offload Pass"
+        ]
+      }
+    ],
+    "Zapdos ex": [
+      {
+        "ids": [
+          "A1-104",
+          "A1-276"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Peck",
+          "Thundering Hurricane"
+        ],
+        "abilities": []
+      }
+    ],
+    "Spiritomb": [
+      {
+        "ids": [
+          "A2-104",
+          "A2-172"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Swirling Disaster"
+        ],
+        "abilities": []
+      }
+    ],
+    "Minior": [
+      {
+        "ids": [
+          "A3-105",
+          "A3-174"
+        ],
+        "hp": 80,
+        "attacks": [
+          "Star Drop"
+        ],
+        "abilities": []
+      }
+    ],
+    "Croagunk": [
+      {
+        "ids": [
+          "A2-107",
+          "A2-173"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Group Beatdown"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alolan Muk ex": [
+      {
+        "ids": [
+          "A3-111",
+          "A3-188",
+          "A3-206"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Chemical Panic"
+        ],
+        "abilities": []
+      }
+    ],
+    "Alakazam": [
+      {
+        "ids": [
+          "A1-117",
+          "A1-236"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Psychic"
+        ],
+        "abilities": []
+      }
+    ],
+    "Slowpoke": [
+      {
+        "ids": [
+          "A1-118",
+          "A1-237"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Tail Whap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dialga ex": [
+      {
+        "ids": [
+          "A2-119",
+          "A2-188",
+          "A2-205",
+          "A2-207"
+        ],
+        "hp": 150,
+        "attacks": [
+          "Metallic Turbo",
+          "Heavy Impact"
+        ],
+        "abilities": []
+      }
+    ],
+    "Heatran": [
+      {
+        "ids": [
+          "A2-120",
+          "A2-174"
+        ],
+        "hp": 120,
+        "attacks": [
+          "Steel Tackle"
+        ],
+        "abilities": []
+      }
+    ],
+    "Solgaleo ex": [
+      {
+        "ids": [
+          "A3-122",
+          "A3-189",
+          "A3-207",
+          "A3-239"
+        ],
+        "hp": 180,
+        "attacks": [
+          "Sol Breaker"
+        ],
+        "abilities": [
+          "Rising Road"
+        ]
+      }
+    ],
+    "Magearna": [
+      {
+        "ids": [
+          "A3-123",
+          "A3-175"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Silver Cannon"
+        ],
+        "abilities": []
+      }
+    ],
+    "Gengar ex": [
+      {
+        "ids": [
+          "A1-123",
+          "A1-277"
+        ],
+        "hp": 170,
+        "attacks": [
+          "Spooky Shot"
+        ],
+        "abilities": [
+          "Shadowy Spellbind"
+        ]
+      }
+    ],
+    "Garchomp": [
+      {
+        "ids": [
+          "A2-123",
+          "A2-175"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Dragon Claw"
+        ],
+        "abilities": [
+          "Reckless Shearing"
+        ]
+      }
+    ],
+    "Drampa": [
+      {
+        "ids": [
+          "A3-124",
+          "A3-176"
+        ],
+        "hp": 100,
+        "attacks": [
+          "Berserk"
+        ],
+        "abilities": []
+      }
+    ],
+    "Lickilicky ex": [
+      {
+        "ids": [
+          "A2-125",
+          "A2-189",
+          "A2-203"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Licking Fury"
+        ],
+        "abilities": []
+      }
+    ],
+    "Mewtwo ex": [
+      {
+        "ids": [
+          "A1-129",
+          "A1-262",
+          "A1-282",
+          "A1-286"
+        ],
+        "hp": 150,
+        "attacks": [
+          "Psychic Sphere",
+          "Psydrive"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pikipek": [
+      {
+        "ids": [
+          "A3-133",
+          "A3-177"
+        ],
+        "hp": 50,
+        "attacks": [
+          "Peck"
+        ],
+        "abilities": []
+      }
+    ],
+    "Staraptor": [
+      {
+        "ids": [
+          "A2-134",
+          "A2-176"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Clutch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Bewear": [
+      {
+        "ids": [
+          "A3-139",
+          "A3-178"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Tantrum"
+        ],
+        "abilities": []
+      }
+    ],
+    "Diglett": [
+      {
+        "ids": [
+          "A1-139",
+          "A1-238"
+        ],
+        "hp": 50,
+        "attacks": [
+          "Mud-Slap"
+        ],
+        "abilities": []
+      }
+    ],
+    "Glameow": [
+      {
+        "ids": [
+          "A2-139",
+          "A2-178"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Pose"
+        ],
+        "abilities": []
+      }
+    ],
+    "Komala": [
+      {
+        "ids": [
+          "A3-141",
+          "A3-179"
+        ],
+        "hp": 90,
+        "attacks": [
+          "Rolling Tackle"
+        ],
+        "abilities": [
+          "Comatose"
+        ]
+      }
+    ],
+    "Regigigas": [
+      {
+        "ids": [
+          "A2-143",
+          "A2-179"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Raging Hammer"
+        ],
+        "abilities": []
+      }
+    ],
+    "Machamp ex": [
+      {
+        "ids": [
+          "A1-146",
+          "A1-263",
+          "A1-278"
+        ],
+        "hp": 180,
+        "attacks": [
+          "Mega Punch"
+        ],
+        "abilities": []
+      }
+    ],
+    "Cubone": [
+      {
+        "ids": [
+          "A1-151",
+          "A1-239"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Growl"
+        ],
+        "abilities": []
+      }
+    ],
+    "Marowak ex": [
+      {
+        "ids": [
+          "A1-153",
+          "A1-264"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Bonemerang"
+        ],
+        "abilities": []
+      }
+    ],
+    "Nidoqueen": [
+      {
+        "ids": [
+          "A1-168",
+          "A1-240"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Lovestrike"
+        ],
+        "abilities": []
+      }
+    ],
+    "Golbat": [
+      {
+        "ids": [
+          "A1-173",
+          "A1-242"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Wing Attack"
+        ],
+        "abilities": []
+      }
+    ],
+    "Weezing": [
+      {
+        "ids": [
+          "A1-177",
+          "A1-243"
+        ],
+        "hp": 110,
+        "attacks": [
+          "Tackle"
+        ],
+        "abilities": [
+          "Gas Leak"
+        ]
+      }
+    ],
+    "Incineroar ex": [
+      {
+        "ids": [
+          "A3-182",
+          "A3-200"
+        ],
+        "hp": 180,
+        "attacks": [
+          "Fire Fang",
+          "Scar-Charged Smash"
+        ],
+        "abilities": []
+      }
+    ],
+    "Dragonite": [
+      {
+        "ids": [
+          "A1-185",
+          "A1-244"
+        ],
+        "hp": 160,
+        "attacks": [
+          "Draco Meteor"
+        ],
+        "abilities": []
+      }
+    ],
+    "Pidgeot": [
+      {
+        "ids": [
+          "A1-188",
+          "A1-245"
+        ],
+        "hp": 130,
+        "attacks": [
+          "Wing Attack"
+        ],
+        "abilities": [
+          "Drive Off"
+        ]
+      }
+    ],
+    "Wigglytuff ex": [
+      {
+        "ids": [
+          "A1-195",
+          "A1-265",
+          "A1-279"
+        ],
+        "hp": 140,
+        "attacks": [
+          "Sleepy Song"
+        ],
+        "abilities": []
+      }
+    ],
+    "Meowth": [
+      {
+        "ids": [
+          "A1-196",
+          "A1-246"
+        ],
+        "hp": 60,
+        "attacks": [
+          "Pay Day"
+        ],
+        "abilities": []
+      }
+    ],
+    "Ditto": [
+      {
+        "ids": [
+          "A1-205",
+          "A1-247"
+        ],
+        "hp": 70,
+        "attacks": [
+          "Copy Anything"
+        ],
+        "abilities": []
+      }
+    ],
+    "Porygon": [
+      {
+        "ids": [
+          "A1-209",
+          "A1-249"
+        ],
+        "hp": 50,
+        "attacks": [
+          "Sharpen"
+        ],
+        "abilities": [
+          "Data Scan"
+        ]
+      }
+    ]
+  },
+  "trainer_cards": [
+    {
+      "id": "P-A-001",
+      "name": "Potion"
+    },
+    {
+      "id": "P-A-002",
+      "name": "X Speed"
+    },
+    {
+      "id": "P-A-003",
+      "name": "Hand Scope"
+    },
+    {
+      "id": "P-A-004",
+      "name": "Pokédex"
+    },
+    {
+      "id": "P-A-005",
+      "name": "Poké Ball"
+    },
+    {
+      "id": "P-A-006",
+      "name": "Red Card"
+    },
+    {
+      "id": "P-A-007",
+      "name": "Professor's Research"
+    },
+    {
+      "id": "P-A-008",
+      "name": "Pokédex"
+    },
+    {
+      "id": "A3a-063",
+      "name": "Beast Wall"
+    },
+    {
+      "id": "A1a-063",
+      "name": "Old Amber"
+    },
+    {
+      "id": "A3a-064",
+      "name": "Repel"
+    },
+    {
+      "id": "A1a-064",
+      "name": "Pokémon Flute"
+    },
+    {
+      "id": "A3a-065",
+      "name": "Electrical Cord"
+    },
+    {
+      "id": "A1a-065",
+      "name": "Mythical Slab"
+    },
+    {
+      "id": "A3b-066",
+      "name": "Eevee Bag"
+    },
+    {
+      "id": "A3a-066",
+      "name": "Beastite"
+    },
+    {
+      "id": "A1a-066",
+      "name": "Budding Expeditioner"
+    },
+    {
+      "id": "A3b-067",
+      "name": "Leftovers"
+    },
+    {
+      "id": "A3a-067",
+      "name": "Gladion"
+    },
+    {
+      "id": "A1a-067",
+      "name": "Blue"
+    },
+    {
+      "id": "A3b-068",
+      "name": "Hau"
+    },
+    {
+      "id": "A3a-068",
+      "name": "Looker"
+    },
+    {
+      "id": "A1a-068",
+      "name": "Leaf"
+    },
+    {
+      "id": "A2b-069",
+      "name": "Iono"
+    },
+    {
+      "id": "A3b-069",
+      "name": "Penny"
+    },
+    {
+      "id": "A3a-069",
+      "name": "Lusamine"
+    },
+    {
+      "id": "A2b-070",
+      "name": "Pokémon Center Lady"
+    },
+    {
+      "id": "A2b-071",
+      "name": "Red"
+    },
+    {
+      "id": "A2b-072",
+      "name": "Team Rocket Grunt"
+    },
+    {
+      "id": "A2a-072",
+      "name": "Irida"
+    },
+    {
+      "id": "A2a-073",
+      "name": "Celestic Town Elder"
+    },
+    {
+      "id": "A2a-074",
+      "name": "Barry"
+    },
+    {
+      "id": "A2a-075",
+      "name": "Adaman"
+    },
+    {
+      "id": "A1a-080",
+      "name": "Budding Expeditioner"
+    },
+    {
+      "id": "A3a-081",
+      "name": "Gladion"
+    },
+    {
+      "id": "A1a-081",
+      "name": "Blue"
+    },
+    {
+      "id": "A3a-082",
+      "name": "Looker"
+    },
+    {
+      "id": "A1a-082",
+      "name": "Leaf"
+    },
+    {
+      "id": "A3a-083",
+      "name": "Lusamine"
+    },
+    {
+      "id": "A3b-085",
+      "name": "Hau"
+    },
+    {
+      "id": "A3b-086",
+      "name": "Penny"
+    },
+    {
+      "id": "A2a-087",
+      "name": "Irida"
+    },
+    {
+      "id": "A2b-088",
+      "name": "Iono"
+    },
+    {
+      "id": "A2a-088",
+      "name": "Celestic Town Elder"
+    },
+    {
+      "id": "A2b-089",
+      "name": "Pokémon Center Lady"
+    },
+    {
+      "id": "A2a-089",
+      "name": "Barry"
+    },
+    {
+      "id": "A2b-090",
+      "name": "Red"
+    },
+    {
+      "id": "A2a-090",
+      "name": "Adaman"
+    },
+    {
+      "id": "A2b-091",
+      "name": "Team Rocket Grunt"
+    },
+    {
+      "id": "A3b-107",
+      "name": "Eevee Bag"
+    },
+    {
+      "id": "A2b-111",
+      "name": "Poké Ball"
+    },
+    {
+      "id": "A3-142",
+      "name": "Big Malasada"
+    },
+    {
+      "id": "A3-143",
+      "name": "Fishing Net"
+    },
+    {
+      "id": "A3-144",
+      "name": "Rare Candy"
+    },
+    {
+      "id": "A2-144",
+      "name": "Skull Fossil"
+    },
+    {
+      "id": "A3-145",
+      "name": "Rotom Dex"
+    },
+    {
+      "id": "A2-145",
+      "name": "Armor Fossil"
+    },
+    {
+      "id": "A3-146",
+      "name": "Poison Barb"
+    },
+    {
+      "id": "A2-146",
+      "name": "Pokémon Communication"
+    },
+    {
+      "id": "A3-147",
+      "name": "Leaf Cape"
+    },
+    {
+      "id": "A2-147",
+      "name": "Giant Cape"
+    },
+    {
+      "id": "A3-148",
+      "name": "Acerola"
+    },
+    {
+      "id": "A2-148",
+      "name": "Rocky Helmet"
+    },
+    {
+      "id": "A3-149",
+      "name": "Ilima"
+    },
+    {
+      "id": "A2-149",
+      "name": "Lum Berry"
+    },
+    {
+      "id": "A3-150",
+      "name": "Kiawe"
+    },
+    {
+      "id": "A2-150",
+      "name": "Cyrus"
+    },
+    {
+      "id": "A3-151",
+      "name": "Guzma"
+    },
+    {
+      "id": "A2-151",
+      "name": "Team Galactic Grunt"
+    },
+    {
+      "id": "A3-152",
+      "name": "Lana"
+    },
+    {
+      "id": "A2-152",
+      "name": "Cynthia"
+    },
+    {
+      "id": "A3-153",
+      "name": "Sophocles"
+    },
+    {
+      "id": "A2-153",
+      "name": "Volkner"
+    },
+    {
+      "id": "A3-154",
+      "name": "Mallow"
+    },
+    {
+      "id": "A2-154",
+      "name": "Dawn"
+    },
+    {
+      "id": "A3-155",
+      "name": "Lillie"
+    },
+    {
+      "id": "A2-155",
+      "name": "Mars"
+    },
+    {
+      "id": "A3-190",
+      "name": "Acerola"
+    },
+    {
+      "id": "A2-190",
+      "name": "Cyrus"
+    },
+    {
+      "id": "A3-191",
+      "name": "Ilima"
+    },
+    {
+      "id": "A2-191",
+      "name": "Team Galactic Grunt"
+    },
+    {
+      "id": "A3-192",
+      "name": "Kiawe"
+    },
+    {
+      "id": "A2-192",
+      "name": "Cynthia"
+    },
+    {
+      "id": "A3-193",
+      "name": "Guzma"
+    },
+    {
+      "id": "A2-193",
+      "name": "Volkner"
+    },
+    {
+      "id": "A3-194",
+      "name": "Lana"
+    },
+    {
+      "id": "A2-194",
+      "name": "Dawn"
+    },
+    {
+      "id": "A3-195",
+      "name": "Sophocles"
+    },
+    {
+      "id": "A2-195",
+      "name": "Mars"
+    },
+    {
+      "id": "A3-196",
+      "name": "Mallow"
+    },
+    {
+      "id": "A3-197",
+      "name": "Lillie"
+    },
+    {
+      "id": "A3-208",
+      "name": "Guzma"
+    },
+    {
+      "id": "A3-209",
+      "name": "Lillie"
+    },
+    {
+      "id": "A1-216",
+      "name": "Helix Fossil"
+    },
+    {
+      "id": "A1-217",
+      "name": "Dome Fossil"
+    },
+    {
+      "id": "A1-218",
+      "name": "Old Amber"
+    },
+    {
+      "id": "A1-219",
+      "name": "Erika"
+    },
+    {
+      "id": "A1-220",
+      "name": "Misty"
+    },
+    {
+      "id": "A1-221",
+      "name": "Blaine"
+    },
+    {
+      "id": "A1-222",
+      "name": "Koga"
+    },
+    {
+      "id": "A1-223",
+      "name": "Giovanni"
+    },
+    {
+      "id": "A1-224",
+      "name": "Brock"
+    },
+    {
+      "id": "A1-225",
+      "name": "Sabrina"
+    },
+    {
+      "id": "A1-226",
+      "name": "Lt. Surge"
+    },
+    {
+      "id": "A1-266",
+      "name": "Erika"
+    },
+    {
+      "id": "A1-267",
+      "name": "Misty"
+    },
+    {
+      "id": "A1-268",
+      "name": "Blaine"
+    },
+    {
+      "id": "A1-269",
+      "name": "Koga"
+    },
+    {
+      "id": "A1-270",
+      "name": "Giovanni"
+    },
+    {
+      "id": "A1-271",
+      "name": "Brock"
+    },
+    {
+      "id": "A1-272",
+      "name": "Sabrina"
+    },
+    {
+      "id": "A1-273",
+      "name": "Lt. Surge"
+    }
+  ]
+}
