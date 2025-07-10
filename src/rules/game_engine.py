@@ -355,7 +355,7 @@ class GameEngine:
         """Validate deck according to TCG Pocket rules."""
         if len(deck) != GameConstants.DECK_SIZE:
             return False
-            
+        
         # Must have at least one Basic Pokemon
         basic_count = sum(
             1 for card in deck
@@ -363,16 +363,16 @@ class GameEngine:
         )
         if basic_count == 0:
             return False
-            
+        
         # Maximum 2 copies of any card
         card_counts: Dict[str, int] = {}
         for card in deck:
             card_counts[card.name] = card_counts.get(card.name, 0) + 1
             if card_counts[card.name] > GameConstants.MAX_COPIES_PER_CARD:
                 return False
-                
+        
         return True
-
+    
     def _calculate_damage(self, attack: Attack, attacker: PokemonCard, 
                          defender: PokemonCard) -> int:
         """Calculate attack damage including weakness."""
