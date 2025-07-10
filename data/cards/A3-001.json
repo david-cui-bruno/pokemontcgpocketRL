@@ -1,0 +1,30 @@
+{
+  "id": "A3-001",
+  "name": "Exeggcute",
+  "hp": 60,
+  "pokemon_type": "grass",
+  "stage": 0,
+  "attacks": [
+    {
+      "name": "Rolling Tackle",
+      "cost": [
+        "grass",
+        "colorless"
+      ],
+      "damage": 30,
+      "effects": [],
+      "description": null
+    }
+  ],
+  "ability": null,
+  "owner": null,
+  "set_code": "A3",
+  "rarity": null,
+  "evolves_from": null,
+  "retreat_cost": 1,
+  "weakness": "fire",
+  "is_ex": true,
+  "attached_energies": [],
+  "damage_counters": 0,
+  "status_condition": null
+}

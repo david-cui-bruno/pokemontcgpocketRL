@@ -1,4 +1,4 @@
-    """Tests for ability system."""
+"""Tests for ability system."""
 
 import pytest
 from src.rules.actions import ActionValidator, AbilityTriggerChecker, AbilityAction, ActionType

@@ -1,173 +1,243 @@
-"""Core data structures for the game state.
+"""Game state management for Pokemon TCG Pocket.
 
-This module defines the immutable dataclasses for GameState and PlayerState,
-which together represent the entire state of a Pokemon TCG Pocket game.
+This module defines the immutable state classes that represent the complete
+game state, including player states, energy zones, and turn tracking.
 """
 
 from __future__ import annotations
 from dataclasses import dataclass, field
-from typing import List, Optional, Tuple
-import dataclasses
-
-from src.card_db.core import Card, PokemonCard, SupporterCard, EnergyType, PlayerTag
+from typing import List, Optional, Set, Dict
 from enum import Enum, auto
 
+from src.rules.constants import (
+    EnergyType, GamePhase, StatusCondition, GameConstants
+)
+from src.card_db.core import (
+    Card, PokemonCard, SupporterCard, ToolCard, ItemCard
+)
 
-class GamePhase(Enum):
-    DRAW = 1
-    START_OF_TURN = 2
-    MAIN = 3
-    ATTACK = 4
-    END = 5
+class PlayerTag(Enum):
+    """Player identifier."""
+    PLAYER = auto()
+    OPPONENT = auto()
 
-    def next_phase(self) -> 'GamePhase':
-        """Get the next phase in sequence."""
-        phases = [GamePhase.DRAW, GamePhase.START_OF_TURN, GamePhase.MAIN, 
-                 GamePhase.ATTACK, GamePhase.END]
-        current_idx = phases.index(self)
-        return phases[(current_idx + 1) % len(phases)]
+    @property
+    def other(self) -> PlayerTag:
+        """Get the opposing player's tag."""
+        return PlayerTag.OPPONENT if self == PlayerTag.PLAYER else PlayerTag.PLAYER
 
-
-@dataclass(frozen=False)  # Change from frozen=True
-class PlayerState:
-    """Represents the complete state for a single player."""
-    
-    player_tag: PlayerTag
-    
-    # Active Pokemon and bench (max 3 in TCG Pocket)
-    active_pokemon: Optional[PokemonCard] = None
-    bench: List[PokemonCard] = field(default_factory=list)
-    
-    # Card piles
-    deck: List[Card] = field(default_factory=list)
-    hand: List[Card] = field(default_factory=list)
-    discard_pile: List[Card] = field(default_factory=list)
-    
-    # Game state variables
-    points: int = 0
-    energy_zone: Optional[EnergyType] = None
-    supporter_played_this_turn: bool = False
-    energy_attached_this_turn: bool = False
-    pokemon_entered_play_this_turn: List[str] = field(default_factory=list)
-    registered_energy_types: List[EnergyType] = field(default_factory=list)
-    max_registered_types: int = 3
+@dataclass(frozen=True)
+class EnergyZone:
+    """Represents a player's Energy Zone (single-slot buffer)."""
+    registered_types: Set[EnergyType]  # Types that can be generated (1-3)
+    current_energy: Optional[EnergyType] = None  # Current energy in buffer
     
     def __post_init__(self):
-        if len(self.bench) > 3:
-            raise ValueError("Bench cannot exceed 3 Pokemon.")
-        if self.points > 3:
-            raise ValueError("Points cannot exceed 3.")
-    
-    @property
-    def pokemon_in_play(self) -> List[PokemonCard]:
-        """Returns a list of all Pokemon in play (active and benched)."""
-        in_play = []
-        if self.active_pokemon:
-            in_play.append(self.active_pokemon)
-        in_play.extend(self.bench)
-        return in_play
+        """Validate energy zone setup."""
+        if len(self.registered_types) > GameConstants.MAX_ENERGY_TYPES:
+            raise ValueError(
+                f"Cannot register more than {GameConstants.MAX_ENERGY_TYPES} energy types"
+            )
+        if len(self.registered_types) == 0:
+            raise ValueError("Must register at least one energy type")
+
+    def can_generate_energy(self) -> bool:
+        """Check if zone can generate new energy."""
+        return self.current_energy is None
+
+    def generate_energy(self, rng) -> Optional[EnergyType]:
+        """Generate a random energy of registered type if buffer is empty."""
+        if not self.can_generate_energy():
+            return None
+        return rng.choice(list(self.registered_types))
+
+@dataclass(frozen=True)
+class TurnState:
+    """Tracks actions taken during a turn."""
+    energy_attached: bool = False  # Track energy attachment
+    supporter_played: bool = False  # One supporter per turn
+    retreated: bool = False  # One retreat per turn
+    attacked: bool = False  # Attack ends turn
+    pokemon_played_this_turn: Set[str] = field(default_factory=set)  # IDs of Pokemon played
+    pokemon_evolved_this_turn: Set[str] = field(default_factory=set)  # IDs of evolved Pokemon
 
     def can_play_supporter(self) -> bool:
         """Check if a supporter can be played."""
-        return not self.supporter_played_this_turn
+        return not self.supporter_played
 
     def can_attach_energy(self) -> bool:
         """Check if energy can be attached."""
-        return not self.energy_attached_this_turn and self.energy_zone is not None
+        return not self.energy_attached
 
+    def can_retreat(self) -> bool:
+        """Check if a retreat can be performed."""
+        return not self.retreated
+
+@dataclass(frozen=True)
+class PlayerState:
+    """Represents a player's complete game state."""
+    tag: PlayerTag
+    deck: List[Card]
+    hand: List[Card]
+    active_pokemon: Optional[PokemonCard] = None
+    bench: List[PokemonCard] = field(default_factory=list)
+    discard_pile: List[Card] = field(default_factory=list)
+    energy_zone: EnergyZone
+    points: int = 0
+    
+    def __post_init__(self):
+        """Validate player state."""
+        if len(self.bench) > GameConstants.MAX_BENCH_SIZE:
+            raise ValueError(f"Bench cannot exceed {GameConstants.MAX_BENCH_SIZE} Pokemon")
+        if len(self.hand) > GameConstants.MAX_HAND_SIZE:
+            raise ValueError(f"Hand cannot exceed {GameConstants.MAX_HAND_SIZE} cards")
+        if self.points > GameConstants.POINTS_TO_WIN:
+            raise ValueError(f"Points cannot exceed {GameConstants.POINTS_TO_WIN}")
+
+    @property
+    def has_active_pokemon(self) -> bool:
+        """Check if player has an active Pokemon."""
+        return self.active_pokemon is not None
+
+    @property
     def can_bench_pokemon(self) -> bool:
-        """Check if a Pokemon can be benched."""
-        return len(self.bench) < 3
+        """Check if player can add Pokemon to bench."""
+        return len(self.bench) < GameConstants.MAX_BENCH_SIZE
 
-    def has_pokemon_entered_play_this_turn(self, pokemon_id: str) -> bool:
-        """Check if a Pokemon entered play this turn."""
-        return pokemon_id in self.pokemon_entered_play_this_turn
+    @property
+    def all_pokemon(self) -> List[PokemonCard]:
+        """Get all Pokemon in play (active + bench)."""
+        pokemon = []
+        if self.active_pokemon:
+            pokemon.append(self.active_pokemon)
+        pokemon.extend(self.bench)
+        return pokemon
 
-    def generate_energy(self, energy_type: EnergyType) -> bool:
-        """Generate energy into the energy zone."""
-        if self.energy_zone is not None:
-            return False
-        self.energy_zone = energy_type
-        return True
+    @property
+    def has_valid_attack_target(self) -> bool:
+        """Check if player has a Pokemon that can be attacked."""
+        return self.active_pokemon is not None
 
-    def attach_energy(self, pokemon: PokemonCard, energy_type: Optional[EnergyType] = None) -> bool:
-        """Attach energy from zone to a Pokemon."""
-        if self.energy_attached_this_turn:
-            return False
-        if energy_type is None:
-            energy_type = self.energy_zone
-        if energy_type is None:
+    def can_evolve_pokemon(self, evolution: PokemonCard, pokemon_id: str) -> bool:
+        """Check if specific Pokemon can evolve into the given evolution."""
+        if not evolution.evolves_from:
             return False
             
-        pokemon.attached_energies.append(energy_type)
-        self.energy_zone = None
-        self.energy_attached_this_turn = True
-        return True
+        # Find target Pokemon
+        target = None
+        if self.active_pokemon and self.active_pokemon.id == pokemon_id:
+            target = self.active_pokemon
+        else:
+            for pokemon in self.bench:
+                if pokemon.id == pokemon_id:
+                    target = pokemon
+                    break
+                    
+        if not target:
+            return False
+            
+        return (
+            target.name == evolution.evolves_from and
+            target.turns_in_play > 0  # Can't evolve Pokemon played this turn
+        )
 
-    def register_energy_type(self, energy_type: EnergyType) -> 'PlayerState':
-        """Register an energy type for the zone if not already full."""
-        if len(self.registered_energy_types) >= self.max_registered_types:
-            raise ValueError("Maximum number of energy types already registered.")
-        if energy_type in self.registered_energy_types:
-            return self  # No change needed
-        new_types = self.registered_energy_types + [energy_type]
-        return dataclasses.replace(self, registered_energy_types=new_types)
+    def must_discard_hand(self) -> bool:
+        """Check if cards must be discarded due to hand size limit."""
+        return len(self.hand) > GameConstants.MAX_HAND_SIZE
 
-    def unregister_energy_type(self, energy_type: EnergyType) -> 'PlayerState':
-        """Unregister an energy type."""
-        if energy_type not in self.registered_energy_types:
-            return self
-        new_types = [et for et in self.registered_energy_types if et != energy_type]
-        return dataclasses.replace(self, registered_energy_types=new_types)
-
-
-@dataclass(frozen=False)  # Change from frozen=True
+@dataclass(frozen=True)
 class GameState:
-    """Represents the complete state of the game."""
-    
+    """Complete game state."""
     player: PlayerState
     opponent: PlayerState
-    active_player: PlayerTag = PlayerTag.PLAYER
-    phase: GamePhase = GamePhase.START_OF_TURN  # Fixed: Start with START_OF_TURN phase
-    turn_number: int = 1
-    is_finished: bool = False
-    winner: Optional[PlayerTag] = None
+    phase: GamePhase
+    turn_count: int = 1
     is_first_turn: bool = True
-    
+    turn_state: TurnState = field(default_factory=TurnState)
+    active_player_tag: PlayerTag = PlayerTag.PLAYER
+
+    def __post_init__(self):
+        """Validate game state."""
+        if not isinstance(self.player, PlayerState):
+            raise ValueError("Invalid player state")
+        if not isinstance(self.opponent, PlayerState):
+            raise ValueError("Invalid opponent state")
+        if self.player.tag == self.opponent.tag:
+            raise ValueError("Players must have different tags")
+
     @property
-    def active_player_state(self) -> PlayerState:
-        """Get the state of the currently active player."""
-        return self.player if self.active_player == PlayerTag.PLAYER else self.opponent
+    def active_player(self) -> PlayerState:
+        """Get the active player's state."""
+        return self.player if self.active_player_tag == PlayerTag.PLAYER else self.opponent
+
+    @property
+    def inactive_player(self) -> PlayerState:
+        """Get the inactive player's state."""
+        return self.opponent if self.active_player_tag == PlayerTag.PLAYER else self.player
+
+    @property
+    def is_game_over(self) -> bool:
+        """Check if game is over (points or no Pokemon)."""
+        return (
+            self.player.points >= GameConstants.POINTS_TO_WIN or
+            self.opponent.points >= GameConstants.POINTS_TO_WIN or
+            not any(self.player.all_pokemon) or
+            not any(self.opponent.all_pokemon)
+        )
+
+    @property
+    def winner(self) -> Optional[PlayerTag]:
+        """Get the winner if game is over."""
+        if self.player.points >= GameConstants.POINTS_TO_WIN:
+            return PlayerTag.PLAYER
+        if self.opponent.points >= GameConstants.POINTS_TO_WIN:
+            return PlayerTag.OPPONENT
+        if not any(self.player.all_pokemon):
+            return PlayerTag.OPPONENT
+        if not any(self.opponent.all_pokemon):
+            return PlayerTag.PLAYER
+        return None
+
+    def can_play_card(self, card: Card) -> bool:
+        """Check if a card can be played in current phase/state."""
+        if self.phase != GamePhase.ACTION:
+            return False
+            
+        if isinstance(card, SupporterCard):
+            return not self.turn_state.supporter_played
+            
+        return True
+
+    def advance_phase(self) -> GameState:
+        """Advance to the next phase, updating turn count if needed."""
+        phase_order = [
+            GamePhase.START,
+            GamePhase.ACTION,
+            GamePhase.ATTACK,
+            GamePhase.CHECKUP
+        ]
+        current_idx = phase_order.index(self.phase)
+        next_phase = phase_order[(current_idx + 1) % len(phase_order)]
         
-    @property
-    def inactive_player_state(self) -> PlayerState:
-        """Get the state of the currently inactive player."""
-        return self.opponent if self.active_player == PlayerTag.PLAYER else self.player
-
-    def get_player_state(self, player_tag: PlayerTag) -> PlayerState:
-        """Get the state for a specific player tag."""
-        if player_tag == PlayerTag.PLAYER:
-            return self.player
-        return self.opponent
-
-    def advance_phase(self) -> 'GameState':
-        """Advance the game to the next phase or turn."""
-        if self.phase == GamePhase.START_OF_TURN:
-            return dataclasses.replace(self, phase=GamePhase.DRAW)
-        elif self.phase == GamePhase.DRAW:
-            return dataclasses.replace(self, phase=GamePhase.MAIN)
-        elif self.phase == GamePhase.MAIN:
-            return dataclasses.replace(self, phase=GamePhase.ATTACK)
-        elif self.phase == GamePhase.ATTACK:
-            return dataclasses.replace(self, phase=GamePhase.END)
-        elif self.phase == GamePhase.END:
-            # End of turn, switch active player
-            new_active_player = PlayerTag.OPPONENT if self.active_player == PlayerTag.PLAYER else PlayerTag.PLAYER
-            return dataclasses.replace(
-                self,
-                phase=GamePhase.START_OF_TURN,
-                active_player=new_active_player,
-                turn_number=self.turn_number + 1,
-                is_first_turn=False  # No longer the first turn after it passes
+        # If completing a turn
+        if next_phase == GamePhase.START:
+            return GameState(
+                player=self.player,
+                opponent=self.opponent,
+                phase=next_phase,
+                turn_count=self.turn_count + 1,
+                is_first_turn=False,
+                active_player_tag=self.active_player_tag.other,
+                turn_state=TurnState()  # Reset turn state
             )
-        return self
+        
+        # Just advancing phases within turn
+        return GameState(
+            player=self.player,
+            opponent=self.opponent,
+            phase=next_phase,
+            turn_count=self.turn_count,
+            is_first_turn=self.is_first_turn,
+            active_player_tag=self.active_player_tag,
+            turn_state=self.turn_state
+        )

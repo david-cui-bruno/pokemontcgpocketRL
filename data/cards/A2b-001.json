@@ -15,6 +15,9 @@
         {
           "text": "Put 1 random Weedle from your deck onto your Bench.",
           "effect_type": null,
+          "target": null,
+          "amount": null,
+          "conditions": [],
           "parameters": {}
         }
       ],
