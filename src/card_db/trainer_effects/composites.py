@@ -20,6 +20,7 @@ from src.card_db.core import EnergyType
 def heal_20_damage():
     """Heal 20 damage from 1 of your Pokémon."""
     return [
+        lambda ctx: set_targets_to_player_pokemon(ctx),
         lambda ctx: player_chooses_target(ctx),
         lambda ctx: heal_pokemon(ctx, 20)
     ]
@@ -169,7 +170,7 @@ def switch_damaged_opponent():
     return [
         lambda ctx: require_bench_pokemon(ctx, "opponent"),
         lambda ctx: require_damaged_pokemon(ctx, "opponent"),
-        lambda ctx: player_chooses_target(ctx, ctx.opponent.bench),
+        lambda ctx: player_chooses_target(ctx),
         lambda ctx: switch_opponent_active(ctx)
     ]
 
@@ -211,7 +212,7 @@ def attach_water_energy_coin_flip():
     return [
         lambda ctx: require_pokemon_type(ctx, EnergyType.WATER, "player"),
         lambda ctx: player_chooses_target(ctx),
-        lambda ctx: coin_flip_repeat(ctx, lambda c: attach_energy_from_zone(c, EnergyType.WATER))
+        lambda ctx: attach_energy_from_zone_coin_flip(ctx, EnergyType.WATER)
     ]
 
 def attach_fighting_energy_specific():

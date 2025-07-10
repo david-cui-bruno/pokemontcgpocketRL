@@ -57,30 +57,25 @@ class PokemonTCGEnv(gym.Env):
             }),
             
             # Bench information (max 3 in TCG Pocket)
-            'bench': gym.spaces.Tuple([
-                gym.spaces.Dict({
-                    'hp': gym.spaces.Box(0, 300, (1,), dtype=np.int32),
-                    'damage': gym.spaces.Box(0, 300, (1,), dtype=np.int32),
-                    'energy': gym.spaces.Box(0, 10, (1,), dtype=np.int32),
-                    'is_basic': gym.spaces.Discrete(2),
-                }) for _ in range(3)
-            ]),
-            
-            # Game state information
-            'game_info': gym.spaces.Dict({
-                'hand_size': gym.spaces.Box(0, 60, (1,), dtype=np.int32),
-                'deck_size': gym.spaces.Box(0, 60, (1,), dtype=np.int32),
-                'points_remaining': gym.spaces.Box(0, 3, (1,), dtype=np.int32),  # Fixed: Points, not prizes
-                'energy_zone': gym.spaces.Box(0, 1, (1,), dtype=np.int32),  # Fixed: Add energy zone
-            }),
-            
-            # Add bench information
-            "bench": gym.spaces.Dict({
+            'bench': gym.spaces.Dict({
                 "pokemon_count": gym.spaces.Box(low=0, high=3, shape=(1,), dtype=np.int32),  # Fixed: Max 3
                 "hp": gym.spaces.Box(low=0, high=500, shape=(3,), dtype=np.int32),  # Fixed: 3 slots
                 "types": gym.spaces.Box(low=0, high=10, shape=(3,), dtype=np.int32),  # Fixed: 3 slots
                 "stages": gym.spaces.Box(low=0, high=2, shape=(3,), dtype=np.int32),  # Fixed: 3 slots
                 "energy_counts": gym.spaces.Box(low=0, high=8, shape=(3,), dtype=np.int32),  # Fixed: 3 slots
+            }),
+            
+            # Fixed: Add top-level fields that tests expect
+            'hand_size': gym.spaces.Box(0, 20, (1,), dtype=np.int32),  # Fixed: TCG Pocket max 20
+            'deck_size': gym.spaces.Box(0, 20, (1,), dtype=np.int32),  # Fixed: TCG Pocket deck size 20
+            'points_remaining': gym.spaces.Box(0, 3, (1,), dtype=np.int32),  # Fixed: Points, not prizes
+            
+            # Game state information (nested)
+            'game_info': gym.spaces.Dict({
+                'hand_size': gym.spaces.Box(0, 20, (1,), dtype=np.int32),  # Fixed: TCG Pocket max 20
+                'deck_size': gym.spaces.Box(0, 20, (1,), dtype=np.int32),  # Fixed: TCG Pocket deck size 20
+                'points_remaining': gym.spaces.Box(0, 3, (1,), dtype=np.int32),  # Fixed: Points, not prizes
+                'energy_zone': gym.spaces.Box(0, 1, (1,), dtype=np.int32),  # Fixed: Add energy zone
             }),
         })
         
@@ -104,8 +99,8 @@ class PokemonTCGEnv(gym.Env):
         self.state.player.deck = self.player_deck.copy()
         np.random.shuffle(self.state.player.deck)
         
-        # Draw opening hand (7 cards in TCG Pocket)
-        for _ in range(7):
+        # Draw opening hand (5 cards in TCG Pocket - rulebook §3)
+        for _ in range(5):
             if self.state.player.deck:
                 self.state.player.hand.append(self.state.player.deck.pop())
         
@@ -115,9 +110,12 @@ class PokemonTCGEnv(gym.Env):
         # Setup opponent similarly
         self.state.opponent.deck = self.opponent_deck.copy()
         np.random.shuffle(self.state.opponent.deck)
-        for _ in range(7):
+        for _ in range(5):
             if self.state.opponent.deck:
                 self.state.opponent.hand.append(self.state.opponent.deck.pop())
+        
+        # Advance to MAIN phase after drawing opening hand
+        self.state.phase = GamePhase.MAIN
         
         return self._get_observation(), {}
     
@@ -159,7 +157,7 @@ class PokemonTCGEnv(gym.Env):
         return self._get_observation(), reward, terminated, False, info
     
     def _get_observation(self) -> Dict[str, Any]:
-        """Convert game state to observation."""
+        """Get current observation."""
         # Get active Pokemon stats safely
         active_pokemon = self.state.player.active_pokemon
         active_pokemon_stats = {
@@ -206,13 +204,22 @@ class PokemonTCGEnv(gym.Env):
             # Player state
             "hand_size": np.array([len(self.state.player.hand)], dtype=np.int32),
             "deck_size": np.array([len(self.state.player.deck)], dtype=np.int32),
-            "points_remaining": np.array([3 - self.state.player.points], dtype=np.int32),  # Fixed: Points remaining
-            "bench_size": np.array([len(self.state.player.bench)], dtype=np.int32),
+            "points_remaining": np.array([3 - self.state.player.points], dtype=np.int32),
+            "deck_size": np.array([len(self.state.player.deck)], dtype=np.int32),
+            "points_remaining": np.array([3 - self.state.player.points], dtype=np.int32),
             "energy_zone": energy_zone_status,  # Fixed: Add energy zone
             
             # Active Pokemon and bench
             "active_pokemon": active_pokemon_stats,
             "bench": bench_info,
+            
+            # Game info (nested structure)
+            "game_info": {
+                "hand_size": np.array([len(self.state.player.hand)], dtype=np.int32),
+                "deck_size": np.array([len(self.state.player.deck)], dtype=np.int32),
+                "points_remaining": np.array([3 - self.state.player.points], dtype=np.int32),
+                "energy_zone": energy_zone_status,
+            },
             
             # Opponent state
             "opponent_hand_size": np.array([len(self.state.opponent.hand)], dtype=np.int32),
@@ -256,7 +263,49 @@ class PokemonTCGEnv(gym.Env):
     def _apply_action(self, action: Action) -> Dict[str, Any]:
         """Apply an action to the game state."""
         try:
-            if action.type == ActionType.PLAY_ITEM:
+            if action.type == ActionType.PLAY_POKEMON:
+                # Play a basic Pokemon to bench or active position
+                # Find the card in hand by ID (more robust than object identity)
+                card_in_hand = None
+                for card in self.state.player.hand:
+                    if card.id == action.source_card.id:
+                        card_in_hand = card
+                        break
+                
+                if card_in_hand:
+                    self.state.player.hand.remove(card_in_hand)
+                    
+                    # If no active Pokemon, set this as active Pokemon
+                    if self.state.player.active_pokemon is None:
+                        self.state.player.active_pokemon = card_in_hand
+                    else:
+                        # Otherwise add to bench (respecting 3-bench limit)
+                        if len(self.state.player.bench) < 3:
+                            self.state.player.bench.append(card_in_hand)
+                        else:
+                            return {"success": False, "error": "Bench is full (max 3 Pokemon)"}
+                    
+                    self.state.player.add_pokemon_to_play(card_in_hand)
+                    return {"success": True, "error": None}
+                return {"success": False, "error": "Pokemon not in hand"}
+            
+            elif action.type == ActionType.EVOLVE_POKEMON:
+                # Evolve a Pokemon
+                success = self.game_engine.evolve_pokemon(
+                    action.source_card, action.target_card, self.state
+                )
+                if success:
+                    # Remove evolution card from hand
+                    self.state.player.hand.remove(action.source_card)
+                    # Replace the base Pokemon with evolution
+                    if action.target_card == self.state.player.active_pokemon:
+                        self.state.player.active_pokemon = action.source_card
+                    elif action.target_card in self.state.player.bench:
+                        idx = self.state.player.bench.index(action.target_card)
+                        self.state.player.bench[idx] = action.source_card
+                return {"success": success, "error": None if success else "Failed to evolve"}
+            
+            elif action.type == ActionType.PLAY_ITEM:
                 success = self.game_engine.play_trainer_card(
                     action.source_card, self.state
                 )
@@ -274,6 +323,29 @@ class PokemonTCGEnv(gym.Env):
                 )
                 return {"success": success, "error": None if success else "Failed to play supporter"}
             
+            elif action.type == ActionType.ATTACH_ENERGY:
+                # Attach energy from energy zone to active Pokemon
+                if self.state.player.energy_zone and self.state.player.active_pokemon:
+                    success = self.state.player.attach_energy(self.state.player.active_pokemon)
+                    return {"success": success, "error": None if success else "Failed to attach energy"}
+                return {"success": False, "error": "No energy in zone or no active Pokemon"}
+            
+            elif action.type == ActionType.USE_ATTACK:
+                # Use an attack
+                if (action.source_card and action.target_card and 
+                    hasattr(action, 'attack_index') and action.attack_index is not None):
+                    
+                    # Get the attack
+                    attack = action.source_card.attacks[action.attack_index]
+                    
+                    # Resolve the attack using game engine
+                    result = self.game_engine.resolve_attack(
+                        action.source_card, attack, action.target_card, self.state
+                    )
+                    
+                    return {"success": True, "error": None, "attack_result": result}
+                return {"success": False, "error": "Invalid attack parameters"}
+            
             elif action.type == ActionType.PASS:
                 # Handle pass action
                 self.state.advance_phase()
@@ -281,7 +353,7 @@ class PokemonTCGEnv(gym.Env):
             
             # Add other action types as needed
             else:
-                return {"success": False, "error": f"Unhandled action type: {action.type}"}
+                return {"success": False, "error": f"Unknown action type: {action.type}"}
         
         except Exception as e:
             return {"success": False, "error": str(e)}

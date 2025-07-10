@@ -6,7 +6,7 @@ evolution, retreat, and other core mechanics.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Tuple, Any
 from enum import Enum
 import random
@@ -14,7 +14,7 @@ import random
 from src.card_db.core import (
     PokemonCard, Card, Attack, Effect, EnergyType, Stage, StatusCondition, TargetType, ItemCard, ToolCard, SupporterCard, TrainerCard
 )
-from src.rules.game_state import GameState, PlayerState
+from src.rules.game_state import GameState, PlayerState, GamePhase, PlayerTag
 from src.rules.actions import Action, ActionType
 
 
@@ -41,6 +41,11 @@ class AttackResult:
     energy_discarded: List[EnergyType]
     status_condition_applied: Optional[StatusCondition] = None
     coin_flips: List[CoinFlipResult] = None
+    
+    @property
+    def final_damage(self) -> int:
+        """Backward compatibility property for final_damage."""
+        return self.damage_dealt
 
 
 class GameEngine:
@@ -169,19 +174,19 @@ class GameEngine:
         target.damage_counters += final_damage
         target_ko = target.damage_counters >= target.hp
         
-        # Award points for KO (TCG Pocket point system)
+        # Award points if target is KO'd (TCG Pocket rulebook §10)
         if target_ko:
-            points_awarded = 2 if target.is_ex else 1
             # Determine which player gets the points
+            # If target is player's active Pokemon, opponent gets points
+            # If target is opponent's active Pokemon, player gets points
             if target == game_state.player.active_pokemon:
-                self.award_points(game_state.opponent, points_awarded)
+                # Opponent gets points
+                points_to_award = 2 if target.is_ex else 1
+                self.award_points(game_state.opponent, points_to_award)
             elif target == game_state.opponent.active_pokemon:
-                self.award_points(game_state.player, points_awarded)
-        
-        # Handle energy costs (attack costs are separate from effect discards)
-        # Do NOT add attack cost energies to energy_discarded for the AttackResult
-        # attack_energy_costs = self._handle_attack_costs(attacker, attack, game_state)
-        # energy_discarded.extend(attack_energy_costs)
+                # Player gets points
+                points_to_award = 2 if target.is_ex else 1
+                self.award_points(game_state.player, points_to_award)
         
         # Apply attack effects
         attacker_effects = self._apply_attacker_effects(attack, attacker, game_state)
@@ -233,31 +238,19 @@ class GameEngine:
         bench_pokemon: PokemonCard,
         game_state: GameState
     ) -> bool:
-        """Handle Pokemon retreat.
-        
-        Parameters
-        ----------
-        active_pokemon : PokemonCard
-            The currently active Pokemon
-        bench_pokemon : PokemonCard
-            The Pokemon to switch to
-        game_state : GameState
-            Current game state
-            
-        Returns
-        -------
-        bool
-            True if retreat was successful
-        """
-        # Check if retreat is legal
+        """Retreat active Pokemon to bench, bringing bench Pokemon to active."""
         if not self._can_retreat(active_pokemon, bench_pokemon, game_state):
             return False
         
-        # Pay retreat cost
+        # Remove energy for retreat cost
         retreat_cost = active_pokemon.retreat_cost
         if retreat_cost > 0:
-            if len(active_pokemon.attached_energies) < retreat_cost:
-                return False  # Not enough energy
+            self.discard_energy(active_pokemon, active_pokemon.attached_energies[:retreat_cost])
+        
+        # Switch active and bench Pokemon
+        game_state.player.active_pokemon = bench_pokemon
+        game_state.player.bench.remove(bench_pokemon)
+        game_state.player.bench.append(active_pokemon)
         
         return True
     
@@ -309,26 +302,11 @@ class GameEngine:
         drawn_cards = []
         for _ in range(min(count, len(player.deck))):
             if player.deck:
-                drawn_cards.append(player.deck.pop())
+                drawn_card = player.deck.pop()
+                drawn_cards.append(drawn_card)
+                player.hand.append(drawn_card)
         
         return drawn_cards
-    
-    def take_prize_card(self, player: PlayerState) -> Optional[Card]:
-        """Take a prize card.
-        
-        Parameters
-        ----------
-        player : PlayerState
-            The player taking the prize card
-            
-        Returns
-        -------
-        Optional[Card]
-            The prize card taken, or None if no prizes remain
-        """
-        if player.prizes:
-            return player.prizes.pop()
-        return None
     
     def _extract_damage_bonus(self, effect_text: str) -> int:
         """Extract damage bonus from effect text."""
@@ -365,33 +343,29 @@ class GameEngine:
         return None
     
     def apply_status_condition_effects(self, pokemon: PokemonCard, game_state: GameState) -> Dict[str, Any]:
-        """Apply effects of status conditions at the start of turn."""
+        """Apply effects of status conditions during Check-up phase (rulebook §7)."""
         effects = {}
         
         if pokemon.status_condition == StatusCondition.POISONED:
-            # Fixed: Poison does 10 damage between turns (not 20)
+            # Poison: 10 damage during each Check-up
             pokemon.damage_counters += 10
+            effects["damage"] = 10
             effects["poison_damage"] = 10
         
         elif pokemon.status_condition == StatusCondition.BURNED:
-            # Burn does 20 damage between turns
+            # Burn: 20 damage, then flip a coin; heads cures Burn
             pokemon.damage_counters += 20
+            effects["damage"] = 20
             effects["burn_damage"] = 20
-            # TODO: Add coin flip to cure burn on heads
+            coin_result = self.flip_coin()
+            if coin_result == CoinFlipResult.HEADS:
+                pokemon.status_condition = None
+                effects["burn_cured"] = True
         
-        elif pokemon.status_condition == StatusCondition.ASLEEP:
-            # Sleep prevents attacking (handled in attack validation)
-            effects["asleep"] = True
-            # TODO: Add coin flip to wake up on heads
-        
-        elif pokemon.status_condition == StatusCondition.PARALYZED:
-            # Paralysis prevents attacking (handled in attack validation)
-            effects["paralyzed"] = True
-            # TODO: Add automatic cure after one full turn
-        
-        elif pokemon.status_condition == StatusCondition.CONFUSED:
-            # Confusion causes self-damage when attacking (handled in attack resolution)
-            effects["confused"] = True
+        # Always return these keys (even if 0)
+        effects.setdefault("poison_damage", 0)
+        effects.setdefault("burn_damage", 0)
+        effects.setdefault("damage", 0)
         
         return effects
     
@@ -418,6 +392,10 @@ class GameEngine:
         game_state: GameState
     ) -> bool:
         """Check if an attack can be used."""
+        # Check if we're in ATTACK phase
+        if game_state.phase != GamePhase.ATTACK:
+            return False
+        
         # Check if Pokemon is asleep or paralyzed
         if attacker.status_condition in [StatusCondition.ASLEEP, StatusCondition.PARALYZED]:
             return False
@@ -506,10 +484,12 @@ class GameEngine:
             return False
         
         # Check if evolution card is in hand
-        if evolution not in game_state.player.hand:
+        if evolution not in game_state.active_player_state.hand:
             return False
         
-        # TODO: Add restriction "not on the turn it entered play"
+        # Rulebook §4: Cannot evolve on the turn it entered play
+        if base_pokemon.id in game_state.active_player_state.pokemon_entered_play_this_turn:
+            return False
         
         return True
     
@@ -559,39 +539,29 @@ class GameEngine:
         return True
     
     def award_points(self, player: PlayerState, points: int) -> bool:
-        """Award points to a player for KOing Pokemon.
+        """Award points for KOing Pokemon (TCG Pocket rulebook §10).
         
         Parameters
         ----------
         player : PlayerState
             The player to award points to
         points : int
-            Number of points to award (1 for regular Pokemon, 2 for ex/Tera)
+            Points to award (1 for regular Pokemon, 2 for ex/Tera)
             
         Returns
         -------
         bool
-            True if points were awarded successfully
+            True if points were awarded, False if player already has 3 points
         """
-        if points > 0 and player.points < 3:
-            player.points = min(3, player.points + points)
-            return True
-        return False
+        if player.points >= 3:
+            return False
+        
+        player.points = min(3, player.points + points)
+        return True
     
     def check_game_over(self, game_state: GameState) -> Optional[str]:
-        """Check if the game is over and return the winner.
-        
-        Parameters
-        ----------
-        game_state : GameState
-            Current game state
-            
-        Returns
-        -------
-        Optional[str]
-            "player" if player wins, "opponent" if opponent wins, None if game continues
-        """
-        # Check points (TCG Pocket: first to 3 points wins)
+        """Check if the game is over and return the winner (rulebook §10)."""
+        # Check points (first to 3 points wins)
         if game_state.player.points >= 3:
             return "player"
         if game_state.opponent.points >= 3:
@@ -602,14 +572,15 @@ class GameEngine:
             not game_state.player.bench):
             return "opponent"
         if (not game_state.opponent.active_pokemon and 
-            not game_state.opponent.bench):
+                not game_state.opponent.bench):
             return "player"
         
-        # Check if either player has no cards in deck
-        if not game_state.player.deck:
-            return "opponent"
-        if not game_state.opponent.deck:
-            return "player"
+        # Deck out: Only lose if required to draw and cannot (DRAW phase)
+        if game_state.phase == GamePhase.DRAW:
+            if game_state.active_player == PlayerTag.PLAYER and not game_state.player.deck:
+                return "opponent"
+            if game_state.active_player == PlayerTag.OPPONENT and not game_state.opponent.deck:
+                return "player"
         
         return None
     
@@ -631,10 +602,14 @@ class GameEngine:
         target_pokemon: Optional[PokemonCard] = None
     ) -> bool:
         """Play a trainer card using the composable effects system."""
-        player = game_state.active_player
+        player = game_state.active_player_state
         
         # Import here to avoid circular import
-        from src.card_db.trainer_executor import execute_trainer_card
+        from src.card_db.trainer_executor import execute_trainer_card, can_play_trainer_card
+        
+        # Check if the card can be played first
+        if not can_play_trainer_card(card, game_state, player, self):
+            return False
         
         success = execute_trainer_card(card, game_state, player, self)
         if success:
@@ -657,9 +632,83 @@ class GameEngine:
         target_pokemon: Optional[PokemonCard] = None
     ) -> bool:
         """Check if a trainer card can be played (dry run)."""
-        player = game_state.active_player
+        player = game_state.active_player_state  # Fixed: Use active_player_state instead of active_player
         
         # Import here to avoid circular import
         from src.card_db.trainer_executor import can_play_trainer_card
         
         return can_play_trainer_card(card, game_state, player, self)
+    
+    def start_turn_energy_generation(self, player: PlayerState) -> bool:
+        """Generate energy in Energy Zone at start of turn if empty (rulebook §5)."""
+        # Only generate if energy zone is empty and player has registered types
+        if player.energy_zone is None and player.registered_energy_types:
+            import random
+            energy_type = random.choice(player.registered_energy_types)
+            success = player.generate_energy(energy_type)
+            if success:
+                # According to rulebook, energy should be immediately attached
+                # This might need to be handled in the turn advancement logic
+                return True
+        return False
+
+    def start_first_turn(self, game_state: GameState) -> None:
+        """Handle first turn restrictions (rulebook §3)."""
+        if game_state.turn_number == 0:  # Fixed: Check for turn 0
+            # First player cannot draw or attach energy on turn 0
+            active_state = game_state.active_player_state
+            active_state.can_draw_this_turn = False
+            active_state.can_attach_energy_this_turn = False
+
+    def apply_status_condition_effects_in_order(self, pokemon: PokemonCard, game_state: GameState) -> Dict[str, Any]:
+        """Apply status condition effects in rulebook order: Poison → Burn → Sleep → Paralysis."""
+        results = {}
+        
+        # Apply in fixed order per rulebook §7
+        if pokemon.status_condition == StatusCondition.POISONED:
+            pokemon.damage_counters += 10
+            results['poison_damage'] = 10
+        
+        if pokemon.status_condition == StatusCondition.BURNED:
+            pokemon.damage_counters += 20
+            results['burn_damage'] = 20
+            # Flip coin for burn cure
+            if self.flip_coin() == CoinFlipResult.HEADS:
+                pokemon.status_condition = None
+                results['burn_cured'] = True
+        
+        if pokemon.status_condition == StatusCondition.ASLEEP:
+            # Flip coin to wake up
+            if self.flip_coin() == CoinFlipResult.HEADS:
+                pokemon.status_condition = None
+                results['woke_up'] = True
+        
+        if pokemon.status_condition == StatusCondition.PARALYZED:
+            # Paralysis wears off after one full turn
+            # This should be handled in turn advancement
+            pass
+        
+        return results
+
+    def can_attach_tool(self, pokemon: PokemonCard, game_state: GameState) -> bool:
+        """Check if a tool can be attached to a Pokemon (rulebook §9)."""
+        # Check if this Pokemon already has a tool attached
+        # This would need to track attached tools in the PokemonCard or GameState
+        # For now, we'll assume no tool is attached
+        return True  # Placeholder - needs proper implementation
+
+    def enforce_hand_limit(self, player: PlayerState) -> List[Card]:
+        """Enforce 10-card hand limit (rulebook §11)."""
+        if len(player.hand) > 10:
+            # In a real implementation, this would need player input
+            # For now, we'll discard the oldest cards
+            excess = len(player.hand) - 10
+            discarded = player.hand[:excess]
+            player.hand = player.hand[excess:]
+            player.discard_pile.extend(discarded)
+            return discarded
+        return []
+
+    def load_deck(self):
+        # TODO: Implement deck loading from file
+        self.log_info("Load deck not yet implemented.")

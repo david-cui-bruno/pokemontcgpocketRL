@@ -113,10 +113,9 @@ def print_game_state(env, turn_num):
     
     # Player state
     print(f"PLAYER 1:")
-    print(f"  Points: {state.player.points}")
+    print(f"  Points: {state.player.points}/3")
     print(f"  Hand: {len(state.player.hand)} cards")
     print(f"  Deck: {len(state.player.deck)} cards")
-    print(f"  Prizes: {len(state.player.prizes)} remaining")
     print(f"  Energy Zone: {state.player.energy_zone}")
     
     if state.player.active_pokemon:
@@ -131,10 +130,9 @@ def print_game_state(env, turn_num):
     
     # Opponent state
     print(f"\nPLAYER 2:")
-    print(f"  Points: {state.opponent.points}")
+    print(f"  Points: {state.opponent.points}/3")
     print(f"  Hand: {len(state.opponent.hand)} cards")
     print(f"  Deck: {len(state.opponent.deck)} cards")
-    print(f"  Prizes: {len(state.opponent.prizes)} remaining")
     print(f"  Energy Zone: {state.opponent.energy_zone}")
     
     if state.opponent.active_pokemon:
@@ -160,11 +158,19 @@ def test_real_gameplay():
     deck = create_realistic_deck()
     print(f"Created deck with {len(deck)} cards")
     
+    # Verify deck size (rulebook §1)
+    assert len(deck) == 20, f"Deck must be exactly 20 cards, got {len(deck)}"
+    
     # Create environment
     env = PokemonTCGEnv(player_deck=deck, opponent_deck=deck)
     obs, info = env.reset()
     
     print("\n🎯 Game initialized successfully!")
+    
+    # Verify starting hand size (rulebook §3)
+    assert obs["hand_size"][0] == 5, f"Starting hand must be 5 cards, got {obs['hand_size'][0]}"
+    print(f"✅ Starting hand: {obs['hand_size'][0]} cards")
+    
     print_game_state(env, 0)
     
     # Play the game

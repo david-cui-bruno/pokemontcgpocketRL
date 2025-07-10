@@ -1,13 +1,20 @@
 """Execute trainer card effect chains."""
 
 from src.card_db.trainer_effects import EffectContext
-from src.card_db.comprehensive_trainer_registry import TRAINER_EFFECTS
+from src.card_db.comprehensive_trainer_registry import TRAINER_EFFECTS, get_effect_for_card
 from src.card_db.core import TrainerCard, ItemCard, ToolCard, SupporterCard
 from src.rules.game_state import GameState, PlayerState
 
 def execute_trainer_card(card: TrainerCard, game_state: GameState, player: PlayerState, game_engine=None) -> bool:
     """Execute a trainer card's effects."""
-    effect_chain = TRAINER_EFFECTS.get(card.name)
+    # First try to get effect by card name
+    effect_text = get_effect_for_card(card.name)
+    if effect_text:
+        effect_chain = TRAINER_EFFECTS.get(effect_text)
+    else:
+        # Fall back to direct name lookup (for backward compatibility)
+        effect_chain = TRAINER_EFFECTS.get(card.name)
+    
     if not effect_chain:
         print(f"No effect defined for {card.name}")
         return False
@@ -41,7 +48,12 @@ def can_play_trainer_card(card: TrainerCard, game_state: GameState, player: Play
         return True
     
     # Try to execute the effect chain without actually applying effects
-    effect_chain = TRAINER_EFFECTS.get(card.name)
+    effect_text = get_effect_for_card(card.name)
+    if effect_text:
+        effect_chain = TRAINER_EFFECTS.get(effect_text)
+    else:
+        effect_chain = TRAINER_EFFECTS.get(card.name)
+    
     if not effect_chain:
         return False
     

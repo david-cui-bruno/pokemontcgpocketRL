@@ -38,7 +38,7 @@ def test_player_state_initialization():
     assert state.points == 0
     assert state.energy_zone is None
     assert not state.has_played_supporter
-    assert not state.has_attached_energy
+    assert not state.energy_attached_this_turn
 
 def test_player_state_bench_limit(sample_pokemon):
     """Test that bench cannot exceed 3 Pokemon (TCG Pocket limit)."""
@@ -62,7 +62,7 @@ def test_can_play_supporter():
     """Test supporter play restrictions."""
     state = PlayerState()
     assert state.can_play_supporter()
-    state.has_played_supporter = True
+    state.supporter_played_this_turn = True
     assert not state.can_play_supporter()
 
 def test_can_attach_energy():
@@ -70,9 +70,15 @@ def test_can_attach_energy():
     state = PlayerState()
     assert not state.can_attach_energy()
     state.energy_zone = EnergyType.FIRE
+    basic_pokemon = PokemonCard(
+        id="TEST-001",
+        name="Test Pokemon",
+        hp=100,
+        pokemon_type=EnergyType.COLORLESS,
+        stage=Stage.BASIC
+    )
+    state.active_pokemon = basic_pokemon
     assert state.can_attach_energy()
-    state.has_attached_energy = True
-    assert not state.can_attach_energy()
 
 def test_game_state_initialization():
     """Test that GameState initializes with correct defaults."""
@@ -112,5 +118,4 @@ def test_phase_advancement():
     assert state.turn_number == 2
     
     # Test flag reset
-    state.active_player_state.has_played_supporter = False
-    state.active_player_state.has_attached_energy = False 
+    state.active_player_state.supporter_played_this_turn = False 

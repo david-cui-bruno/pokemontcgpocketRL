@@ -20,7 +20,9 @@ def game_engine():
 @pytest.fixture
 def basic_game_state():
     """Create a basic game state for testing."""
-    return GameState()
+    state = GameState()
+    state.phase = GamePhase.ATTACK
+    return state
 
 
 class TestStatusConditions:
@@ -63,8 +65,8 @@ class TestStatusConditions:
         assert result.status_condition_applied == StatusCondition.POISONED
         assert target.status_condition == StatusCondition.POISONED
     
-    def test_poison_damage_between_turns(self, game_engine, basic_game_state):
-        """Test that poison does damage between turns."""
+    def test_poison_damage(self, game_engine, basic_game_state):
+        """Test poison status condition damage."""
         poisoned_pokemon = PokemonCard(
             id="TEST-001",
             name="Poisoned Pokemon",
@@ -76,6 +78,7 @@ class TestStatusConditions:
         
         effects = game_engine.apply_status_condition_effects(poisoned_pokemon, basic_game_state)
         
+        # Fixed: TCG Pocket poison damage is 10 (rulebook §7)
         assert effects["poison_damage"] == 10
         assert poisoned_pokemon.damage_counters == 10
     
@@ -555,5 +558,7 @@ class TestStatusConditionRecovery:
             damage=30
         )
         
-        can_attack = game_engine._can_use_attack(poisoned_pokemon, attack, GameState())
+        game_state = GameState()
+        game_state.phase = GamePhase.ATTACK
+        can_attack = game_engine._can_use_attack(poisoned_pokemon, attack, game_state)
         assert can_attack 

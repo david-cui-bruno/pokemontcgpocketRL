@@ -4,7 +4,7 @@ import pytest
 from typing import List
 
 from src.rules.game_engine import GameEngine, DamageResult, CoinFlipResult
-from src.rules.game_state import GameState, PlayerState
+from src.rules.game_state import GameState, PlayerState, GamePhase, PlayerTag
 from src.card_db.core import PokemonCard, Attack, EnergyType, Stage, StatusCondition, Card
 
 
@@ -90,7 +90,9 @@ def grass_pokemon():
 @pytest.fixture
 def basic_game_state():
     """Create a basic game state for testing."""
-    return GameState()
+    state = GameState()
+    state.phase = GamePhase.ATTACK
+    return state
 
 
 @pytest.fixture
@@ -116,6 +118,7 @@ class TestGameEngine:
         basic_pokemon.attached_energies = [EnergyType.COLORLESS]
         
         game_state = GameState()
+        game_state.phase = GamePhase.ATTACK
         result = game_engine.resolve_attack(basic_pokemon, attack, target, game_state)
         
         assert result.damage_dealt == 30
@@ -135,9 +138,10 @@ class TestGameEngine:
         grass_pokemon.damage_counters = 0
         
         game_state = GameState()
+        game_state.phase = GamePhase.ATTACK
         result = game_engine.resolve_attack(fire_pokemon, attack, grass_pokemon, game_state)
         
-        # Fixed: Weakness adds +20 damage, not multiplies by 2
+        # Fixed: Weakness adds +20 damage (rulebook §1)
         assert result.damage_dealt == 60  # 40 + 20 for weakness
         assert result.damage_result == DamageResult.WEAKNESS
         assert not result.target_ko  # 60 damage vs 90 HP should NOT KO (60 < 90)
@@ -159,6 +163,7 @@ class TestGameEngine:
         fire_pokemon.attached_energies = [EnergyType.FIRE]
         
         game_state = GameState()
+        game_state.phase = GamePhase.ATTACK
         result = game_engine.resolve_attack(fire_pokemon, attack, target, game_state)
         
         # Should be normal damage, no resistance reduction
@@ -178,6 +183,7 @@ class TestGameEngine:
         )
         
         game_state = GameState()
+        game_state.phase = GamePhase.ATTACK
         game_state.player.hand = [evolution]
         
         # Should be able to evolve
@@ -198,7 +204,9 @@ class TestGameEngine:
         )
         
         game_state = GameState()
+        game_state.phase = GamePhase.ATTACK
         game_state.player.bench = [bench_pokemon]
+        game_state.player.active_pokemon = basic_pokemon
         
         # Should be able to retreat (no retreat cost)
         assert game_engine.retreat_pokemon(basic_pokemon, bench_pokemon, game_state)
@@ -209,6 +217,11 @@ class TestGameEngine:
         
         # Add energy and should be able to retreat
         basic_pokemon.attached_energies = [EnergyType.COLORLESS]
+        
+        # Fix: Set the active Pokemon back to basic_pokemon (it was changed in the previous retreat)
+        game_state.player.active_pokemon = basic_pokemon
+        game_state.player.bench = [bench_pokemon]
+        
         assert game_engine.retreat_pokemon(basic_pokemon, bench_pokemon, game_state)
     
     def test_retreat_restrictions_status_conditions(self, game_engine, basic_pokemon):
@@ -222,6 +235,7 @@ class TestGameEngine:
         )
         
         game_state = GameState()
+        game_state.phase = GamePhase.ATTACK
         game_state.player.bench = [bench_pokemon]
         
         # Test asleep Pokemon cannot retreat
@@ -236,25 +250,26 @@ class TestGameEngine:
         basic_pokemon.status_condition = None
         assert game_engine.retreat_pokemon(basic_pokemon, bench_pokemon, game_state)
     
-    def test_point_system(self, game_engine):
-        """Test the TCG Pocket point system."""
+    def test_point_awarding_system(self, game_engine):
+        """Test TCG Pocket point awarding system."""
         player = PlayerState()
         
-        # Award points for regular Pokemon KO
+        # Award 1 point for regular Pokemon KO
         assert game_engine.award_points(player, 1)
         assert player.points == 1
         
-        # Award points for ex Pokemon KO
+        # Award 2 points for ex Pokemon KO
         assert game_engine.award_points(player, 2)
         assert player.points == 3
         
         # Try to award more points (should not exceed 3)
         assert not game_engine.award_points(player, 1)
-        assert player.points == 3  # Should still be 3
+        assert player.points == 3
     
     def test_game_over_conditions(self, game_engine):
         """Test game over detection with point system."""
         game_state = GameState()
+        game_state.phase = GamePhase.DRAW
         
         # Add some Pokemon to avoid the "no Pokemon in play" condition
         basic_pokemon = PokemonCard(
@@ -284,10 +299,12 @@ class TestGameEngine:
         game_state.opponent.points = 3
         assert game_engine.check_game_over(game_state) == "opponent"
         
-        # Reset and test deck depletion
+        # Reset and test deck depletion (only in DRAW phase)
         game_state.player.points = 0
         game_state.opponent.points = 0
         game_state.player.deck = []
+        game_state.phase = GamePhase.DRAW
+        game_state.active_player = PlayerTag.PLAYER
         assert game_engine.check_game_over(game_state) == "opponent"
     
     def test_draw_cards(self, game_engine):
@@ -304,25 +321,6 @@ class TestGameEngine:
         assert len(drawn) == 2  # Only 2 cards left
         assert len(player.deck) == 0
     
-    def test_take_prize_card(self, game_engine, mock_card):
-        """Test taking prize cards."""
-        player = PlayerState()
-        player.prizes = [mock_card, mock_card, mock_card]  # Use actual Card objects
-        
-        prize = game_engine.take_prize_card(player)
-        assert prize is not None
-        assert prize == mock_card
-        assert len(player.prizes) == 2
-        
-        # Take all prizes
-        game_engine.take_prize_card(player)
-        game_engine.take_prize_card(player)
-        assert len(player.prizes) == 0
-        
-        # Try to take from empty prizes
-        prize = game_engine.take_prize_card(player)
-        assert prize is None
-    
     def test_attack_resolution_ko(self, game_engine, fire_pokemon):
         """Test attack resolution that results in KO."""
         attack = fire_pokemon.attacks[0]
@@ -338,6 +336,7 @@ class TestGameEngine:
         fire_pokemon.attached_energies = [EnergyType.FIRE]
         
         game_state = GameState()
+        game_state.phase = GamePhase.ATTACK
         result = game_engine.resolve_attack(fire_pokemon, attack, target, game_state)
         
         assert result.damage_dealt == 40

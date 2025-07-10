@@ -102,11 +102,11 @@ class TestComprehensiveGameFlow:
         obs, info = game_env.reset()
         
         # Check initial state
-        assert game_env.state.phase == GamePhase.DRAW
+        assert game_env.state.phase == GamePhase.MAIN  # Fixed: Game advances to MAIN after drawing
         assert game_env.state.player.points == 0
         assert game_env.state.opponent.points == 0
-        assert len(game_env.state.player.hand) == 7  # TCG Pocket draws 7
-        assert len(game_env.state.opponent.hand) == 7
+        assert len(game_env.state.player.hand) == 5  # TCG Pocket draws 5 (rulebook §3)
+        assert len(game_env.state.opponent.hand) == 5
         # No prize cards in TCG Pocket - uses points instead
         
         print("✅ Environment initialization works")
@@ -209,6 +209,9 @@ class TestComprehensiveGameFlow:
         """Test weakness and resistance mechanics."""
         game_engine = game_env.game_engine
         
+        # Set phase to ATTACK for attack validation
+        game_env.state.phase = GamePhase.ATTACK
+        
         # Test weakness (+20 damage)
         fire_attacker = PokemonCard(
             id="FIRE-001",
@@ -283,7 +286,7 @@ class TestComprehensiveGameFlow:
         
         effects = game_engine.apply_status_condition_effects(poisoned_pokemon, game_env.state)
         assert "poison_damage" in effects
-        assert effects["poison_damage"] == 10  # TCG Pocket poison damage
+        assert effects["poison_damage"] == 10  # TCG Pocket poison damage (rulebook §7)
         
         # Test burn
         burned_pokemon = PokemonCard(
@@ -304,6 +307,9 @@ class TestComprehensiveGameFlow:
     def test_attack_validation(self, game_env):
         """Test attack validation logic."""
         game_engine = game_env.game_engine
+        
+        # Set the phase to ATTACK for attack validation
+        game_env.state.phase = GamePhase.ATTACK
         
         # Pokemon without energy
         pokemon_no_energy = PokemonCard(

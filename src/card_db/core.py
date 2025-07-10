@@ -23,7 +23,7 @@ Pikachu ex
 from __future__ import annotations
 
 from dataclasses import dataclass
-from enum import Enum, auto
+from enum import Enum, IntEnum, auto
 from typing import Any, Dict, List, Optional, Union
 
 
@@ -43,12 +43,27 @@ class EnergyType(Enum):
     FAIRY = "fairy"
 
 
-class Stage(Enum):
+class Stage(IntEnum):
     """Pokemon evolution stages."""
     
-    BASIC = "basic"
-    STAGE_1 = "stage_1"
-    STAGE_2 = "stage_2"
+    BASIC = 0
+    STAGE_1 = 1
+    STAGE_2 = 2
+    
+    @property
+    def name(self) -> str:
+        """Get the string representation of the stage."""
+        return self._name_.lower()
+    
+    @classmethod
+    def from_string(cls, stage_str: str) -> 'Stage':
+        """Create a Stage from a string representation."""
+        stage_map = {
+            "basic": cls.BASIC,
+            "stage_1": cls.STAGE_1,
+            "stage_2": cls.STAGE_2
+        }
+        return stage_map.get(stage_str.lower(), cls.BASIC)
 
 
 class StatusCondition(Enum):

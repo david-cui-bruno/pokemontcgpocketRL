@@ -115,9 +115,28 @@ COMPREHENSIVE_TRAINER_EFFECTS = {
     "Choose 1:\n\nDuring this turn, attacks used by your Pokémon that evolve from Eevee do +10 damage to your opponent's Active Pokémon.\n\nHeal 20 damage from each of your Pokémon that evolves from Eevee.": conditional_eevee_choice(),
 }
 
+# Card name to effect text mapping for specific trainer cards
+CARD_NAME_TO_EFFECT = {
+    "Erika": "Heal 50 damage from 1 of your {G} Pokémon.",
+    "Sabrina": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)",
+    "Cyrus": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot.",
+    "Misty": "Choose 1 of your {W} Pokémon, and flip a coin until you get tails. For each heads, take a {W} Energy from your Energy Zone and attach it to that Pokémon.",
+    "Giovanni": "During this turn, attacks used by your Pokémon do +10 damage to your opponent's Active Pokémon.",
+    "Blaine": "During this turn, attacks used by your Ninetales, Rapidash, or Magmar do +30 damage to your opponent's Active Pokémon.",
+    "Koga": "Put your Muk or Weezing in the Active Spot into your hand.",
+    "Potion": "Heal 20 damage from 1 of your Pokémon.",
+}
+
+# Export the registry as TRAINER_EFFECTS for compatibility
+TRAINER_EFFECTS = COMPREHENSIVE_TRAINER_EFFECTS
+
 def get_trainer_effect_function(effect_text: str):
     """Get the function for a trainer effect by its text."""
     return COMPREHENSIVE_TRAINER_EFFECTS.get(effect_text)
+
+def get_effect_for_card(card_name: str):
+    """Get the effect text for a specific card name."""
+    return CARD_NAME_TO_EFFECT.get(card_name)
 
 def get_all_covered_effects():
     """Get all effects that are covered by the registry."""

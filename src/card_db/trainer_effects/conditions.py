@@ -2,7 +2,7 @@
 
 from typing import List
 from .context import EffectContext
-from src.card_db.core import PokemonCard, EnergyType
+from src.card_db.core import PokemonCard, EnergyType, Stage
 
 def require_bench_pokemon(ctx: EffectContext, target_player: str = "opponent") -> EffectContext:
     """Require that target player has Pokemon on bench."""
@@ -15,12 +15,18 @@ def require_bench_pokemon(ctx: EffectContext, target_player: str = "opponent") -
 def require_damaged_pokemon(ctx: EffectContext, target_player: str = "opponent") -> EffectContext:
     """Filter targets to only damaged Pokemon."""
     target = ctx.opponent if target_player == "opponent" else ctx.player
+    print(f"DEBUG: Checking {target_player} bench: {[p.name for p in target.bench]}")
+    print(f"DEBUG: Bench Pokemon damage: {[p.damage_counters for p in target.bench]}")
+    
     damaged_pokemon = [p for p in target.bench if p.damage_counters > 0]
+    print(f"DEBUG: Damaged Pokemon found: {[p.name for p in damaged_pokemon]}")
+    
     if not damaged_pokemon:
         ctx.failed = True
         print(f"Cannot play card: {target_player} has no damaged Pokemon on bench")
     else:
         ctx.targets = damaged_pokemon
+        print(f"DEBUG: Set targets to: {[p.name for p in ctx.targets]}")
     return ctx
 
 def require_energy_in_zone(ctx: EffectContext, energy_type: EnergyType) -> EffectContext:
@@ -75,4 +81,16 @@ def require_pokemon_in_discard(ctx: EffectContext, pokemon_names: List[str] = No
         print(f"Cannot play card: No suitable Pokemon in discard pile")
     else:
         ctx.targets = pokemon_in_discard
+    return ctx
+
+def set_targets_to_player_pokemon(ctx: EffectContext) -> EffectContext:
+    """Set targets to all of the player's Pokemon in play."""
+    all_pokemon = ctx.player.pokemon_in_play
+    
+    if not all_pokemon:
+        ctx.failed = True
+        print("Cannot play card: No Pokemon in play")
+    else:
+        ctx.targets = all_pokemon
+    
     return ctx

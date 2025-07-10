@@ -20,7 +20,9 @@ def game_engine():
 @pytest.fixture
 def basic_game_state():
     """Create a basic game state for testing."""
-    return GameState()
+    state = GameState()
+    state.phase = GamePhase.ATTACK
+    return state
 
 
 class TestWeaknessMechanics:
@@ -185,7 +187,7 @@ class TestStatusConditionDamage:
     """Test correct status condition damage values."""
     
     def test_poison_damage_10(self, game_engine, basic_game_state):
-        """Test that poison does exactly 10 damage."""
+        """Test poison damage is 10 in TCG Pocket (rulebook §7)."""
         poisoned_pokemon = PokemonCard(
             id="TEST-001",
             name="Poisoned Pokemon",
@@ -197,6 +199,7 @@ class TestStatusConditionDamage:
         
         effects = game_engine.apply_status_condition_effects(poisoned_pokemon, basic_game_state)
         
+        # Fixed: TCG Pocket poison damage is 10 (rulebook §7)
         assert effects["poison_damage"] == 10
         assert poisoned_pokemon.damage_counters == 10
     

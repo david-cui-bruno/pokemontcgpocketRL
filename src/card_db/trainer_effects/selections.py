@@ -9,6 +9,8 @@ def player_chooses_target(ctx: EffectContext, targets: List[PokemonCard] = None)
     if targets is None:
         targets = ctx.targets
     
+    print(f"DEBUG: Available targets: {[p.name for p in targets] if targets else 'None'}")
+    
     if not targets:
         ctx.failed = True
         return ctx
@@ -68,4 +70,25 @@ def set_target_to_active(ctx: EffectContext, target_player: str = "player") -> E
         return ctx
     
     ctx.data['selected_target'] = target.active_pokemon
+    return ctx
+
+def switch_opponent_active(ctx: EffectContext) -> EffectContext:
+    """Switch opponent's active Pokemon with selected benched Pokemon."""
+    selected = ctx.data.get('selected_target')
+    if not selected or selected not in ctx.opponent.bench:
+        ctx.failed = True
+        return ctx
+    
+    # Store the current active Pokemon
+    current_active = ctx.opponent.active_pokemon
+    
+    # Move selected Pokemon from bench to active
+    ctx.opponent.bench.remove(selected)
+    ctx.opponent.active_pokemon = selected
+    
+    # Move current active to bench (if there was one)
+    if current_active:
+        ctx.opponent.bench.append(current_active)
+    
+    print(f"Switched opponent's active Pokemon to {selected.name}")
     return ctx

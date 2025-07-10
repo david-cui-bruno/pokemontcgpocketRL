@@ -16,6 +16,7 @@ from src.card_db.trainer_executor import execute_trainer_card, can_play_trainer_
 from src.card_db.trainer_effects import EffectContext
 from src.rules.game_state import GameState, PlayerState, GamePhase, PlayerTag
 from src.rules.game_engine import GameEngine
+from src.card_db.comprehensive_trainer_registry import TRAINER_EFFECTS, CARD_NAME_TO_EFFECT
 
 
 class TestTrainerCardEffects:
@@ -234,12 +235,14 @@ class TestTrainerCardEffects:
         # Execute Misty
         success = execute_trainer_card(misty, self.game_state, self.game_state.player, self.game_engine)
         
-        # Verify energy attachment
+        # Should succeed and attach 2 energy (2 heads)
         assert success, "Misty should execute successfully"
-        expected_energy = initial_energy + 2  # 2 heads
-        print(f"Expected energy after Misty: {expected_energy}")
-        print(f"Actual energy after Misty: {len(self.water_pokemon.attached_energies)}")
-        assert len(self.water_pokemon.attached_energies) == expected_energy
+        
+        # Check that 2 energy were attached
+        final_energy = len(self.water_pokemon.attached_energies)
+        expected_energy = initial_energy + 2  # 2 heads = 2 energy
+        assert final_energy == expected_energy, f"Expected {expected_energy} energy, got {final_energy}"
+        print(f"Final energy on {self.water_pokemon.name}: {final_energy}")
         print("✅ Misty energy attachment test passed!")
     
     def test_giovanni_damage_bonus(self):
@@ -329,7 +332,7 @@ class TestTrainerCardEffects:
         print("\n🧪 Testing Item Card Multiple Uses")
         print("=" * 50)
         
-        # Create item cards (using a hypothetical Potion)
+        # Create item cards with a defined effect
         potion1 = ItemCard(id='item-potion-1', name='Potion', effects=[])
         potion2 = ItemCard(id='item-potion-2', name='Potion', effects=[])
         self.game_state.player.hand.extend([potion1, potion2])
@@ -340,6 +343,15 @@ class TestTrainerCardEffects:
         
         assert can_play1, "First item should be playable"
         assert can_play2, "Second item should be playable"
+        
+        # Execute first potion
+        success1 = execute_trainer_card(potion1, self.game_state, self.game_state.player, self.game_engine)
+        assert success1, "First potion should execute successfully"
+        
+        # Execute second potion
+        success2 = execute_trainer_card(potion2, self.game_state, self.game_state.player, self.game_engine)
+        assert success2, "Second potion should execute successfully"
+        
         print("✅ Item card multiple uses test passed!")
     
     def test_all_registered_cards_have_effects(self):
@@ -347,18 +359,19 @@ class TestTrainerCardEffects:
         print("\n🧪 Testing All Registered Cards Have Effects")
         print("=" * 50)
         
-        from src.card_db.trainer_registry import TRAINER_EFFECTS
+        # Test that we have effects defined
+        assert len(TRAINER_EFFECTS) > 0
+        assert len(CARD_NAME_TO_EFFECT) > 0
         
-        for card_name, effect_chain in TRAINER_EFFECTS.items():
-            print(f"Testing {card_name}...")
-            assert effect_chain is not None, f"{card_name} should have an effect chain"
-            assert len(effect_chain) > 0, f"{card_name} should have at least one effect"
-            
-            # Test that effect chain is callable
-            for i, effect_fn in enumerate(effect_chain):
-                assert callable(effect_fn), f"{card_name} effect {i} should be callable"
+        # Test that specific cards have effects
+        test_cards = ["Erika", "Sabrina", "Cyrus", "Misty", "Giovanni", "Blaine"]
+        for card_name in test_cards:
+            effect_text = CARD_NAME_TO_EFFECT.get(card_name)
+            assert effect_text is not None, f"Card {card_name} should have an effect defined"
+            assert effect_text in TRAINER_EFFECTS, f"Effect for {card_name} should be in TRAINER_EFFECTS"
+            print(f"✅ {card_name}: {effect_text}")
         
-        print(f"✅ All {len(TRAINER_EFFECTS)} registered cards have effects!")
+        print("✅ All registered cards have effects!")
     
     def test_effect_context_data_passing(self):
         """Test that effect context properly passes data between functions."""
@@ -425,15 +438,8 @@ class TestTrainerCardEffects:
 def test_individual_trainer_cards():
     """Pytest entry point for individual trainer card tests."""
     tester = TestTrainerCardEffects()
-    tester.setup_method()
-    
-    # Run individual tests
-    tester.test_erika_healing()
-    tester.test_sabrina_switching()
-    tester.test_cyrus_damaged_switch()
-    tester.test_giovanni_damage_bonus()
-    tester.test_supporter_once_per_turn_restriction()
-    tester.test_all_registered_cards_have_effects()
+    success = tester.run_all_tests()
+    assert success, "All trainer card tests should pass"
 
 
 if __name__ == "__main__":

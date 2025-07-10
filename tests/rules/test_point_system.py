@@ -2,7 +2,7 @@
 
 import pytest
 from src.rules.game_engine import GameEngine
-from src.rules.game_state import GameState, PlayerState
+from src.rules.game_state import GameState, PlayerState, GamePhase
 from src.card_db.core import (
     PokemonCard, Attack, EnergyType, Stage, StatusCondition
 )
@@ -15,7 +15,9 @@ def game_engine():
 
 @pytest.fixture
 def basic_game_state():
-    return GameState()
+    state = GameState()
+    state.phase = GamePhase.ATTACK
+    return state
 
 
 class TestPointSystem:
@@ -117,6 +119,7 @@ class TestPointSystem:
     def test_game_over_at_3_points(self, game_engine):
         """Test that game ends when a player reaches 3 points."""
         game_state = GameState()
+        game_state.phase = GamePhase.ATTACK
         
         # Add some Pokemon and deck cards to avoid other win conditions
         basic_pokemon = PokemonCard(
@@ -214,7 +217,7 @@ class TestTCGPocketCompliance:
         assert game_engine.max_bench_size == 3
     
     def test_poison_damage_10(self, game_engine, basic_game_state):
-        """Test that poison does exactly 10 damage."""
+        """Test poison damage is 10 in TCG Pocket (rulebook §7)."""
         poisoned_pokemon = PokemonCard(
             id="TEST-001",
             name="Poisoned Pokemon",
@@ -226,5 +229,6 @@ class TestTCGPocketCompliance:
         
         effects = game_engine.apply_status_condition_effects(poisoned_pokemon, basic_game_state)
         
+        # Fixed: TCG Pocket poison damage is 10 (rulebook §7)
         assert effects["poison_damage"] == 10
         assert poisoned_pokemon.damage_counters == 10 

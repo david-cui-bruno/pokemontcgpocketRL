@@ -198,3 +198,37 @@ def draw_cards(ctx: EffectContext, count: int) -> EffectContext:
     
     print(f"Drew {drawn} cards")
     return ctx
+
+def attach_energy_from_zone_coin_flip(ctx: EffectContext, energy_type: EnergyType) -> EffectContext:
+    """Attach energy based on coin flips until tails. For each heads, attach one energy."""
+    selected = ctx.data.get('selected_target')
+    if not selected:
+        ctx.failed = True
+        return ctx
+    
+    # Count heads first to determine total energy to attach
+    from src.rules.game_engine import CoinFlipResult
+    
+    heads_count = 0
+    while True:
+        flip = ctx.game_engine.flip_coin()
+        print(f"Coin flip {heads_count + 1}: {flip.value}")
+        
+        if flip == CoinFlipResult.HEADS:
+            heads_count += 1
+        else:
+            break
+    
+    print(f"Total heads: {heads_count}")
+    
+    # Attach energy equal to the number of heads
+    for _ in range(heads_count):
+        selected.attached_energies.append(energy_type)
+        print(f"Attached {energy_type.value} energy to {selected.name}")
+    
+    if heads_count > 0:
+        print(f"Attached {heads_count} {energy_type.value} energy to {selected.name}")
+    else:
+        print(f"No heads - no energy attached to {selected.name}")
+    
+    return ctx

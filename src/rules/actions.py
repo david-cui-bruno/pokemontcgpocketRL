@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from enum import Enum, auto
 from typing import Optional, List, Dict, Any
 
-from src.card_db.core import Card, PokemonCard, Ability, Stage, StatusCondition, AbilityType
+from src.card_db.core import Card, PokemonCard, ItemCard, ToolCard, SupporterCard, Ability, Stage, StatusCondition, AbilityType
 from src.rules.game_state import GameState, PlayerState, GamePhase, PlayerTag
 
 
@@ -80,18 +80,36 @@ class ActionValidator:
         """Check if a Pokemon card can be played/evolved."""
         player = state.active_player_state
         
-        # Basic Pokemon checks
-        if card.stage == Stage.BASIC:
-            return (
-                card in player.hand and
-                len(player.bench) < 3 and  # Fixed: TCG Pocket has max 3 bench
-                state.phase == GamePhase.MAIN
-            )
-        
-        # Evolution checks
+        # Basic Pokemon checks (no target provided)
         if target is None:
+            if card.stage == Stage.BASIC:
+                # You can always play a Pokemon if you don't have an active Pokemon
+                if player.active_pokemon is None:
+                    return (
+                        card in player.hand and
+                        state.phase == GamePhase.MAIN
+                    )
+                # If you have an active Pokemon, you can only play to bench if bench has space
+                else:
+                    return (
+                        card in player.hand and
+                        len(player.bench) < 3 and  # Fixed: TCG Pocket has max 3 bench
+                        state.phase == GamePhase.MAIN
+                    )
+            else:
+                # Non-basic Pokemon can't be played directly
+                return False
+        
+        # Evolution checks (target provided)
+        if card.stage == Stage.BASIC:
+            # Basic Pokemon can't evolve other Pokemon
             return False
-            
+        
+        # Only allow evolution if the evolution card is a higher stage than the target
+        stage_order = {Stage.BASIC: 0, Stage.STAGE_1: 1, Stage.STAGE_2: 2}
+        if stage_order[card.stage] <= stage_order[target.stage]:
+            return False
+        
         return (
             card in player.hand and
             target in player.pokemon_in_play and
