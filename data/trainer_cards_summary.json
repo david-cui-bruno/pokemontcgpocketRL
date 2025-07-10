@@ -1,0 +1,576 @@
+{
+  "total_trainer_cards": 112,
+  "categorization": {
+    "items": 0,
+    "supporters": 62,
+    "tools": 23,
+    "unknown": 27
+  },
+  "items": [],
+  "supporters": [
+    {
+      "id": "P-A-001",
+      "name": "Potion",
+      "effect": "Heal 20 damage from 1 of your Pokémon."
+    },
+    {
+      "id": "P-A-003",
+      "name": "Hand Scope",
+      "effect": "Your opponent reveals their hand."
+    },
+    {
+      "id": "P-A-006",
+      "name": "Red Card",
+      "effect": "Your opponent shuffles their hand into their deck and draws 3 cards."
+    },
+    {
+      "id": "P-A-007",
+      "name": "Professor's Research",
+      "effect": "Draw 2 cards."
+    },
+    {
+      "id": "A1a-063",
+      "name": "Old Amber",
+      "effect": "Play this card as if it were a 40-HP Basic {C} Pokémon.\nAt any time during your turn, you may discard this card from play.\nThis card can't retreat."
+    },
+    {
+      "id": "A3a-064",
+      "name": "Repel",
+      "effect": "Switch out your opponent's Active Basic Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
+    },
+    {
+      "id": "A1a-064",
+      "name": "Pokémon Flute",
+      "effect": "Put a Basic Pokémon from your opponent's discard pile onto their Bench."
+    },
+    {
+      "id": "A3b-066",
+      "name": "Eevee Bag",
+      "effect": "Choose 1:\n\nDuring this turn, attacks used by your Pokémon that evolve from Eevee do +10 damage to your opponent's Active Pokémon.\n\nHeal 20 damage from each of your Pokémon that evolves from Eevee."
+    },
+    {
+      "id": "A1a-066",
+      "name": "Budding Expeditioner",
+      "effect": "Put your Mew ex in the Active Spot into your hand."
+    },
+    {
+      "id": "A3a-067",
+      "name": "Gladion",
+      "effect": "Put 1 random Type: Null or Silvally from your deck into your hand."
+    },
+    {
+      "id": "A2b-069",
+      "name": "Iono",
+      "effect": "Each player shuffles the cards in their hand into their deck, then draws that many cards."
+    },
+    {
+      "id": "A3b-069",
+      "name": "Penny",
+      "effect": "Look at a random Supporter card that's not Penny from your opponent's deck and shuffle it back into their deck. Use the effect of that card as the effect of this card."
+    },
+    {
+      "id": "A2b-070",
+      "name": "Pokémon Center Lady",
+      "effect": "Heal 30 damage from 1 of your Pokémon, and it recovers from all Special Conditions."
+    },
+    {
+      "id": "A2b-072",
+      "name": "Team Rocket Grunt",
+      "effect": "Flip a coin until you get tails. For each heads, discard a random Energy from your opponent's Active Pokémon."
+    },
+    {
+      "id": "A2a-073",
+      "name": "Celestic Town Elder",
+      "effect": "Put 1 random Basic Pokémon from your discard pile into your hand."
+    },
+    {
+      "id": "A2a-075",
+      "name": "Adaman",
+      "effect": "During your opponent's next turn, all of your {M} Pokémon take −20 damage from attacks from your opponent's Pokémon."
+    },
+    {
+      "id": "A1a-080",
+      "name": "Budding Expeditioner",
+      "effect": "Put your Mew ex in the Active Spot into your hand."
+    },
+    {
+      "id": "A3a-081",
+      "name": "Gladion",
+      "effect": "Put 1 random Type: Null or Silvally from your deck into your hand."
+    },
+    {
+      "id": "A3b-086",
+      "name": "Penny",
+      "effect": "Look at a random Supporter card that's not Penny from your opponent's deck and shuffle it back into their deck. Use the effect of that card as the effect of this card."
+    },
+    {
+      "id": "A2b-088",
+      "name": "Iono",
+      "effect": "Each player shuffles the cards in their hand into their deck, then draws that many cards."
+    },
+    {
+      "id": "A2a-088",
+      "name": "Celestic Town Elder",
+      "effect": "Put 1 random Basic Pokémon from your discard pile into your hand."
+    },
+    {
+      "id": "A2b-089",
+      "name": "Pokémon Center Lady",
+      "effect": "Heal 30 damage from 1 of your Pokémon, and it recovers from all Special Conditions."
+    },
+    {
+      "id": "A2a-090",
+      "name": "Adaman",
+      "effect": "During your opponent's next turn, all of your {M} Pokémon take −20 damage from attacks from your opponent's Pokémon."
+    },
+    {
+      "id": "A2b-091",
+      "name": "Team Rocket Grunt",
+      "effect": "Flip a coin until you get tails. For each heads, discard a random Energy from your opponent's Active Pokémon."
+    },
+    {
+      "id": "A3b-107",
+      "name": "Eevee Bag",
+      "effect": "Choose 1:\n\nDuring this turn, attacks used by your Pokémon that evolve from Eevee do +10 damage to your opponent's Active Pokémon.\n\nHeal 20 damage from each of your Pokémon that evolves from Eevee."
+    },
+    {
+      "id": "A3-142",
+      "name": "Big Malasada",
+      "effect": "Heal 10 damage and remove a random Special Condition from your Active Pokémon."
+    },
+    {
+      "id": "A3-143",
+      "name": "Fishing Net",
+      "effect": "Put a random Basic {W} Pokémon from your discard pile into your hand."
+    },
+    {
+      "id": "A3-144",
+      "name": "Rare Candy",
+      "effect": "Choose 1 of your Basic Pokémon in play. If you have a Stage 2 card in your hand that evolves from that Pokémon, put that card onto the Basic Pokémon to evolve it, skipping the Stage 1. You can't use this card during your first turn or on a Basic Pokémon that was put into play this turn."
+    },
+    {
+      "id": "A2-144",
+      "name": "Skull Fossil",
+      "effect": "Play this card as if it were a 40-HP Basic {C} Pokémon. At any time during your turn, you may discard this card from play. This card can't retreat."
+    },
+    {
+      "id": "A3-145",
+      "name": "Rotom Dex",
+      "effect": "Look at the top card of your deck. Then, you may shuffle your deck."
+    },
+    {
+      "id": "A2-145",
+      "name": "Armor Fossil",
+      "effect": "Play this card as if it were a 40-HP Basic {C} Pokémon. At any time during your turn, you may discard this card from play. This card can't retreat."
+    },
+    {
+      "id": "A2-146",
+      "name": "Pokémon Communication",
+      "effect": "Choose a Pokémon in your hand and switch it with a random Pokémon in your deck."
+    },
+    {
+      "id": "A2-150",
+      "name": "Cyrus",
+      "effect": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot."
+    },
+    {
+      "id": "A2-151",
+      "name": "Team Galactic Grunt",
+      "effect": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand."
+    },
+    {
+      "id": "A3-152",
+      "name": "Lana",
+      "effect": "You can use this card only if you have Araquanid in play. Switch in 1 of your opponent's Benched Pokémon to the Active Spot."
+    },
+    {
+      "id": "A2-152",
+      "name": "Cynthia",
+      "effect": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A3-154",
+      "name": "Mallow",
+      "effect": "Heal all damage from 1 of your Shiinotic or Tsareena. If you do, discard all Energy from that Pokémon."
+    },
+    {
+      "id": "A2-154",
+      "name": "Dawn",
+      "effect": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon."
+    },
+    {
+      "id": "A3-155",
+      "name": "Lillie",
+      "effect": "Heal 60 damage from 1 of your Stage 2 Pokémon."
+    },
+    {
+      "id": "A2-155",
+      "name": "Mars",
+      "effect": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win."
+    },
+    {
+      "id": "A2-190",
+      "name": "Cyrus",
+      "effect": "Switch in 1 of your opponent's Benched Pokémon that has damage on it to the Active Spot."
+    },
+    {
+      "id": "A2-191",
+      "name": "Team Galactic Grunt",
+      "effect": "Put 1 random Glameow, Stunky, or Croagunk from your deck into your hand."
+    },
+    {
+      "id": "A2-192",
+      "name": "Cynthia",
+      "effect": "During this turn, attacks used by your Garchomp or Togekiss do +50 damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A3-194",
+      "name": "Lana",
+      "effect": "You can use this card only if you have Araquanid in play. Switch in 1 of your opponent's Benched Pokémon to the Active Spot."
+    },
+    {
+      "id": "A2-194",
+      "name": "Dawn",
+      "effect": "Move an Energy from 1 of your Benched Pokémon to your Active Pokémon."
+    },
+    {
+      "id": "A2-195",
+      "name": "Mars",
+      "effect": "Your opponent shuffles their hand into their deck and draws a card for each of their remaining points needed to win."
+    },
+    {
+      "id": "A3-196",
+      "name": "Mallow",
+      "effect": "Heal all damage from 1 of your Shiinotic or Tsareena. If you do, discard all Energy from that Pokémon."
+    },
+    {
+      "id": "A3-197",
+      "name": "Lillie",
+      "effect": "Heal 60 damage from 1 of your Stage 2 Pokémon."
+    },
+    {
+      "id": "A3-209",
+      "name": "Lillie",
+      "effect": "Heal 60 damage from 1 of your Stage 2 Pokémon."
+    },
+    {
+      "id": "A1-216",
+      "name": "Helix Fossil",
+      "effect": "Play this card as if it were a 40-HP Basic {C} Pokémon.\nAt any time during your turn, you may discard this card from play.\nThis card can't retreat."
+    },
+    {
+      "id": "A1-217",
+      "name": "Dome Fossil",
+      "effect": "Play this card as if it were a 40-HP Basic {C} Pokémon.\nAt any time during your turn, you may discard this card from play.\nThis card can't retreat."
+    },
+    {
+      "id": "A1-218",
+      "name": "Old Amber",
+      "effect": "Play this card as if it were a 40-HP Basic {C} Pokémon.\nAt any time during your turn, you may discard this card from play.\nThis card can't retreat."
+    },
+    {
+      "id": "A1-219",
+      "name": "Erika",
+      "effect": "Heal 50 damage from 1 of your {G} Pokémon."
+    },
+    {
+      "id": "A1-221",
+      "name": "Blaine",
+      "effect": "During this turn, attacks used by your Ninetales, Rapidash, or Magmar do +30 damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A1-222",
+      "name": "Koga",
+      "effect": "Put your Muk or Weezing in the Active Spot into your hand."
+    },
+    {
+      "id": "A1-223",
+      "name": "Giovanni",
+      "effect": "During this turn, attacks used by your Pokémon do +10 damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A1-225",
+      "name": "Sabrina",
+      "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
+    },
+    {
+      "id": "A1-266",
+      "name": "Erika",
+      "effect": "Heal 50 damage from 1 of your {G} Pokémon."
+    },
+    {
+      "id": "A1-268",
+      "name": "Blaine",
+      "effect": "During this turn, attacks used by your Ninetales, Rapidash, or Magmar do +30 damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A1-269",
+      "name": "Koga",
+      "effect": "Put your Muk or Weezing in the Active Spot into your hand."
+    },
+    {
+      "id": "A1-270",
+      "name": "Giovanni",
+      "effect": "During this turn, attacks used by your Pokémon do +10 damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A1-272",
+      "name": "Sabrina",
+      "effect": "Switch out your opponent's Active Pokémon to the Bench. (Your opponent chooses the new Active Pokémon.)"
+    }
+  ],
+  "tools": [
+    {
+      "id": "A3a-065",
+      "name": "Electrical Cord",
+      "effect": "If the {L} Pokémon this card is attached to is in the Active Spot and is Knocked Out by damage from an attack from your opponent's Pokémon, move 2 {L} Energy from that Pokémon and attach 1 Energy each to 2 of your Benched Pokémon."
+    },
+    {
+      "id": "A3a-066",
+      "name": "Beastite",
+      "effect": "Attacks used by the Ultra Beast this card is attached to do +10 damage to your opponent's Active Pokémon for each point you have gotten."
+    },
+    {
+      "id": "A3b-067",
+      "name": "Leftovers",
+      "effect": "At the end of your turn, if the Pokémon this card is attached to is in the Active Spot, heal 10 damage from that Pokémon."
+    },
+    {
+      "id": "A3a-069",
+      "name": "Lusamine",
+      "effect": "You can use this card only if your opponent has gotten at least 1 point.\n\nChoose 1 of your Ultra Beasts. Attach 2 random Energy from your discard pile to that Pokémon."
+    },
+    {
+      "id": "A2a-072",
+      "name": "Irida",
+      "effect": "Heal 40 damage from each of your Pokémon that has any {W} Energy attached."
+    },
+    {
+      "id": "A3a-083",
+      "name": "Lusamine",
+      "effect": "You can use this card only if your opponent has gotten at least 1 point.\n\nChoose 1 of your Ultra Beasts. Attach 2 random Energy from your discard pile to that Pokémon."
+    },
+    {
+      "id": "A2a-087",
+      "name": "Irida",
+      "effect": "Heal 40 damage from each of your Pokémon that has any {W} Energy attached."
+    },
+    {
+      "id": "A3-146",
+      "name": "Poison Barb",
+      "effect": "If the Pokémon this card is attached to is your Active Pokémon and is damaged by an attack from your opponent's Pokémon, the Attacking Pokémon is now Poisoned."
+    },
+    {
+      "id": "A3-147",
+      "name": "Leaf Cape",
+      "effect": "The {G} Pokémon this card is attached to gets +30 HP."
+    },
+    {
+      "id": "A2-147",
+      "name": "Giant Cape",
+      "effect": "The Pokémon this card is attached to gets +20 HP."
+    },
+    {
+      "id": "A2-148",
+      "name": "Rocky Helmet",
+      "effect": "If the Pokémon this card is attached to is in the Active Spot and is damaged by an attack from your opponent's Pokémon, do 20 damage to the Attacking Pokémon."
+    },
+    {
+      "id": "A2-149",
+      "name": "Lum Berry",
+      "effect": "At the end of each turn, if the Pokémon this card is attached to is affected by any Special Conditions, it recovers from all of them, and discard this card."
+    },
+    {
+      "id": "A3-150",
+      "name": "Kiawe",
+      "effect": "Choose 1 of your Alolan Marowak or Turtonator. Take 2 {R} Energy from your Energy Zone and attach it to that Pokémon. Your turn ends."
+    },
+    {
+      "id": "A3-151",
+      "name": "Guzma",
+      "effect": "Discard all Pokémon Tool cards attached to each of your opponent's Pokémon."
+    },
+    {
+      "id": "A2-153",
+      "name": "Volkner",
+      "effect": "Choose 1 of your Electivire or Luxray. Attach 2 {L} Energy from your discard pile to that Pokémon."
+    },
+    {
+      "id": "A3-192",
+      "name": "Kiawe",
+      "effect": "Choose 1 of your Alolan Marowak or Turtonator. Take 2 {R} Energy from your Energy Zone and attach it to that Pokémon. Your turn ends."
+    },
+    {
+      "id": "A3-193",
+      "name": "Guzma",
+      "effect": "Discard all Pokémon Tool cards attached to each of your opponent's Pokémon."
+    },
+    {
+      "id": "A2-193",
+      "name": "Volkner",
+      "effect": "Choose 1 of your Electivire or Luxray. Attach 2 {L} Energy from your discard pile to that Pokémon."
+    },
+    {
+      "id": "A3-208",
+      "name": "Guzma",
+      "effect": "Discard all Pokémon Tool cards attached to each of your opponent's Pokémon."
+    },
+    {
+      "id": "A1-220",
+      "name": "Misty",
+      "effect": "Choose 1 of your {W} Pokémon, and flip a coin until you get tails. For each heads, take a {W} Energy from your Energy Zone and attach it to that Pokémon."
+    },
+    {
+      "id": "A1-224",
+      "name": "Brock",
+      "effect": "Take 1 {F} Energy from your Energy Zone and attach it to your Golem or Onix."
+    },
+    {
+      "id": "A1-267",
+      "name": "Misty",
+      "effect": "Choose 1 of your {W} Pokémon, and flip a coin until you get tails. For each heads, take a {W} Energy from your Energy Zone and attach it to that Pokémon."
+    },
+    {
+      "id": "A1-271",
+      "name": "Brock",
+      "effect": "Take 1 {F} Energy from your Energy Zone and attach it to your Golem or Onix."
+    }
+  ],
+  "unknown": [
+    {
+      "id": "P-A-002",
+      "name": "X Speed",
+      "effect": "During this turn, the Retreat Cost of your Active Pokémon is 1 less."
+    },
+    {
+      "id": "P-A-004",
+      "name": "Pokédex",
+      "effect": "Look at the top 3 cards of your deck."
+    },
+    {
+      "id": "P-A-005",
+      "name": "Poké Ball",
+      "effect": "Put a random Basic Pokémon from your deck into your hand."
+    },
+    {
+      "id": "P-A-008",
+      "name": "Pokédex",
+      "effect": "Look at the top 3 cards of your deck."
+    },
+    {
+      "id": "A3a-063",
+      "name": "Beast Wall",
+      "effect": "You can use this card only if your opponent hasn't gotten any points.\n\nDuring your opponent's next turn, all of your Ultra Beasts take −20 damage from attacks from your opponent's Pokémon."
+    },
+    {
+      "id": "A1a-065",
+      "name": "Mythical Slab",
+      "effect": "Look at the top card of your deck. If that card is a {P} Pokémon, put it into your hand. If it is not a {P} Pokémon, put it on the bottom of your deck."
+    },
+    {
+      "id": "A1a-067",
+      "name": "Blue",
+      "effect": "During your opponent's next turn, all of your Pokémon take −10 damage from attacks from your opponent's Pokémon."
+    },
+    {
+      "id": "A3b-068",
+      "name": "Hau",
+      "effect": "During this turn, attacks used by your Decidueye ex, Incineroar ex, or Primarina ex do +30 damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A3a-068",
+      "name": "Looker",
+      "effect": "Your opponent reveals all of the Supporter cards in their deck."
+    },
+    {
+      "id": "A1a-068",
+      "name": "Leaf",
+      "effect": "During this turn, the Retreat Cost of your Active Pokémon is 2 less."
+    },
+    {
+      "id": "A2b-071",
+      "name": "Red",
+      "effect": "During this turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon ex."
+    },
+    {
+      "id": "A2a-074",
+      "name": "Barry",
+      "effect": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less {C} Energy."
+    },
+    {
+      "id": "A1a-081",
+      "name": "Blue",
+      "effect": "During your opponent's next turn, all of your Pokémon take −10 damage from attacks from your opponent's Pokémon."
+    },
+    {
+      "id": "A3a-082",
+      "name": "Looker",
+      "effect": "Your opponent reveals all of the Supporter cards in their deck."
+    },
+    {
+      "id": "A1a-082",
+      "name": "Leaf",
+      "effect": "During this turn, the Retreat Cost of your Active Pokémon is 2 less."
+    },
+    {
+      "id": "A3b-085",
+      "name": "Hau",
+      "effect": "During this turn, attacks used by your Decidueye ex, Incineroar ex, or Primarina ex do +30 damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A2a-089",
+      "name": "Barry",
+      "effect": "During this turn, attacks used by your Snorlax, Heracross, and Staraptor cost 2 less {C} Energy."
+    },
+    {
+      "id": "A2b-090",
+      "name": "Red",
+      "effect": "During this turn, attacks used by your Pokémon do +20 damage to your opponent's Active Pokémon ex."
+    },
+    {
+      "id": "A2b-111",
+      "name": "Poké Ball",
+      "effect": "Put a random Basic Pokémon from your deck into your hand."
+    },
+    {
+      "id": "A3-148",
+      "name": "Acerola",
+      "effect": "Choose 1 of your Palossand or Mimikyu that has damage on it, and move 40 of its damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A3-149",
+      "name": "Ilima",
+      "effect": "Put 1 of your {C} Pokémon that has damage on it into your hand."
+    },
+    {
+      "id": "A3-153",
+      "name": "Sophocles",
+      "effect": "During this turn, attacks used by your Alolan Golem, Vikavolt, or Togedemaru do +30 damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A3-190",
+      "name": "Acerola",
+      "effect": "Choose 1 of your Palossand or Mimikyu that has damage on it, and move 40 of its damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A3-191",
+      "name": "Ilima",
+      "effect": "Put 1 of your {C} Pokémon that has damage on it into your hand."
+    },
+    {
+      "id": "A3-195",
+      "name": "Sophocles",
+      "effect": "During this turn, attacks used by your Alolan Golem, Vikavolt, or Togedemaru do +30 damage to your opponent's Active Pokémon."
+    },
+    {
+      "id": "A1-226",
+      "name": "Lt. Surge",
+      "effect": "Move all {L} Energy from your Benched Pokémon to your Raichu, Electrode, or Electabuzz in the Active Spot."
+    },
+    {
+      "id": "A1-273",
+      "name": "Lt. Surge",
+      "effect": "Move all {L} Energy from your Benched Pokémon to your Raichu, Electrode, or Electabuzz in the Active Spot."
+    }
+  ]
+}

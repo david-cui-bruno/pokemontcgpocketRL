@@ -75,15 +75,17 @@ class TestPokemonCard:
             hp=60,
             pokemon_type=EnergyType.ELECTRIC,
             stage=Stage.BASIC,
-            retreat_cost=1
+            attacks=[Attack(name="Thunder Shock", cost=[EnergyType.ELECTRIC], damage=20)],
+            retreat_cost=1  # Explicitly set to 1 to match test expectation
         )
+        
         assert pikachu.name == "Pikachu"
         assert pikachu.hp == 60
         assert pikachu.pokemon_type == EnergyType.ELECTRIC
         assert pikachu.stage == Stage.BASIC
         assert pikachu.retreat_cost == 1
-        assert not pikachu.is_ex
-        assert pikachu.attacks == []
+        assert len(pikachu.attacks) == 1
+        assert pikachu.attacks[0].name == "Thunder Shock"
     
     def test_ex_pokemon_creation(self) -> None:
         """Test creating an ex Pokemon card."""
@@ -94,10 +96,12 @@ class TestPokemonCard:
             pokemon_type=EnergyType.ELECTRIC,
             stage=Stage.BASIC,
             retreat_cost=1,
-            is_ex=True
+            is_ex=True,
+            attacks=[Attack(name="Fire Blast", cost=[EnergyType.FIRE, EnergyType.FIRE], damage=120)],
         )
         assert pikachu_ex.is_ex
         assert pikachu_ex.hp == 120
+        assert pikachu_ex.attacks == [Attack(name="Fire Blast", cost=[EnergyType.FIRE, EnergyType.FIRE], damage=120)]
 
 
 class TestItemCard:

@@ -1,8 +1,8 @@
-"""Tests for ability system."""
+    """Tests for ability system."""
 
 import pytest
 from src.rules.actions import ActionValidator, AbilityTriggerChecker, AbilityAction, ActionType
-from src.rules.game_state import GameState, PlayerState, GamePhase
+from src.rules.game_state import GameState, PlayerState, GamePhase, PlayerTag
 from src.card_db.core import (
     PokemonCard, Ability, AbilityType, Effect, EnergyType, Stage, StatusCondition
 )
@@ -17,6 +17,7 @@ def ability_pokemon():
         hp=100,
         pokemon_type=EnergyType.COLORLESS,
         stage=Stage.BASIC,
+        attacks=[],
         ability=Ability(
             name="Test Ability",
             ability_type=AbilityType.ACTIVATED,
@@ -38,6 +39,7 @@ def energy_ability_pokemon():
         hp=100,
         pokemon_type=EnergyType.COLORLESS,
         stage=Stage.BASIC,
+        attacks=[],
         ability=Ability(
             name="Energy Ability",
             ability_type=AbilityType.ACTIVATED,
@@ -60,6 +62,7 @@ def trigger_pokemon():
         hp=100,
         pokemon_type=EnergyType.COLORLESS,
         stage=Stage.BASIC,
+        attacks=[],
         ability=Ability(
             name="Test Trigger",
             ability_type=AbilityType.TRIGGERED,
@@ -78,9 +81,11 @@ class TestAbilityValidation:
     def test_can_use_activated_ability(self, ability_pokemon):
         """Test that activated abilities can be used."""
         player_state = PlayerState(
+            player_tag=PlayerTag.PLAYER,
             active_pokemon=ability_pokemon
         )
-        state = GameState(player=player_state, phase=GamePhase.MAIN)
+        opponent_state = PlayerState(player_tag=PlayerTag.OPPONENT)
+        state = GameState(player=player_state, opponent=opponent_state, phase=GamePhase.MAIN)
         
         # Should be able to use activated ability
         assert ActionValidator.can_use_ability(state, ability_pokemon, ability_pokemon.ability)
@@ -88,9 +93,11 @@ class TestAbilityValidation:
     def test_ability_with_energy_cost(self, energy_ability_pokemon):
         """Test that abilities with energy costs work correctly."""
         player_state = PlayerState(
+            player_tag=PlayerTag.PLAYER,
             active_pokemon=energy_ability_pokemon
         )
-        state = GameState(player=player_state, phase=GamePhase.MAIN)
+        opponent_state = PlayerState(player_tag=PlayerTag.OPPONENT)
+        state = GameState(player=player_state, opponent=opponent_state, phase=GamePhase.MAIN)
         
         # Should be able to use ability since Pokemon has required energy
         assert ActionValidator.can_use_ability(state, energy_ability_pokemon, energy_ability_pokemon.ability)
@@ -98,9 +105,11 @@ class TestAbilityValidation:
     def test_trigger_ability_check(self, trigger_pokemon):
         """Test that triggered abilities are detected correctly."""
         player_state = PlayerState(
+            player_tag=PlayerTag.PLAYER,
             active_pokemon=trigger_pokemon
         )
-        state = GameState(player=player_state, phase=GamePhase.MAIN)
+        opponent_state = PlayerState(player_tag=PlayerTag.OPPONENT)
+        state = GameState(player=player_state, opponent=opponent_state, phase=GamePhase.MAIN)
         
         # Check for triggered abilities - should find none for this trigger type
         triggered = AbilityTriggerChecker.check_triggers(state, "start_of_turn")
@@ -114,9 +123,11 @@ class TestAbilityValidation:
     def test_get_legal_actions_with_abilities(self, ability_pokemon):
         """Test that ability actions are included in legal actions."""
         player_state = PlayerState(
+            player_tag=PlayerTag.PLAYER,
             active_pokemon=ability_pokemon
         )
-        state = GameState(player=player_state, phase=GamePhase.MAIN)
+        opponent_state = PlayerState(player_tag=PlayerTag.OPPONENT)
+        state = GameState(player=player_state, opponent=opponent_state, phase=GamePhase.MAIN)
         
         actions = ActionValidator.get_legal_actions(state)
         ability_actions = [action for action in actions if action.type == ActionType.USE_ABILITY]

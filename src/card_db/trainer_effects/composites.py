@@ -6,6 +6,7 @@ This module provides composable functions for every unique trainer effect
 found in the game, organized by effect type.
 """
 
+from functools import partial
 from typing import List, Callable
 from .context import EffectContext
 from .conditions import *
@@ -20,8 +21,8 @@ from src.card_db.core import EnergyType
 def heal_20_damage():
     """Heal 20 damage from 1 of your Pokémon."""
     return [
-        lambda ctx: set_targets_to_player_pokemon(ctx),
-        lambda ctx: player_chooses_target(ctx),
+        set_targets_to_player_pokemon,
+        player_chooses_target,
         lambda ctx: heal_pokemon(ctx, 20)
     ]
 
@@ -42,12 +43,12 @@ def heal_30_damage_remove_all_conditions():
         lambda ctx: remove_all_special_conditions(ctx)
     ]
 
-def heal_50_grass_pokemon():
-    """Heal 50 damage from 1 of your {G} Pokémon."""
+def heal_50_grass_pokemon() -> List[Callable[[EffectContext], EffectContext]]:
+    """Heal 50 damage from a Grass Pokemon."""
     return [
-        lambda ctx: require_pokemon_type(ctx, EnergyType.GRASS, "player"),
-        lambda ctx: player_chooses_target(ctx),
-        lambda ctx: heal_pokemon(ctx, 50)
+        player_chooses_target,
+        partial(require_pokemon_type, pokemon_type=EnergyType.GRASS),
+        partial(heal_pokemon, amount=50)
     ]
 
 def heal_60_stage2_pokemon():

@@ -34,6 +34,7 @@ __all__ = [
     'search_deck_for_pokemon',
     'shuffle_hand_into_deck_and_draw',
     'draw_cards',
+    'attach_tool_card',
     # Composites
     'heal_grass_pokemon',
     'switch_damaged_opponent',

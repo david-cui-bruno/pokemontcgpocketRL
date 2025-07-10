@@ -1,8 +1,10 @@
 """Tests for the TCG Pocket point system."""
 
 import pytest
-from src.rules.game_engine import GameEngine
-from src.rules.game_state import GameState, PlayerState, GamePhase
+import dataclasses
+from unittest.mock import patch
+from src.rules.game_engine import GameEngine, CoinFlipResult
+from src.rules.game_state import GameState, PlayerState, GamePhase, PlayerTag
 from src.card_db.core import (
     PokemonCard, Attack, EnergyType, Stage, StatusCondition
 )
@@ -15,9 +17,9 @@ def game_engine():
 
 @pytest.fixture
 def basic_game_state():
-    state = GameState()
-    state.phase = GamePhase.ATTACK
-    return state
+    player = PlayerState(player_tag=PlayerTag.PLAYER)
+    opponent = PlayerState(player_tag=PlayerTag.OPPONENT)
+    return GameState(player=player, opponent=opponent, phase=GamePhase.MAIN)
 
 
 class TestPointSystem:
@@ -25,126 +27,76 @@ class TestPointSystem:
     
     def test_basic_point_awarding(self, game_engine):
         """Test basic point awarding."""
-        player = PlayerState()
+        player = PlayerState(player_tag=PlayerTag.PLAYER)
         
-        # Award 1 point for regular Pokemon KO
-        assert game_engine.award_points(player, 1)
+        # Award 1 point
+        player = game_engine.award_points(player, 1)
         assert player.points == 1
         
-        # Award 2 points for ex Pokemon KO
-        assert game_engine.award_points(player, 2)
+        # Award 2 points
+        player = game_engine.award_points(player, 2)
         assert player.points == 3
         
         # Try to award more points (should not exceed 3)
-        assert not game_engine.award_points(player, 1)
-        assert player.points == 3
+        with pytest.raises(ValueError):
+            game_engine.award_points(player, 1)
     
     def test_ko_awards_points(self, game_engine, basic_game_state):
-        """Test that KOing Pokemon awards points."""
-        # Create attacker
+        """Test that KOing a regular Pokemon awards 1 point."""
         attacker = PokemonCard(
-            id="TEST-001",
-            name="Attacker",
-            hp=100,
-            pokemon_type=EnergyType.COLORLESS,
-            stage=Stage.BASIC,
+            id="TEST-001", name="Attacker", hp=100, pokemon_type=EnergyType.COLORLESS, stage=Stage.BASIC,
+            attacks=[Attack(name="Strong Attack", cost=[EnergyType.COLORLESS], damage=40)],
             attached_energies=[EnergyType.COLORLESS]
         )
-        
-        # Create target (regular Pokemon)
         target = PokemonCard(
-            id="TEST-002",
-            name="Target",
-            hp=30,  # Low HP to ensure KO
-            pokemon_type=EnergyType.COLORLESS,
-            stage=Stage.BASIC
+            id="TEST-002", name="Target", hp=30, pokemon_type=EnergyType.COLORLESS, stage=Stage.BASIC, attacks=[]
         )
         
-        attack = Attack(
-            name="Strong Attack",
-            cost=[EnergyType.COLORLESS],
-            damage=40  # Enough to KO
-        )
+        player_state = dataclasses.replace(basic_game_state.player, active_pokemon=target)
+        opponent_state = dataclasses.replace(basic_game_state.opponent, active_pokemon=attacker)
+        game_state = GameState(player=player_state, opponent=opponent_state, active_player=PlayerTag.OPPONENT, phase=GamePhase.ATTACK)
         
-        # Set up game state
-        basic_game_state.player.active_pokemon = target
-        basic_game_state.opponent.active_pokemon = attacker
+        # Execute attack
+        final_state = game_engine.execute_attack(game_state, attacker.attacks[0])
         
-        # Resolve attack
-        result = game_engine.resolve_attack(attacker, attack, target, basic_game_state)
-        
-        # Should KO and award 1 point
-        assert result.target_ko
-        assert basic_game_state.opponent.points == 1
+        assert final_state.opponent.points == 1
+        assert final_state.player.active_pokemon is None # Target should be knocked out
     
     def test_ex_pokemon_awards_2_points(self, game_engine, basic_game_state):
-        """Test that KOing ex Pokemon awards 2 points."""
-        # Create attacker
+        """Test that KOing an ex Pokemon awards 2 points."""
         attacker = PokemonCard(
-            id="TEST-001",
-            name="Attacker",
-            hp=100,
-            pokemon_type=EnergyType.COLORLESS,
-            stage=Stage.BASIC,
+            id="TEST-001", name="Attacker", hp=100, pokemon_type=EnergyType.COLORLESS, stage=Stage.BASIC,
+            attacks=[Attack(name="Strong Attack", cost=[EnergyType.COLORLESS], damage=40)],
             attached_energies=[EnergyType.COLORLESS]
         )
-        
-        # Create target (ex Pokemon)
         target = PokemonCard(
-            id="TEST-002",
-            name="Ex Target",
-            hp=30,  # Low HP to ensure KO
-            pokemon_type=EnergyType.COLORLESS,
-            stage=Stage.BASIC,
-            is_ex=True  # This is an ex Pokemon
+            id="TEST-002", name="Ex Target", hp=30, pokemon_type=EnergyType.COLORLESS, stage=Stage.BASIC, is_ex=True, attacks=[]
         )
         
-        attack = Attack(
-            name="Strong Attack",
-            cost=[EnergyType.COLORLESS],
-            damage=40  # Enough to KO
-        )
+        player_state = dataclasses.replace(basic_game_state.player, active_pokemon=target)
+        opponent_state = dataclasses.replace(basic_game_state.opponent, active_pokemon=attacker)
+        game_state = GameState(player=player_state, opponent=opponent_state, active_player=PlayerTag.OPPONENT, phase=GamePhase.ATTACK)
         
-        # Set up game state
-        basic_game_state.player.active_pokemon = target
-        basic_game_state.opponent.active_pokemon = attacker
+        final_state = game_engine.execute_attack(game_state, attacker.attacks[0])
         
-        # Resolve attack
-        result = game_engine.resolve_attack(attacker, attack, target, basic_game_state)
-        
-        # Should KO and award 2 points
-        assert result.target_ko
-        assert basic_game_state.opponent.points == 2
+        assert final_state.opponent.points == 2
     
-    def test_game_over_at_3_points(self, game_engine):
-        """Test that game ends when a player reaches 3 points."""
-        game_state = GameState()
-        game_state.phase = GamePhase.ATTACK
+    def test_game_over_at_3_points(self, game_engine, basic_game_state):
+        """Test that the game ends when a player reaches 3 points."""
+        player = dataclasses.replace(basic_game_state.player, points=2)
+        ko_pokemon = PokemonCard(id="p1", name="KO Pokemon", hp=10, pokemon_type=EnergyType.COLORLESS, stage=Stage.BASIC, attacks=[])
         
-        # Add some Pokemon and deck cards to avoid other win conditions
-        basic_pokemon = PokemonCard(
-            id="TEST-001",
-            name="Test Pokemon",
-            hp=100,
-            pokemon_type=EnergyType.COLORLESS,
-            stage=Stage.BASIC
-        )
-        game_state.player.active_pokemon = basic_pokemon
-        game_state.opponent.active_pokemon = basic_pokemon
-        game_state.player.deck = [None, None, None]
-        game_state.opponent.deck = [None, None, None]
+        # Set opponent to have the KO'd pokemon
+        opponent_state = dataclasses.replace(basic_game_state.opponent, active_pokemon=ko_pokemon)
         
-        # Game should continue normally
-        assert game_engine.check_game_over(game_state) is None
+        # Knock out the pokemon, awarding the final point
+        game_state = dataclasses.replace(basic_game_state, player=player, opponent=opponent_state)
+        final_state = game_engine._apply_knockout(game_state, ko_pokemon)
         
-        # Player reaches 3 points and wins
-        game_state.player.points = 3
-        assert game_engine.check_game_over(game_state) == "player"
-        
-        # Reset and test opponent wins
-        game_state.player.points = 0
-        game_state.opponent.points = 3
-        assert game_engine.check_game_over(game_state) == "opponent"
+        final_state_after_check = game_engine.check_game_over(final_state)
+
+        assert final_state_after_check.winner == PlayerTag.PLAYER
+        assert final_state_after_check.is_finished is True
 
 
 class TestTCGPocketCompliance:
@@ -153,64 +105,29 @@ class TestTCGPocketCompliance:
     def test_weakness_adds_20_damage(self, game_engine, basic_game_state):
         """Test that weakness adds exactly 20 damage."""
         attacker = PokemonCard(
-            id="TEST-001",
-            name="Fire Pokemon",
-            hp=100,
-            pokemon_type=EnergyType.FIRE,
-            stage=Stage.BASIC,
-            attached_energies=[EnergyType.FIRE]
+            id="TEST-001", name="Fire Pokemon", hp=100, pokemon_type=EnergyType.FIRE, stage=Stage.BASIC,
+            attacks=[Attack(name="Test", cost=[], damage=30)], attached_energies=[EnergyType.FIRE]
         )
-        
-        target = PokemonCard(
-            id="TEST-002",
-            name="Grass Pokemon",
-            hp=100,
-            pokemon_type=EnergyType.GRASS,
-            stage=Stage.BASIC,
-            weakness=EnergyType.FIRE
+        defender = PokemonCard(
+            id="TEST-002", name="Grass Pokemon", hp=100, pokemon_type=EnergyType.GRASS, stage=Stage.BASIC,
+            attacks=[], weakness=(EnergyType.FIRE, 20)
         )
-        
-        attack = Attack(
-            name="Fire Attack",
-            cost=[EnergyType.FIRE],
-            damage=30
-        )
-        
-        result = game_engine.resolve_attack(attacker, attack, target, basic_game_state)
-        
-        # Should be 30 + 20 = 50 damage, not 30 * 2 = 60
-        assert result.damage_dealt == 50
+
+        damage, _ = game_engine._calculate_damage(attacker.attacks[0], attacker, defender)
+        assert damage == 50
     
     def test_no_resistance_mechanics(self, game_engine, basic_game_state):
-        """Test that there are no resistance mechanics."""
+        """Test that resistance does not reduce damage."""
         attacker = PokemonCard(
-            id="TEST-001",
-            name="Fire Pokemon",
-            hp=100,
-            pokemon_type=EnergyType.FIRE,
-            stage=Stage.BASIC,
-            attached_energies=[EnergyType.FIRE]
+            id="TEST-001", name="Fire Pokemon", hp=100, pokemon_type=EnergyType.FIRE, stage=Stage.BASIC,
+            attacks=[Attack(name="Test", cost=[], damage=30)], attached_energies=[EnergyType.FIRE]
         )
-        
-        target = PokemonCard(
-            id="TEST-002",
-            name="Water Pokemon",
-            hp=100,
-            pokemon_type=EnergyType.WATER,
-            stage=Stage.BASIC
-            # No resistance field
+        defender = PokemonCard(
+            id="TEST-002", name="Water Pokemon", hp=100, pokemon_type=EnergyType.WATER, stage=Stage.BASIC, attacks=[]
         )
-        
-        attack = Attack(
-            name="Fire Attack",
-            cost=[EnergyType.FIRE],
-            damage=30
-        )
-        
-        result = game_engine.resolve_attack(attacker, attack, target, basic_game_state)
-        
-        # Should be exactly 30 damage, no reduction
-        assert result.damage_dealt == 30
+
+        damage, _ = game_engine._calculate_damage(attacker.attacks[0], attacker, defender)
+        assert damage == 30
     
     def test_bench_limit_3(self, game_engine):
         """Test that bench limit is 3 Pokemon."""
@@ -219,16 +136,20 @@ class TestTCGPocketCompliance:
     def test_poison_damage_10(self, game_engine, basic_game_state):
         """Test poison damage is 10 in TCG Pocket (rulebook §7)."""
         poisoned_pokemon = PokemonCard(
-            id="TEST-001",
-            name="Poisoned Pokemon",
-            hp=100,
-            pokemon_type=EnergyType.COLORLESS,
-            stage=Stage.BASIC,
-            status_condition=StatusCondition.POISONED
+            id="TEST-001", name="Poisoned Pokemon", hp=100, pokemon_type=EnergyType.COLORLESS,
+            stage=Stage.BASIC, attacks=[], status_condition=StatusCondition.POISONED
         )
-        
-        effects = game_engine.apply_status_condition_effects(poisoned_pokemon, basic_game_state)
-        
-        # Fixed: TCG Pocket poison damage is 10 (rulebook §7)
-        assert effects["poison_damage"] == 10
-        assert poisoned_pokemon.damage_counters == 10 
+        updated_pokemon, was_ko = game_engine.apply_status_condition_effects_in_order(poisoned_pokemon)
+
+        assert updated_pokemon.damage_counters == 10
+
+    def test_burn_damage_20(self, game_engine, basic_game_state):
+        """Test that burn does exactly 20 damage on a TAILS flip."""
+        burned_pokemon = PokemonCard(
+            id="TEST-001", name="Burned Pokemon", hp=100, pokemon_type=EnergyType.COLORLESS,
+            stage=Stage.BASIC, attacks=[], status_condition=StatusCondition.BURNED
+        )
+
+        with patch.object(game_engine, 'flip_coin', return_value=CoinFlipResult.TAILS):
+            updated_pokemon, was_ko = game_engine.apply_status_condition_effects_in_order(burned_pokemon)
+            assert updated_pokemon.damage_counters == 20 

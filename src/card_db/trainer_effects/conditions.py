@@ -1,32 +1,26 @@
 """Condition functions for trainer effects."""
 
-from typing import List
+from typing import List, Any, Dict
 from .context import EffectContext
 from src.card_db.core import PokemonCard, EnergyType, Stage
+import dataclasses
 
-def require_bench_pokemon(ctx: EffectContext, target_player: str = "opponent") -> EffectContext:
-    """Require that target player has Pokemon on bench."""
-    target = ctx.opponent if target_player == "opponent" else ctx.player
-    if not target.bench:
+def require_bench_pokemon(ctx: EffectContext) -> EffectContext:
+    """Require at least one benched Pokemon."""
+    if not ctx.player.bench:
         ctx.failed = True
-        print(f"Cannot play card: {target_player} has no benched Pokemon")
+        print("No benched Pokemon available")
     return ctx
 
-def require_damaged_pokemon(ctx: EffectContext, target_player: str = "opponent") -> EffectContext:
-    """Filter targets to only damaged Pokemon."""
-    target = ctx.opponent if target_player == "opponent" else ctx.player
-    print(f"DEBUG: Checking {target_player} bench: {[p.name for p in target.bench]}")
-    print(f"DEBUG: Bench Pokemon damage: {[p.damage_counters for p in target.bench]}")
+def require_damaged_pokemon(ctx: EffectContext) -> EffectContext:
+    """Require that the selected Pokemon has damage counters."""
+    if not ctx.targets:
+        return dataclasses.replace(ctx, failed=True)
     
-    damaged_pokemon = [p for p in target.bench if p.damage_counters > 0]
-    print(f"DEBUG: Damaged Pokemon found: {[p.name for p in damaged_pokemon]}")
+    selected = ctx.targets[0]
+    if selected.damage_counters == 0:
+        return dataclasses.replace(ctx, failed=True)
     
-    if not damaged_pokemon:
-        ctx.failed = True
-        print(f"Cannot play card: {target_player} has no damaged Pokemon on bench")
-    else:
-        ctx.targets = damaged_pokemon
-        print(f"DEBUG: Set targets to: {[p.name for p in ctx.targets]}")
     return ctx
 
 def require_energy_in_zone(ctx: EffectContext, energy_type: EnergyType) -> EffectContext:
@@ -36,15 +30,15 @@ def require_energy_in_zone(ctx: EffectContext, energy_type: EnergyType) -> Effec
         print(f"Cannot play card: No {energy_type.value} energy in Energy Zone")
     return ctx
 
-def require_pokemon_type(ctx: EffectContext, pokemon_type: EnergyType, target_player: str = "player") -> EffectContext:
-    """Filter targets to specific Pokemon type."""
-    target = ctx.opponent if target_player == "opponent" else ctx.player
-    typed_pokemon = [p for p in target.pokemon_in_play if p.pokemon_type == pokemon_type]
-    if not typed_pokemon:
-        ctx.failed = True
-        print(f"Cannot play card: No {pokemon_type.value} Pokemon in play")
-    else:
-        ctx.targets = typed_pokemon
+def require_pokemon_type(ctx: EffectContext, pokemon_type: EnergyType) -> EffectContext:
+    """Require that the selected Pokemon is of a specific type."""
+    if not ctx.targets:
+        return dataclasses.replace(ctx, failed=True)
+    
+    selected = ctx.targets[0]
+    if selected.pokemon_type != pokemon_type:
+        return dataclasses.replace(ctx, failed=True)
+    
     return ctx
 
 def require_specific_pokemon(ctx: EffectContext, pokemon_names: List[str], target_player: str = "player") -> EffectContext:

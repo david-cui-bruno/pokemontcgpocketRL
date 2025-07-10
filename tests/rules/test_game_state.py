@@ -1,8 +1,9 @@
 """Tests for game state functionality."""
 
 import pytest
+import dataclasses
 from src.rules.game_state import GameState, PlayerState, PlayerTag, GamePhase
-from src.card_db.core import PokemonCard, ItemCard, SupporterCard, EnergyType, Stage
+from src.card_db.core import PokemonCard, EnergyType, Stage, Attack
 
 
 @pytest.fixture
@@ -14,108 +15,119 @@ def sample_pokemon() -> PokemonCard:
         hp=100,
         pokemon_type=EnergyType.COLORLESS,
         stage=Stage.BASIC,
-        retreat_cost=1
+        attacks=[Attack(name="Test Attack", cost=[], damage=10)]
     )
+
 
 @pytest.fixture
 def empty_player_state() -> PlayerState:
     """Create an empty player state."""
-    return PlayerState()
+    return PlayerState(player_tag=PlayerTag.PLAYER)
+
 
 @pytest.fixture
 def empty_game_state() -> GameState:
     """Create an empty game state."""
-    return GameState()
+    return GameState(
+        player=PlayerState(player_tag=PlayerTag.PLAYER),
+        opponent=PlayerState(player_tag=PlayerTag.OPPONENT)
+    )
 
-def test_player_state_initialization():
+
+def test_player_state_initialization(empty_player_state: PlayerState):
     """Test that PlayerState initializes with correct defaults."""
-    state = PlayerState()
-    assert state.active_pokemon is None
-    assert len(state.bench) == 0
-    assert len(state.hand) == 0
-    assert len(state.deck) == 0
-    assert len(state.discard) == 0
-    assert state.points == 0
-    assert state.energy_zone is None
-    assert not state.has_played_supporter
-    assert not state.energy_attached_this_turn
+    assert empty_player_state.active_pokemon is None
+    assert len(empty_player_state.bench) == 0
+    assert len(empty_player_state.hand) == 0
+    assert len(empty_player_state.deck) == 0
+    assert len(empty_player_state.discard_pile) == 0
+    assert empty_player_state.points == 0
+    assert empty_player_state.energy_zone is None
+    assert not empty_player_state.supporter_played_this_turn
+    assert not empty_player_state.energy_attached_this_turn
+
 
 def test_player_state_bench_limit(sample_pokemon):
     """Test that bench cannot exceed 3 Pokemon (TCG Pocket limit)."""
     with pytest.raises(ValueError):
-        PlayerState(bench=[sample_pokemon] * 4)
+        PlayerState(player_tag=PlayerTag.PLAYER, bench=[sample_pokemon] * 4)
+
 
 def test_player_state_point_limit():
     """Test that points cannot exceed 3."""
     with pytest.raises(ValueError):
-        PlayerState(points=4)
+        PlayerState(player_tag=PlayerTag.PLAYER, points=4)
+
 
 def test_pokemon_in_play(sample_pokemon):
     """Test getting all Pokemon in play."""
     state = PlayerState(
+        player_tag=PlayerTag.PLAYER,
         active_pokemon=sample_pokemon,
         bench=[sample_pokemon, sample_pokemon]
     )
     assert len(state.pokemon_in_play) == 3
 
-def test_can_play_supporter():
+
+def test_can_play_supporter(empty_player_state):
     """Test supporter play restrictions."""
-    state = PlayerState()
-    assert state.can_play_supporter()
-    state.supporter_played_this_turn = True
-    assert not state.can_play_supporter()
+    assert empty_player_state.can_play_supporter()
+    
+    state_after_supporter = dataclasses.replace(empty_player_state, supporter_played_this_turn=True)
+    assert not state_after_supporter.can_play_supporter()
 
-def test_can_attach_energy():
+
+def test_can_attach_energy(sample_pokemon):
     """Test energy attachment restrictions."""
-    state = PlayerState()
+    # Cannot attach with no energy in zone
+    state = PlayerState(player_tag=PlayerTag.PLAYER, active_pokemon=sample_pokemon)
     assert not state.can_attach_energy()
-    state.energy_zone = EnergyType.FIRE
-    basic_pokemon = PokemonCard(
-        id="TEST-001",
-        name="Test Pokemon",
-        hp=100,
-        pokemon_type=EnergyType.COLORLESS,
-        stage=Stage.BASIC
-    )
-    state.active_pokemon = basic_pokemon
-    assert state.can_attach_energy()
 
-def test_game_state_initialization():
+    # Can attach with energy in zone
+    state_with_energy = dataclasses.replace(state, energy_zone=[EnergyType.FIRE])
+    assert state_with_energy.can_attach_energy()
+    
+    # Cannot attach if already attached this turn
+    state_after_attachment = dataclasses.replace(state_with_energy, energy_attached_this_turn=True)
+    assert not state_after_attachment.can_attach_energy()
+
+
+def test_game_state_initialization(empty_game_state: GameState):
     """Test that GameState initializes with correct defaults."""
-    state = GameState()
-    assert state.active_player == PlayerTag.PLAYER
-    assert state.phase == GamePhase.DRAW
-    assert state.turn_number == 1
-    assert not state.is_finished
-    assert state.winner is None
+    assert empty_game_state.active_player == PlayerTag.PLAYER
+    assert empty_game_state.phase == GamePhase.START_OF_TURN
+    assert empty_game_state.turn_number == 1
+    assert not empty_game_state.is_finished
+    assert empty_game_state.winner is None
 
-def test_active_player_state():
-    """Test getting active player state."""
-    state = GameState()
-    assert state.active_player_state == state.player
-    state.active_player = PlayerTag.OPPONENT
-    assert state.active_player_state == state.opponent
 
-def test_phase_advancement():
+def test_active_player_state(empty_game_state: GameState):
+    """Test getting active and inactive player state."""
+    assert empty_game_state.active_player_state == empty_game_state.player
+    assert empty_game_state.inactive_player_state == empty_game_state.opponent
+    
+    state_opponent_turn = dataclasses.replace(empty_game_state, active_player=PlayerTag.OPPONENT)
+    assert state_opponent_turn.active_player_state == state_opponent_turn.opponent
+    assert state_opponent_turn.inactive_player_state == state_opponent_turn.player
+
+
+def test_phase_advancement(empty_game_state: GameState):
     """Test phase advancement and turn changes."""
-    state = GameState()
+    state = empty_game_state
     
     # Test phase progression
+    assert state.phase == GamePhase.START_OF_TURN
+    state = dataclasses.replace(state, phase=state.phase.next_phase())
     assert state.phase == GamePhase.DRAW
-    state.advance_phase()
+    state = dataclasses.replace(state, phase=state.phase.next_phase())
     assert state.phase == GamePhase.MAIN
-    state.advance_phase()
+    state = dataclasses.replace(state, phase=state.phase.next_phase())
     assert state.phase == GamePhase.ATTACK
-    state.advance_phase()
-    assert state.phase == GamePhase.CHECK_UP
-    state.advance_phase()
-    assert state.phase == GamePhase.END
+    state = dataclasses.replace(state, phase=state.phase.next_phase())
+    assert state.phase == GamePhase.END_OF_TURN
     
     # Test turn change
-    state.advance_phase()
-    assert state.phase == GamePhase.DRAW
+    state = dataclasses.replace(state, phase=state.phase.next_phase())
+    assert state.phase == GamePhase.START_OF_TURN
     assert state.active_player == PlayerTag.OPPONENT
-    assert state.turn_number == 2
-    
-    # Test flag reset
-    state.active_player_state.supporter_played_this_turn = False 
+    assert state.turn_number == 2 

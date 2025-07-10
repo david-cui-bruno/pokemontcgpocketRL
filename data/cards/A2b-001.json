@@ -1,0 +1,35 @@
+{
+  "id": "A2b-001",
+  "name": "Weedle",
+  "hp": 50,
+  "pokemon_type": "grass",
+  "stage": 0,
+  "attacks": [
+    {
+      "name": "Multiply",
+      "cost": [
+        "grass"
+      ],
+      "damage": 0,
+      "effects": [
+        {
+          "text": "Put 1 random Weedle from your deck onto your Bench.",
+          "effect_type": null,
+          "parameters": {}
+        }
+      ],
+      "description": null
+    }
+  ],
+  "ability": null,
+  "owner": null,
+  "set_code": "A2b",
+  "rarity": null,
+  "evolves_from": null,
+  "retreat_cost": 1,
+  "weakness": "fire",
+  "is_ex": false,
+  "attached_energies": [],
+  "damage_counters": 0,
+  "status_condition": null
+}

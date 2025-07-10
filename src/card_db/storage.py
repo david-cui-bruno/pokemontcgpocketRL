@@ -18,6 +18,8 @@ import logging
 from pathlib import Path
 from typing import Dict, List, Optional
 
+from src.card_db.core import Card, PokemonCard, ItemCard
+
 logger = logging.getLogger(__name__)
 
 class CardStorage:
@@ -38,11 +40,11 @@ class CardStorage:
         with open(path, "w") as f:
             json.dump(set_data, f, indent=2)
     
-    def store_card(self, card_id: str, card_data: Dict) -> None:
+    def store_card(self, card_id: str, card: Card) -> None:
         """Store individual card data in JSON format."""
         path = self.cards_dir / f"{card_id}.json"
         with open(path, "w") as f:
-            json.dump(card_data, f, indent=2)
+            json.dump(card.to_dict(), f, indent=2)
     
     def get_set(self, set_id: str) -> Optional[Dict]:
         """Retrieve set data."""
@@ -75,3 +77,19 @@ class CardStorage:
     def list_cards(self) -> List[str]:
         """List all available cards."""
         return [p.stem for p in self.cards_dir.glob("*.json")] 
+
+    def load_card(self, card_id: str) -> Optional[Card]:
+        """Load a card from storage by ID."""
+        card_path = self.cards_dir / f"{card_id}.json"
+        if not card_path.exists():
+            return None
+            
+        with open(card_path, 'r') as f:
+            data = json.load(f)
+            # Reconstruct the appropriate card type
+            if data.get("card_type") == "Item":
+                return ItemCard(**data)
+            elif "hp" in data:  # It's a Pokemon card
+                return PokemonCard(**data)
+            else:
+                return Card(**data) 

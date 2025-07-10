@@ -30,13 +30,36 @@ class CardLoader:
         
         all_cards = []
         
-        for json_file in self.data_dir.glob("*.json"):
+        # Load Pokemon cards
+        pokemon_file = self.data_dir / "all_pokemon_cards.json"
+        if pokemon_file.exists():
             try:
-                cards = self.load_cards_from_file(json_file)
+                cards = self.load_cards_from_file(pokemon_file)
                 all_cards.extend(cards)
-                print(f"Loaded {len(cards)} cards from {json_file.name}")
+                print(f"Loaded {len(cards)} cards from {pokemon_file.name}")
             except Exception as e:
-                print(f"Error loading {json_file.name}: {e}")
+                print(f"Error loading {pokemon_file.name}: {e}")
+        
+        # Load Trainer cards
+        trainer_file = self.data_dir / "all_trainer_cards.json"
+        if trainer_file.exists():
+            try:
+                cards = self.load_cards_from_file(trainer_file)
+                all_cards.extend(cards)
+                print(f"Loaded {len(cards)} cards from {trainer_file.name}")
+            except Exception as e:
+                print(f"Error loading {trainer_file.name}: {e}")
+        
+        # Load consolidated cards if no specific files found
+        if not all_cards:
+            consolidated_file = self.data_dir / "consolidated_cards_moves.json"
+            if consolidated_file.exists():
+                try:
+                    cards = self.load_cards_from_file(consolidated_file)
+                    all_cards.extend(cards)
+                    print(f"Loaded {len(cards)} cards from {consolidated_file.name}")
+                except Exception as e:
+                    print(f"Error loading {consolidated_file.name}: {e}")
         
         return all_cards
     
@@ -115,15 +138,16 @@ class CardLoader:
         abilities_data = data.get("abilities", [])
         if abilities_data:
             ability_data = abilities_data[0]  # Take first ability
-            # Create effect from ability text
+            # Create effect from ability text with required text parameter
             ability_effect = Effect(
+                text=ability_data.get("effect", ""),  # Add required text parameter
                 effect_type="text",
-                parameters={"text": ability_data.get("effect", "")}
+                parameters={}
             )
             ability = Ability(
                 name=ability_data.get("name", ""),
                 ability_type=AbilityType.ACTIVATED,
-                effects=[ability_effect]  # Fixed: use effects list, not text
+                effects=[ability_effect]
             )
         
         # TCG Pocket has no resistance (rulebook §1) - ignore resistance data
@@ -146,6 +170,19 @@ class CardLoader:
             if weaknesses:
                 weakness = self._parse_energy_type(weaknesses[0].get("type"))
         
+        # Basic Pokemon attributes
+        card_id = data.get("id")
+        name = data.get("name")
+        hp = data.get("hp")
+
+        # The 'ability' field does not exist on the PokemonCard dataclass.
+        # We should ignore it during parsing.
+        # ability_data = data.get("ability")
+
+        # Super type and sub type
+        super_type = data.get("supertype")
+        sub_types = data.get("subtypes", [])
+
         return PokemonCard(
             id=data.get("id", ""),
             name=data.get("name", ""),
@@ -164,89 +201,50 @@ class CardLoader:
     
     def _parse_trainer_card(self, data: Dict[str, Any]) -> Card:
         """Parse a Trainer card into the appropriate subtype."""
-        # Check for explicit subtype first
-        subtype = data.get("subtype", "").lower()
-        trainer_type = data.get("trainer_type", "").lower()
-        effects = self._parse_effects(data.get("effect"))
-        
-        # Extract set_code from ID or use "set" field
-        set_code = data.get("set")  # Use "set" field from test data
-        if not set_code:
-            card_id = data.get("id", "")
-            if "-" in card_id:
-                set_code = card_id.split("-")[0]
-        
-        # Determine trainer subtype based on name and effect
-        name = data.get("name", "").lower()
-        effect_data = data.get("effect", "")
-        
-        # Handle effect_text safely for string operations
-        if isinstance(effect_data, str):
-            effect_text = effect_data.lower()
-        else:
-            effect_text = ""
-        
-        # If subtype is explicitly set, use it
-        if subtype == "supporter":
-            return SupporterCard(
-                id=data.get("id", ""),
-                name=data.get("name", ""),
-                effects=effects,
-                set_code=set_code,
-                rarity=data.get("rarity")  # Add rarity parsing
-            )
-        elif subtype == "tool":
-            return ToolCard(
-                id=data.get("id", ""),
-                name=data.get("name", ""),
-                effects=effects,
-                set_code=set_code,
-                rarity=data.get("rarity")  # Add rarity parsing
-            )
-        elif subtype == "item":
-            return ItemCard(
-                id=data.get("id", ""),
-                name=data.get("name", ""),
-                effects=effects,
-                set_code=set_code,
-                rarity=data.get("rarity")  # Add rarity parsing
-            )
-        
-        # Check for Tool cards (attach to Pokemon)
-        if (trainer_type == "tool" or 
-            "tool" in name or 
-            "attach" in effect_text or 
-            "equip" in effect_text or
-            any(keyword in name for keyword in ["band", "helmet", "share", "mail", "stone"])):
-            return ToolCard(
-                id=data.get("id", ""),
-                name=data.get("name", ""),
-                effects=effects,
-                set_code=set_code,
-                rarity=data.get("rarity")  # Add rarity parsing
-            )
-        
-        # Check for Supporter cards (powerful, once per turn)
-        elif (trainer_type == "supporter" or
-              any(keyword in name for keyword in ["professor", "marnie", "boss", "cynthia", "n", "juniper"]) or
-              any(keyword in effect_text for keyword in ["draw", "shuffle", "search", "discard"])):
-            return SupporterCard(
-                id=data.get("id", ""),
-                name=data.get("name", ""),
-                effects=effects,
-                set_code=set_code,
-                rarity=data.get("rarity")  # Add rarity parsing
-            )
-        
-        # Default to Item cards (can be played multiple times)
-        else:
-            return ItemCard(
-                id=data.get("id", ""),
-                name=data.get("name", ""),
-                effects=effects,
-                set_code=set_code,
-                rarity=data.get("rarity")  # Add rarity parsing
-            )
+        try:
+            # Ensure category is set to "Trainer" for proper parsing
+            if "category" not in data:
+                data["category"] = "Trainer"
+            
+            # Check for explicit subtype first
+            subtype = str(data.get("subtype", "")).lower()
+            trainer_type = str(data.get("trainer_type", "")).lower()
+            
+            # Parse effects safely
+            effect_data = data.get("effect", [])
+            if isinstance(effect_data, str):
+                effect_data = [effect_data]
+            elif not isinstance(effect_data, list):
+                effect_data = []
+            effects = [Effect(text=str(e)) for e in effect_data]
+            
+            # Extract set_code from ID or use "set" field
+            set_code = data.get("set")
+            if not set_code and "id" in data:
+                card_id = data["id"]
+                if "-" in card_id:
+                    set_code = card_id.split("-")[0]
+            
+            # Common card attributes
+            card_attrs = {
+                "id": data.get("id", ""),
+                "name": data.get("name", ""),
+                "effects": effects,
+                "set_code": set_code,
+                "rarity": data.get("rarity")
+            }
+            
+            # Determine card type and create appropriate instance
+            if subtype == "supporter" or trainer_type == "supporter":
+                return SupporterCard(**card_attrs)
+            elif subtype == "tool" or trainer_type == "tool":
+                return ToolCard(**card_attrs)
+            else:
+                return ItemCard(**card_attrs)  # Default to Item card
+                
+        except Exception as e:
+            print(f"Warning: Failed to parse trainer card {data.get('name', 'Unknown')}: {e}")
+            return None
     
     def _parse_energy_type(self, energy_str: Optional[str]) -> EnergyType:
         """Parse energy type string to enum."""
@@ -264,7 +262,8 @@ class CardLoader:
             "darkness": EnergyType.DARKNESS,
             "metal": EnergyType.METAL,
             "colorless": EnergyType.COLORLESS,
-            "fairy": EnergyType.FAIRY
+            # Map Dragon-type to appropriate types based on the Pokémon
+            "dragon": EnergyType.COLORLESS  # Default to COLORLESS for Dragon-type
         }
         
         if energy_str.lower() not in energy_map:
@@ -293,29 +292,31 @@ class CardLoader:
         
         return stage_map.get(stage_str.lower(), Stage.BASIC)
     
-    def _parse_effects(self, effect_text) -> List[Effect]:
-        """Parse effect text into Effect objects."""
-        if not effect_text:
+    def _parse_effects(self, effect_data) -> List[Effect]:
+        """Parse effect data into Effect objects."""
+        if not effect_data:
             return []
         
-        # Handle list effects - return only first effect for tests
-        if isinstance(effect_text, list):
-            if effect_text:
-                return [Effect(
-                    effect_type="text",
-                    parameters={"text": effect_text[0]}
-                )]
-            return []
+        # Handle list effects
+        if isinstance(effect_data, list):
+            return [Effect(text=str(text)) for text in effect_data if text]
         
         # Handle string effects
-        if not isinstance(effect_text, str):
-            return []
+        if isinstance(effect_data, str):
+            return [Effect(text=effect_data)]
         
-        # For tests, create a simple text effect
-        return [Effect(
-            effect_type="text",
-            parameters={"text": effect_text}
-        )]
+        # Handle dict effects
+        if isinstance(effect_data, dict):
+            # Try to get text from various possible fields
+            text = effect_data.get("text", "")
+            if not text:
+                text = effect_data.get("effect", "")
+            if not text:
+                text = str(effect_data)  # Use the whole dict as text if no specific field found
+            return [Effect(text=text)]
+        
+        # For any other type, convert to string
+        return [Effect(text=str(effect_data))]
 
 
 class CardDatabase:
@@ -331,12 +332,13 @@ class CardDatabase:
         """Get card by ID."""
         return self._cards.get(card_id)
     
-    def find(self, card_name: str) -> Optional[Card]:
-        """Find card by name."""
+    def find(self, card_name: str) -> List[Card]:
+        """Find cards by name. Returns a list of matching cards."""
+        matches = []
         for card in self._cards.values():
             if card.name == card_name:
-                return card
-        return None
+                matches.append(card)
+        return matches
 
 
 # Standalone functions for backward compatibility with tests

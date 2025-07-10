@@ -21,10 +21,17 @@ Pikachu ex
 """
 
 from __future__ import annotations
-
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum, IntEnum, auto
-from typing import Any, Dict, List, Optional, Union
+from typing import Dict, List, Optional, Tuple, Any, Callable, Union
+
+
+# --- Enums and Type Definitions FIRST ---
+
+class PlayerTag(Enum):
+    """Identifies the player and opponent."""
+    PLAYER = auto()
+    OPPONENT = auto()
 
 
 class EnergyType(Enum):
@@ -49,21 +56,15 @@ class Stage(IntEnum):
     BASIC = 0
     STAGE_1 = 1
     STAGE_2 = 2
-    
+
     @property
     def name(self) -> str:
-        """Get the string representation of the stage."""
-        return self._name_.lower()
-    
+        return super().name.replace('_', ' ').title()
+
     @classmethod
     def from_string(cls, stage_str: str) -> 'Stage':
-        """Create a Stage from a string representation."""
-        stage_map = {
-            "basic": cls.BASIC,
-            "stage_1": cls.STAGE_1,
-            "stage_2": cls.STAGE_2
-        }
-        return stage_map.get(stage_str.lower(), cls.BASIC)
+        stage_str = stage_str.upper().replace(' ', '_')
+        return cls[stage_str]
 
 
 class StatusCondition(Enum):
@@ -98,235 +99,166 @@ class TargetType(Enum):
 
 @dataclass(frozen=True)
 class Effect:
-    """Represents a card effect with structured parameters.
+    """Represents a card effect."""
+    text: str
+    effect_type: Optional[str] = None
+    parameters: Dict[str, Any] = field(default_factory=dict)
     
-    Effects are the core building blocks of card abilities, attacks, and
-    triggered effects. They use a simple DSL to describe game state mutations.
-    
-    Parameters
-    ----------
-    effect_type : str
-        The type of effect (e.g., "damage", "heal", "draw_cards", "search")
-    amount : int, optional
-        Numeric parameter for the effect
-    target : TargetType, optional
-        What the effect targets
-    conditions : List[str], optional
-        Conditions that must be met for the effect to apply
-    parameters : Dict[str, Any], optional
-        Additional effect-specific parameters
-        
-    Examples
-    --------
-    >>> damage_effect = Effect(
-    ...     effect_type="damage",
-    ...     amount=30,
-    ...     target=TargetType.OPPONENT_ACTIVE
-    ... )
-    >>> heal_effect = Effect(
-    ...     effect_type="heal", 
-    ...     amount=20,
-    ...     target=TargetType.SELF
-    ... )
-    """
-    
-    effect_type: str
-    amount: Optional[int] = None
-    target: Optional[TargetType] = None
-    conditions: List[str] = None
-    parameters: Optional[Dict[str, Any]] = None
-    
-    def __post_init__(self) -> None:
-        """Initialize mutable defaults."""
-        if self.conditions is None:
-            object.__setattr__(self, 'conditions', [])
-        if self.parameters is None:
-            object.__setattr__(self, 'parameters', {})
+    def to_dict(self) -> dict:
+        return {
+            "text": self.text,
+            "effect_type": self.effect_type,
+            "parameters": self.parameters
+        }
 
 
 @dataclass(frozen=True)
 class Attack:
-    """Represents a Pokemon attack.
-    
-    Parameters
-    ----------
-    name : str
-        The attack name
-    cost : List[EnergyType]
-        Energy cost required to use this attack
-    damage : int
-        Base damage dealt by this attack
-    effects : List[Effect], optional
-        Additional effects beyond damage
-    description : str, optional
-        Human-readable attack description
-        
-    Examples
-    --------
-    >>> thunderbolt = Attack(
-    ...     name="Thunderbolt",
-    ...     cost=[EnergyType.ELECTRIC, EnergyType.ELECTRIC],
-    ...     damage=90,
-    ...     effects=[Effect("discard_energy", amount=1, target=TargetType.SELF)]
-    ... )
-    """
-    
+    """Represents a Pokemon attack."""
     name: str
     cost: List[EnergyType]
     damage: int
-    effects: List[Effect] = None
+    effects: List[Effect] = field(default_factory=list)
     description: Optional[str] = None
     
-    def __post_init__(self) -> None:
-        """Initialize mutable defaults."""
-        if self.effects is None:
-            object.__setattr__(self, 'effects', [])
+    def to_dict(self) -> dict:
+        """Convert attack to a dictionary for JSON serialization."""
+        return {
+            "name": self.name,
+            "cost": [e.value for e in self.cost],
+            "damage": self.damage,
+            "effects": [e.to_dict() for e in self.effects],
+            "description": self.description
+        }
 
 
 @dataclass(frozen=True)
 class Ability:
-    """Represents a Pokemon ability.
-    
-    Parameters
-    ----------
-    name : str
-        The ability name
-    ability_type : AbilityType
-        Type of ability (static, activated, triggered)
-    effects : List[Effect]
-        The effects this ability provides
-    cost : List[EnergyType], optional
-        Energy cost for activated abilities
-    usage_limit : str, optional
-        Usage restrictions ("once_per_turn", "once_per_game", etc.)
-    trigger : str, optional
-        What triggers this ability (for triggered abilities)
-    description : str, optional
-        Human-readable ability description
-        
-    Examples
-    --------
-    >>> static_ability = Ability(
-    ...     name="Lightning Rod",
-    ...     ability_type=AbilityType.STATIC, 
-    ...     effects=[Effect("resistance", amount=20, target=TargetType.SELF)],
-    ...     description="This Pokemon takes 20 less damage from Water attacks"
-    ... )
-    """
-    
+    """Represents a Pokemon ability."""
     name: str
-    ability_type: AbilityType  # Fixed: Use AbilityType enum instead of string
+    ability_type: AbilityType
     effects: List[Effect]
-    cost: List[EnergyType] = None
+    cost: List[EnergyType] = field(default_factory=list)
     usage_limit: Optional[str] = None
     trigger: Optional[str] = None
     description: Optional[str] = None
-    
-    def __post_init__(self) -> None:
-        """Initialize mutable defaults."""
-        if self.cost is None:
-            object.__setattr__(self, 'cost', [])
 
 
-@dataclass
+@dataclass(frozen=True)
 class Card:
-    """Base class for all cards."""
+    """Base class for all cards. Contains only universally required fields."""
     id: str
     name: str
-    set_code: Optional[str] = None
-    rarity: Optional[str] = None
+    
+    def to_dict(self) -> dict:
+        """Convert card to a dictionary for JSON serialization."""
+        return {
+            "id": self.id,
+            "name": self.name
+        }
 
 
-@dataclass
-class PokemonCard:
+@dataclass(frozen=True)
+class PokemonCard(Card):
     """Represents a Pokemon card."""
-    # Required fields first
-    id: str
-    name: str
     hp: int
     pokemon_type: EnergyType
     stage: Stage
-    
-    # Optional fields with defaults
-    set_code: Optional[str] = None
+    attacks: List[Attack]
+    ability: Optional[Ability] = None
+    owner: Optional[PlayerTag] = None
+    set_code: str = "N/A"
     rarity: Optional[str] = None
     evolves_from: Optional[str] = None
-    attacks: List[Attack] = None
-    ability: Optional[Ability] = None
     retreat_cost: int = 0
     weakness: Optional[EnergyType] = None
     is_ex: bool = False
-    attached_energies: List[EnergyType] = None
+    attached_energies: List[EnergyType] = field(default_factory=list)
     damage_counters: int = 0
-    energy_attached: int = 0
     status_condition: Optional[StatusCondition] = None
-    
-    def __post_init__(self) -> None:
-        """Initialize mutable defaults."""
-        if self.attacks is None:
-            object.__setattr__(self, 'attacks', [])
-        if self.attached_energies is None:
-            object.__setattr__(self, 'attached_energies', [])
+    attached_tool: Optional['ToolCard'] = None  # Use string type hint
+
+    def __post_init__(self):
+        if self.hp < 0:
+            raise ValueError("HP cannot be negative")
+
+    def to_dict(self) -> dict:
+        """Convert Pokemon card to a dictionary for JSON serialization."""
+        return {
+            **super().to_dict(),
+            "hp": self.hp,
+            "pokemon_type": self.pokemon_type.value,
+            "stage": self.stage.value,
+            "attacks": [attack.to_dict() for attack in self.attacks],
+            "ability": self.ability.to_dict() if self.ability else None,
+            "owner": self.owner.value if self.owner else None,
+            "set_code": self.set_code,
+            "rarity": self.rarity,
+            "evolves_from": self.evolves_from,
+            "retreat_cost": self.retreat_cost,
+            "weakness": self.weakness.value if self.weakness else None,
+            "is_ex": self.is_ex,
+            "attached_energies": [e.value for e in self.attached_energies],
+            "damage_counters": self.damage_counters,
+            "status_condition": self.status_condition.value if self.status_condition else None
+        }
 
 
-@dataclass
-class ItemCard:
-    """Represents an Item card.
-    
-    Item cards can be played multiple times per turn and have immediate effects.
-    Examples: Potion, Switch, Energy Retrieval
-    """
-    id: str
-    name: str
+@dataclass(frozen=True)
+class ItemCard(Card):
+    """Represents an Item card."""
     effects: List[Effect]
-    set_code: Optional[str] = None
+    owner: Optional[PlayerTag] = None
+    set_code: str = "N/A"
+    rarity: Optional[str] = None
+    description: Optional[str] = None
+    card_type: str = "Item"  # Add this field
+    
+    def to_dict(self) -> dict:
+        return {
+            **super().to_dict(),
+            "effects": [e.to_dict() for e in self.effects],
+            "owner": self.owner.value if self.owner else None,
+            "set_code": self.set_code,
+            "rarity": self.rarity,
+            "description": self.description,
+            "card_type": self.card_type
+        }
+
+
+@dataclass(frozen=True)
+class ToolCard(Card):
+    """Represents a Tool card."""
+    effects: List[Effect]
+    owner: Optional[PlayerTag] = None
+    set_code: str = "N/A"
+    rarity: Optional[str] = None
+    description: Optional[str] = None
+    attached_to: Optional['PokemonCard'] = None  # Use string type hint
+
+
+@dataclass(frozen=True)
+class SupporterCard(Card):
+    """Represents a Supporter card."""
+    effects: List[Effect]
+    owner: Optional[PlayerTag] = None
+    set_code: str = "N/A"
     rarity: Optional[str] = None
     description: Optional[str] = None
 
 
-@dataclass
-class ToolCard:
-    """Represents a Tool card.
-    
-    Tool cards attach to Pokemon and provide ongoing effects.
-    Only 1 Tool can be attached to each Pokemon at a time.
-    Examples: Exp. Share, Rocky Helmet, Choice Band
-    """
-    id: str
-    name: str
-    effects: List[Effect]
-    attached_to: Optional[PokemonCard] = None  # Which Pokemon this tool is attached to
-    set_code: Optional[str] = None
-    rarity: Optional[str] = None
-    description: Optional[str] = None
-
-
-@dataclass
-class SupporterCard:
-    """Represents a Supporter card.
-    
-    Supporter cards can only be played once per turn and have powerful effects.
-    Examples: Professor's Research, Marnie, Boss's Orders
-    """
-    id: str
-    name: str
-    effects: List[Effect]
-    set_code: Optional[str] = None
-    rarity: Optional[str] = None
-    description: Optional[str] = None
-
-
-@dataclass
+@dataclass(frozen=True)
 class EnergyCard(Card):
     """Represents an Energy card."""
-    energy_type: EnergyType = None  # Give it a default value
-    provides: List[EnergyType] = None  # For special energy cards
-    
-    def __post_init__(self):
-        if self.provides is None:
-            self.provides = []
+    energy_type: EnergyType
+    owner: Optional[PlayerTag] = None
+    set_code: Optional[str] = None
+    rarity: Optional[str] = None
+    provides: List[EnergyType] = field(default_factory=list)
 
 
 # Type aliases for convenience
-AnyCard = Union[PokemonCard, ItemCard, ToolCard, SupporterCard]
-TrainerCard = Union[ItemCard, ToolCard, SupporterCard]  # New alias for all trainer types 
+AnyCard = Union[PokemonCard, ItemCard, ToolCard, SupporterCard, EnergyCard]
+TrainerCard = Union[ItemCard, ToolCard, SupporterCard]
+
+# PlayerTag has been moved to the top of the file to resolve circular dependencies. 

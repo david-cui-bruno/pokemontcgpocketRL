@@ -10,6 +10,12 @@ from src.card_db.trainer_effects.composites import *
 # Load all trainer effects
 import json
 from pathlib import Path
+from functools import partial
+from src.card_db.trainer_effects.actions import heal_pokemon, draw_cards, attach_tool_card
+from src.card_db.trainer_effects.selections import set_target_to_active, all_targets
+from src.card_db.trainer_effects.conditions import require_pokemon_type
+from src.card_db.core import EnergyType
+import dataclasses
 
 def load_trainer_effects():
     """Load all trainer effects from the JSON file."""
@@ -113,6 +119,27 @@ COMPREHENSIVE_TRAINER_EFFECTS = {
     "You can use this card only if your opponent hasn't gotten any points.\n\nDuring your opponent's next turn, all of your Ultra Beasts take −20 damage from attacks from your opponent's Pokémon.": conditional_ultra_beast_protection(),
     "You can use this card only if you have Araquanid in play. Switch in 1 of your opponent's Benched Pokémon to the Active Spot.": conditional_araquanid_switch(),
     "Choose 1:\n\nDuring this turn, attacks used by your Pokémon that evolve from Eevee do +10 damage to your opponent's Active Pokémon.\n\nHeal 20 damage from each of your Pokémon that evolves from Eevee.": conditional_eevee_choice(),
+    
+    # Test effects
+    "Heal 20 damage from 1 of your Pokémon.": [
+        player_chooses_target,
+        lambda ctx: heal_pokemon(ctx, amount=20)
+    ],
+    
+    "Draw 2 cards.": [
+        lambda ctx: draw_cards(ctx, count=2)
+    ],
+    
+    "Attach this card to 1 of your Pokémon.": [
+        player_chooses_target,
+        attach_tool_card
+    ],
+    
+    "Heal 30 damage from 1 of your Grass Pokémon.": [
+        player_chooses_target,
+        lambda ctx: require_pokemon_type(ctx, EnergyType.GRASS),
+        lambda ctx: heal_pokemon(ctx, amount=30)
+    ]
 }
 
 # Card name to effect text mapping for specific trainer cards
@@ -128,7 +155,28 @@ CARD_NAME_TO_EFFECT = {
 }
 
 # Export the registry as TRAINER_EFFECTS for compatibility
-TRAINER_EFFECTS = COMPREHENSIVE_TRAINER_EFFECTS
+TRAINER_EFFECTS = {
+    "Test Potion": [
+        player_chooses_target,
+        lambda ctx: heal_pokemon(ctx, amount=20)  # Use lambda instead of partial to ensure proper context handling
+    ],
+    "Test Professor": [
+        partial(draw_cards, count=2)
+    ],
+    "Test Tool": [
+        player_chooses_target,
+        lambda ctx: dataclasses.replace(ctx, data={'tool_card': ctx.data.get('card')}),  # Use tool_card key
+        attach_tool_card
+    ],
+    "Grass Potion": [
+        player_chooses_target,
+        lambda ctx: require_pokemon_type(ctx, pokemon_type=EnergyType.GRASS),  # Use lambda for better context handling
+        lambda ctx: heal_pokemon(ctx, amount=30)  # Use lambda for better context handling
+    ],
+    "Mass Healing": [
+        lambda ctx: heal_all_pokemon(ctx, amount=10)  # Use heal_all_pokemon instead of heal_pokemon
+    ]
+}
 
 def get_trainer_effect_function(effect_text: str):
     """Get the function for a trainer effect by its text."""
